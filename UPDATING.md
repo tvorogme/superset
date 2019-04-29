@@ -21,18 +21,42 @@ under the License.
 This file documents any backwards-incompatible changes in Superset and
 assists people when migrating to a new version.
 
+## Superset 0.34.0
+
+* [5451](https://github.com/apache/incubator-superset/pull/5451): a change
+which adds missing non-nullable fields to the `datasources` table. Depending on
+the integrity of the data, manual intervention may be required.
+
+* [5452](https://github.com/apache/incubator-superset/pull/5452): a change
+which adds missing non-nullable fields and uniqueness constraints to the
+`columns`and `table_columns` tables. Depending on the integrity of the data,
+manual intervention may be required.
+
+* [5453](https://github.com/apache/incubator-superset/pull/5453): a change
+which adds missing non-nullable fields and uniqueness constraints to the metrics
+and sql_metrics tables. Depending on the integrity of the data, manual
+intervention may be required.
+
 ## Superset 0.32.0
+
+* `npm run backend-sync` is deprecated and no longer needed, will fail if called
+* [5445](https://github.com/apache/incubator-superset/pull/5445): a change
+which prevents encoding of empty string from form data in the database.
+This involves a non-schema changing migration which does potentially impact
+a large number of records. Scheduled downtime may be advised.
+
+## Superset 0.31.0
+
 * If you use `Hive` or `Presto`, we've moved some dependencies that were
   in the main package as optional now. To get these packages,
   run `pip install superset[presto]` and/or `pip install superset[hive]` as
   required.
 
-* [5445](https://github.com/apache/incubator-superset/pull/5445) : a change 
-which prevents encoding of empty string from form data in the datanbase. 
-This involves a non-schema changing migration which does potentially impact
-a large number of records. Scheduled downtime may be advised.
+* Similarly, if you use Celery's `flower`, `gsheetsdb`, `thrift` or
+  `thrift-sasl`, those dependencies have now been made optional in our
+  package, meaning you may have to install them in your environment post
+  0.31.0
 
-## Superset 0.31.0
 * boto3 / botocore was removed from the dependency list. If you use s3
 as a place to store your SQL Lab result set or Hive uploads, you may
 have to rely on an alternate requirements.txt file to install those

@@ -209,7 +209,8 @@ export function undoLayoutAction() {
 
     if (
       dashboardLayout.past.length === 0 &&
-      !dashboardState.maxUndoHistoryExceeded
+      !dashboardState.maxUndoHistoryExceeded &&
+      !dashboardState.updatedColorScheme
     ) {
       dispatch(setUnsavedChanges(false));
     }
@@ -219,3 +220,6 @@ export function undoLayoutAction() {
 export const redoLayoutAction = setUnsavedChangesAfterAction(
   UndoActionCreators.redo,
 );
+
+// Update component parents list ----------------------------------------------
+export const UPDATE_COMPONENTS_PARENTS_LIST = 'UPDATE_COMPONENTS_PARENTS_LIST';

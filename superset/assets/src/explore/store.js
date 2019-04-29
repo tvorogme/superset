@@ -29,6 +29,24 @@ export function getFormDataFromControls(controlsState) {
   return formData;
 }
 
+export function validateControl(control) {
+  const validators = control.validators;
+  const validationErrors = [];
+  if (validators && validators.length > 0) {
+    validators.forEach((f) => {
+      const v = f(control.value);
+      if (v) {
+        validationErrors.push(v);
+      }
+    });
+  }
+  if (validationErrors.length > 0) {
+    return { ...control, validationErrors };
+  }
+  return control;
+}
+
+
 export function getControlNames(vizType, datasourceType) {
   const controlNames = [];
   sectionsToRender(vizType, datasourceType).forEach(
@@ -65,7 +83,7 @@ export function getControlsState(state, form_data) {
 
   const controlNames = getControlNames(vizType, state.datasource.type);
 
-  const viz = controlPanelConfigs[vizType];
+  const viz = controlPanelConfigs[vizType] || {};
   const controlOverrides = viz.controlOverrides || {};
   const controlsState = {};
   controlNames.forEach((k) => {
@@ -109,7 +127,7 @@ export function getControlsState(state, form_data) {
     ) {
       control.value = formData[k];
     }
-    controlsState[k] = control;
+    controlsState[k] = validateControl(control);
   });
   if (viz.onInit) {
     return viz.onInit(controlsState);
@@ -120,7 +138,7 @@ export function getControlsState(state, form_data) {
 export function applyDefaultFormData(form_data) {
   const datasourceType = form_data.datasource.split('__')[1];
   const vizType = form_data.viz_type || 'table';
-  const viz = controlPanelConfigs[vizType];
+  const viz = controlPanelConfigs[vizType] || {};
   const controlNames = getControlNames(vizType, datasourceType);
   const controlOverrides = viz.controlOverrides || {};
   const formData = {};

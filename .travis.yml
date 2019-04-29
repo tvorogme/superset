@@ -14,8 +14,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-cache:
-  pip: true
 jobs:
   include:
     - language: python
@@ -74,6 +72,7 @@ jobs:
       python: 3.6
       env: TOXENV=pylint
     - language: python
+      python: 3.6
       env:
         - TOXENV=license-check
         - TRAVIS_CACHE=$HOME/.travis_cache/

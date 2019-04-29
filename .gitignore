@@ -40,6 +40,7 @@ dump.rdb
 env
 env_py3
 envpy3
+env36
 local_config.py
 superset_config.py
 superset.egg-info/
@@ -78,3 +79,4 @@ geckodriver.log
 ghostdriver.log
 testCSV.csv
 .terser-plugin-cache/
+apache-superset-*.tar.gz*

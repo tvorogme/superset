@@ -45,6 +45,7 @@ from sqlalchemy import (
     Boolean, Column, DateTime, ForeignKey, Integer, String, Table, Text, UniqueConstraint,
 )
 from sqlalchemy.orm import backref, relationship
+from sqlalchemy_utils import EncryptedType
 
 from superset import conf, db, security_manager
 from superset.connectors.base.models import BaseColumn, BaseDatasource, BaseMetric
@@ -102,9 +103,11 @@ class DruidCluster(Model, AuditMixinNullable, ImportMixin):
     broker_endpoint = Column(String(255), default='druid/v2')
     metadata_last_refreshed = Column(DateTime)
     cache_timeout = Column(Integer)
+    broker_user = Column(String(255))
+    broker_pass = Column(EncryptedType(String(255), conf.get('SECRET_KEY')))
 
     export_fields = ('cluster_name', 'broker_host', 'broker_port',
-                     'broker_endpoint', 'cache_timeout')
+                     'broker_endpoint', 'cache_timeout', 'broker_user')
     update_from_object_fields = export_fields
     export_children = ['datasources']
 
@@ -139,16 +142,20 @@ class DruidCluster(Model, AuditMixinNullable, ImportMixin):
         cli = PyDruid(
             self.get_base_url(self.broker_host, self.broker_port),
             self.broker_endpoint)
+        if self.broker_user and self.broker_pass:
+            cli.set_basic_auth_credentials(self.broker_user, self.broker_pass)
         return cli
 
     def get_datasources(self):
         endpoint = self.get_base_broker_url() + '/datasources'
-        return json.loads(requests.get(endpoint).text)
+        auth = requests.auth.HTTPBasicAuth(self.broker_user, self.broker_pass)
+        return json.loads(requests.get(endpoint, auth=auth).text)
 
     def get_druid_version(self):
         endpoint = self.get_base_url(
             self.broker_host, self.broker_port) + '/status'
-        return json.loads(requests.get(endpoint).text)['version']
+        auth = requests.auth.HTTPBasicAuth(self.broker_user, self.broker_pass)
+        return json.loads(requests.get(endpoint, auth=auth).text)['version']
 
     @property
     @utils.memoized
@@ -262,9 +269,7 @@ class DruidColumn(Model, BaseColumn):
     __tablename__ = 'columns'
     __table_args__ = (UniqueConstraint('column_name', 'datasource_id'),)
 
-    datasource_id = Column(
-        Integer,
-        ForeignKey('datasources.id'))
+    datasource_id = Column(Integer, ForeignKey('datasources.id'))
     # Setting enable_typechecks=False disables polymorphic inheritance.
     datasource = relationship(
         'DruidDatasource',
@@ -280,7 +285,7 @@ class DruidColumn(Model, BaseColumn):
     export_parent = 'datasource'
 
     def __repr__(self):
-        return self.column_name
+        return self.column_name or str(self.id)
 
     @property
     def expression(self):
@@ -336,15 +341,14 @@ class DruidMetric(Model, BaseMetric):
 
     __tablename__ = 'metrics'
     __table_args__ = (UniqueConstraint('metric_name', 'datasource_id'),)
-    datasource_id = Column(
-        Integer,
-        ForeignKey('datasources.id'))
+    datasource_id = Column(Integer, ForeignKey('datasources.id'))
+
     # Setting enable_typechecks=False disables polymorphic inheritance.
     datasource = relationship(
         'DruidDatasource',
         backref=backref('metrics', cascade='all, delete-orphan'),
         enable_typechecks=False)
-    json = Column(Text)
+    json = Column(Text, nullable=False)
 
     export_fields = (
         'metric_name', 'verbose_name', 'metric_type', 'datasource_id',
@@ -410,7 +414,7 @@ class DruidDatasource(Model, BaseDatasource):
     baselink = 'druiddatasourcemodelview'
 
     # Columns
-    datasource_name = Column(String(255))
+    datasource_name = Column(String(255), nullable=False)
     is_hidden = Column(Boolean, default=False)
     filter_select_enabled = Column(Boolean, default=True)  # override default
     fetch_values_from = Column(String(100))
@@ -420,7 +424,6 @@ class DruidDatasource(Model, BaseDatasource):
         'DruidCluster', backref='datasources', foreign_keys=[cluster_name])
     owners = relationship(owner_class, secondary=druiddatasource_user,
                           backref='druiddatasources')
-    UniqueConstraint('cluster_name', 'datasource_name')
 
     export_fields = (
         'datasource_name', 'is_hidden', 'description', 'default_endpoint',

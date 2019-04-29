@@ -86,7 +86,7 @@ class BaseDatasource(AuditMixinNullable, ImportMixin):
 
     @property
     def column_names(self):
-        return sorted([c.column_name for c in self.columns])
+        return sorted([c.column_name for c in self.columns], key=lambda x: x or '')
 
     @property
     def columns_types(self):
@@ -166,7 +166,9 @@ class BaseDatasource(AuditMixinNullable, ImportMixin):
     def data(self):
         """Data representation of the datasource sent to the frontend"""
         order_by_choices = []
-        for s in sorted(self.column_names):
+        # self.column_names return sorted column_names
+        for s in self.column_names:
+            s = str(s or '')
             order_by_choices.append((json.dumps([s, True]), s + ' [asc]'))
             order_by_choices.append((json.dumps([s, False]), s + ' [desc]'))
 
@@ -345,7 +347,7 @@ class BaseColumn(AuditMixinNullable, ImportMixin):
     __tablename__ = None  # {connector_name}_column
 
     id = Column(Integer, primary_key=True)
-    column_name = Column(String(255))
+    column_name = Column(String(255), nullable=False)
     verbose_name = Column(String(1024))
     is_active = Column(Boolean, default=True)
     type = Column(String(32))
@@ -361,7 +363,7 @@ class BaseColumn(AuditMixinNullable, ImportMixin):
         return self.column_name
 
     num_types = (
-        'DOUBLE', 'FLOAT', 'INT', 'BIGINT',
+        'DOUBLE', 'FLOAT', 'INT', 'BIGINT', 'NUMBER',
         'LONG', 'REAL', 'NUMERIC', 'DECIMAL', 'MONEY',
     )
     date_types = ('DATE', 'TIME', 'DATETIME')
@@ -409,7 +411,7 @@ class BaseMetric(AuditMixinNullable, ImportMixin):
     __tablename__ = None  # {connector_name}_metric
 
     id = Column(Integer, primary_key=True)
-    metric_name = Column(String(512))
+    metric_name = Column(String(255), nullable=False)
     verbose_name = Column(String(1024))
     metric_type = Column(String(32))
     description = Column(Text)

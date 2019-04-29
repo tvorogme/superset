@@ -26,8 +26,8 @@ import random
 import re
 import string
 import unittest
+from unittest import mock
 
-import mock
 import pandas as pd
 import psycopg2
 import sqlalchemy as sqla
@@ -189,7 +189,6 @@ class CoreTests(SupersetTestCase):
             assert_func('ResetPasswordView', view_menus)
             assert_func('RoleModelView', view_menus)
             assert_func('Security', view_menus)
-            assert_func('UserDBModelView', view_menus)
             assert_func('SQL Lab',
                         view_menus)
 

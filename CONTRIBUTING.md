@@ -52,6 +52,7 @@ little bit helps, and credit will always be given.
   - [Creating a new visualization type](#creating-a-new-visualization-type)
   - [Adding a DB migration](#adding-a-db-migration)
   - [Merging DB migrations](#merging-db-migrations)
+  - [SQL Lab Async](#sql-lab-async)
 
 ## Types of Contributions
 
@@ -384,9 +385,6 @@ npm run dev
 
 # Compile the Javascript and CSS in production/optimized mode for official releases
 npm run prod
-
-# Copy a conf file from the frontend to the backend
-npm run sync-backend
 ```
 
 #### Updating NPM packages
@@ -462,6 +460,35 @@ Note that the test environment uses a temporary directory for defining the
 SQLite databases which will be cleared each time before the group of test
 commands are invoked.
 
+#### Typing
+
+To ensure clarity, consistency, all readability, _all_ new functions should use
+[type hints](https://docs.python.org/3/library/typing.html) and include a
+docstring using Sphinx documentation.
+
+Note per [PEP-484](https://www.python.org/dev/peps/pep-0484/#exceptions) no
+syntax for listing explicitly raised exceptions is proposed and thus the
+recommendation is to put this information in a docstring, i.e.,
+
+
+```python
+import math
+from typing import Union
+
+
+def sqrt(x: Union[float, int]) -> Union[float, int]:
+    """
+    Return the square root of x.
+
+    :param x: A number
+    :returns: The square root of the given number
+    :raises ValueError: If the number is negative
+    """
+
+    return math.sqrt(x)
+```
+
+
 ### JavaScript Testing
 
 We use [Jest](https://jestjs.io/) and [Enzyme](https://airbnb.io/enzyme/) to test Javascript. Tests can be run with:
@@ -490,6 +517,12 @@ Run Cypress tests:
 cd /superset/superset/assets
 npm run build
 npm run cypress run
+
+# run tests from a specific file
+npm run cypress run -- --spec cypress/integration/explore/link.test.js
+
+# run specific file with video capture
+npm run cypress run -- --spec cypress/integration/dashboard/index.test.js --config video=true
 ```
 
 ## Translating
@@ -657,3 +690,29 @@ To fix it:
     ```bash
     superset db upgrade
     ```
+
+### SQL Lab Async
+
+It's possible to configure a local database to operate in `async` mode,
+to work on `async` related features.
+
+To do this, you'll need to:
+* Add an additional database entry. We recommend you copy the connection
+  string from the database labeled `main`, and then enable `SQL Lab` and the 
+  features you want to use. Don't forget to check the `Async` box
+* Configure a results backend, here's a local `FileSystemCache` example,
+  not recommended for production,
+  but perfect for testing (stores cache in `/tmp`)
+    ```python
+    from werkzeug.contrib.cache import FileSystemCache
+    RESULTS_BACKEND = FileSystemCache('/tmp/sqllab')
+    ```
+
+Note that:
+* for changes that affect the worker logic, you'll have to
+  restart the `celery worker` process for the changes to be reflected.
+* The message queue used is a `sqlite` database using the `SQLAlchemy`
+  experimental broker. Ok for testing, but not recommended in production
+* In some cases, you may want to create a context that is more aligned
+  to your production environment, and use the similar broker as well as
+  results backend configuration
