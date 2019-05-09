@@ -22,7 +22,7 @@ import VirtualizedSelect from 'react-virtualized-select';
 import { Creatable } from 'react-select';
 import { Button } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
-
+import replaceTemplate from '../../utils/filterTemplates';
 import DateFilterControl from '../../explore/components/controls/DateFilterControl';
 import ControlRow from '../../explore/components/ControlRow';
 import Control from '../../explore/components/Control';
@@ -74,9 +74,6 @@ const defaultProps = {
   instantFiltering: true,
 };
 
-const profileViewContainer = document.getElementById('app');
-const bootstrap = JSON.parse(profileViewContainer.getAttribute('data-bootstrap'));
-
 class FilterBox extends React.Component {
   constructor(props) {
     super(props);
@@ -112,15 +109,14 @@ class FilterBox extends React.Component {
     });
     this.setState({ hasChanged: false });
   }
-
   changeFilter(filter, options) {
     const fltr = TIME_FILTER_MAP[filter] || filter;
     let vals = null;
     if (options !== null) {
       if (Array.isArray(options)) {
-        vals = options.map(opt => opt.value);
+        vals = options.map(opt => replaceTemplate(opt.value));
       } else if (options.value) {
-        vals = options.value;
+        vals = replaceTemplate(options.value);
       } else {
         vals = options;
       }
@@ -192,18 +188,6 @@ class FilterBox extends React.Component {
     return datasourceFilters;
   }
 
-  static replaceTemplate(x) {
-      const templates = {
-          '{email}': bootstrap.user.email,
-      };
-      if (x in templates){
-        return templates[x]
-      } else {
-        return x
-      }
-
-  }
-
   renderSelect(filterConfig) {
     const { filtersChoices } = this.props;
     const { selectedValues } = this.state;
@@ -233,7 +217,6 @@ class FilterBox extends React.Component {
     const data = this.props.filtersChoices[key];
     const max = Math.max(...data.map(d => d.metric));
     let value = selectedValues[key] || null;
-
     // Assign default value if required
     if (!value && filterConfig.defaultValue) {
       if (filterConfig.multiple) {
@@ -244,8 +227,6 @@ class FilterBox extends React.Component {
       }
     }
 
-    // Fill all templates with user information
-    value = value ? value.map(FilterBox.replaceTemplate) : value;
     return (
       <OnPasteSelect
         placeholder={t('Select [%s]', label)}
@@ -288,7 +269,6 @@ class FilterBox extends React.Component {
 
   render() {
     const { instantFiltering } = this.props;
-
     return (
       <div className="scrollbar-container">
         <div className="scrollbar-content">

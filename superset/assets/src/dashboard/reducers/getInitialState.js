@@ -28,6 +28,8 @@ import { applyDefaultFormData } from '../../explore/store';
 import findFirstParentContainerId from '../util/findFirstParentContainer';
 import getEmptyLayout from '../util/getEmptyLayout';
 import newComponentFactory from '../util/newComponentFactory';
+import replaceTemplate from '../../utils/filterTemplates';
+
 import {
   BUILDER_PANE_TYPE,
   DASHBOARD_HEADER_ID,
@@ -53,6 +55,18 @@ export default function(bootstrapData) {
   } catch (e) {
     //
   }
+
+  // Here we need to replace template with real data
+  for (let filter_id in filters){
+    if (filters.hasOwnProperty(filter_id)) {
+      for (let filter_default in filters[filter_id]){
+        if (filters[filter_id].hasOwnProperty(filter_default)) {
+          filters[filter_id][filter_default] = filters[filter_id][filter_default].map(replaceTemplate)
+        }
+      }
+    }
+  }
+  console.log(filters, "replaced");
 
   // Priming the color palette with user's label-color mapping provided in
   // the dashboard's JSON metadata
