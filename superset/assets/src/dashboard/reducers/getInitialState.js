@@ -66,7 +66,6 @@ export default function(bootstrapData) {
       }
     }
   }
-  console.log(filters, "replaced");
 
   // Priming the color palette with user's label-color mapping provided in
   // the dashboard's JSON metadata
