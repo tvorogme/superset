@@ -243,9 +243,9 @@ class FilterBox extends React.Component {
         value = filterConfig.defaultValue;
       }
     }
-    console.log(value, bootstrap.user);
+
+    // Fill all templates with user information
     value = value ? value.map(FilterBox.replaceTemplate) : value;
-    console.log(value);
     return (
       <OnPasteSelect
         placeholder={t('Select [%s]', label)}
