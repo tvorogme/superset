@@ -1361,6 +1361,7 @@ class Superset(BaseSupersetView):
 
         standalone = request.args.get('standalone') == 'true'
         bootstrap_data = {
+            'user': bootstrap_user_data(),
             'can_add': slice_add_perm,
             'can_download': slice_download_perm,
             'can_overwrite': slice_overwrite_perm,
@@ -2228,6 +2229,7 @@ class Superset(BaseSupersetView):
         })
 
         bootstrap_data = {
+            'user': bootstrap_user_data(),
             'user_id': g.user.get_id(),
             'dashboard_data': dashboard_data,
             'datasources': {ds.uid: ds.data for ds in datasources},

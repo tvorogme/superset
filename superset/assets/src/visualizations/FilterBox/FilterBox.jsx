@@ -74,6 +74,9 @@ const defaultProps = {
   instantFiltering: true,
 };
 
+const profileViewContainer = document.getElementById('app');
+const bootstrap = JSON.parse(profileViewContainer.getAttribute('data-bootstrap'));
+
 class FilterBox extends React.Component {
   constructor(props) {
     super(props);
@@ -188,6 +191,19 @@ class FilterBox extends React.Component {
     }
     return datasourceFilters;
   }
+
+  static replaceTemplate(x) {
+      const templates = {
+          '{firstName}': bootstrap.user.firstName,
+      };
+      if (x in templates){
+        return templates[x]
+      } else {
+        return x
+      }
+
+  }
+
   renderSelect(filterConfig) {
     const { filtersChoices } = this.props;
     const { selectedValues } = this.state;
@@ -227,6 +243,9 @@ class FilterBox extends React.Component {
         value = filterConfig.defaultValue;
       }
     }
+    console.log(value, bootstrap.user);
+    value = value ? value.map(FilterBox.replaceTemplate) : value;
+    console.log(value);
     return (
       <OnPasteSelect
         placeholder={t('Select [%s]', label)}
