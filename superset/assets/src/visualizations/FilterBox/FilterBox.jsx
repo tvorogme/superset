@@ -194,7 +194,7 @@ class FilterBox extends React.Component {
 
   static replaceTemplate(x) {
       const templates = {
-          '{firstName}': bootstrap.user.firstName,
+          '{email}': bootstrap.user.email,
       };
       if (x in templates){
         return templates[x]
