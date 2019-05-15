@@ -13,7 +13,7 @@ attrs==19.1.0             # via jsonschema
 babel==2.6.0              # via flask-babel
 billiard==3.5.0.4         # via celery
 bleach==3.0.2
-celery[gevent]
+celery[gevent]==4.2.0
 certifi==2018.8.24        # via requests
 cffi==1.11.5              # via cryptography
 chardet==3.0.4            # via requests
