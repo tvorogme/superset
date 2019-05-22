@@ -59,6 +59,7 @@ py==1.7.0                 # via retry
 pycparser==2.19           # via cffi
 pydruid==0.5.2
 pyjwt==1.7.1              # via flask-appbuilder, flask-jwt-extended
+pyodbc
 pyrsistent==0.14.11       # via jsonschema
 python-dateutil==2.6.1
 python-editor==1.0.3      # via alembic
