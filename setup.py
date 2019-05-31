@@ -96,7 +96,6 @@ setup(
         'python-dateutil',
         'python-geohash',
         'pyyaml>=3.13',
-        'redis',
         'requests>=2.20.0',
         'retry>=0.9.2',
         'selenium>=3.141.0',
