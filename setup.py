@@ -70,7 +70,7 @@ setup(
     scripts=['superset/bin/superset'],
     install_requires=[
         'bleach>=3.0.2, <4.0.0',
-        'celery>=4.2.0, <5.0.0',
+        'celery[gevent]>=4.2.0, <5.0.0',
         'click>=6.0, <7.0.0',  # `click`>=7 forces "-" instead of "_"
         'colorama',
         'contextlib2',
@@ -94,6 +94,7 @@ setup(
         'pathlib2',
         'polyline',
         'pydruid>=0.5.2',
+        'pyodbc',
         'python-dateutil',
         'python-dotenv',
         'python-geohash',
