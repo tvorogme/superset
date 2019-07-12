@@ -79,6 +79,7 @@ const defaultProps = {
 };
 
 class FilterBox extends React.Component {
+
   static replaceTemplate(x) {
     const templates = {
         '{email}': bootstrap.user.email,
@@ -86,6 +87,7 @@ class FilterBox extends React.Component {
         '{firstName}': bootstrap.user.firstName,
         '{lastName}': bootstrap.user.lastName,
     };
+
     if (x in templates) {
         return templates[x];
     }
@@ -247,8 +249,11 @@ class FilterBox extends React.Component {
     }
 
     if (value && value.length > 0) {
+      if (filterConfig.multiple) {
         value = value.map(FilterBox.replaceTemplate);
-        console.log(value);
+      } else {
+        value = FilterBox.replaceTemplate(filterConfig.defaultValue);
+      }
     }
 
     return (
