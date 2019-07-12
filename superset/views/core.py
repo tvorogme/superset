@@ -2520,6 +2520,7 @@ class Superset(BaseSupersetView):
 
         bootstrap_data = {
             "user_id": g.user.get_id(),
+            "user": bootstrap_user_data(),
             "dashboard_data": dashboard_data,
             "datasources": {ds.uid: ds.data for ds in datasources},
             "common": self.common_bootstrap_payload(),
