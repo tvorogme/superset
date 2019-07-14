@@ -33,7 +33,6 @@ import './FilterBox.css';
 
 const profileViewContainer = document.getElementById('app');
 const bootstrap = JSON.parse(profileViewContainer.getAttribute('data-bootstrap'));
-const user = { ...bootstrap.user };
 
 // maps control names to their key in extra_filters
 const TIME_FILTER_MAP = {
@@ -252,7 +251,7 @@ class FilterBox extends React.Component {
       if (filterConfig.multiple) {
         value = value.map(FilterBox.replaceTemplate);
       } else {
-        value = FilterBox.replaceTemplate(filterConfig.defaultValue);
+        value = FilterBox.replaceTemplate(value);
       }
     }
 
