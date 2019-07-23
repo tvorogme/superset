@@ -57,9 +57,11 @@ export default function(bootstrapData) {
 
   Object.keys(filters).forEach(filterId => {
     Object.keys(filters[filterId]).forEach(filterItem => {
-      filters[filterId][filterItem] = filters[filterId][filterItem].map(
-        replaceTemplate,
-      );
+      filters[filterId][filterItem] = !Array.isArray(
+        filters[filterId][filterItem],
+      )
+        ? replaceTemplate(filters[filterId][filterItem])
+        : filters[filterId][filterItem].map(replaceTemplate);
     });
   });
 
