@@ -30,9 +30,7 @@ import controls from '../../explore/controls';
 import OnPasteSelect from '../../components/OnPasteSelect';
 import VirtualizedRendererWrap from '../../components/VirtualizedRendererWrap';
 import './FilterBox.css';
-
-const profileViewContainer = document.getElementById('app');
-const bootstrap = JSON.parse(profileViewContainer.getAttribute('data-bootstrap'));
+import replaceTemplate from '../../utils/filterTemplates';
 
 // maps control names to their key in extra_filters
 const TIME_FILTER_MAP = {
@@ -78,20 +76,6 @@ const defaultProps = {
 };
 
 class FilterBox extends React.Component {
-
-  static replaceTemplate(x) {
-    const templates = {
-        '{email}': bootstrap.user.email,
-        '{username}': bootstrap.user.username,
-        '{firstName}': bootstrap.user.firstName,
-        '{lastName}': bootstrap.user.lastName,
-    };
-
-    if (x in templates) {
-        return templates[x];
-    }
-    return x;
-  }
 
   constructor(props) {
     super(props);
@@ -249,9 +233,9 @@ class FilterBox extends React.Component {
 
     if (value && value.length > 0) {
       if (filterConfig.multiple) {
-        value = value.map(FilterBox.replaceTemplate);
+        value = value.map(replaceTemplate);
       } else {
-        value = FilterBox.replaceTemplate(value);
+        value = replaceTemplate(value);
       }
     }
 

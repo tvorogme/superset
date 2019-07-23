@@ -28,6 +28,7 @@ import { applyDefaultFormData } from '../../explore/store';
 import findFirstParentContainerId from '../util/findFirstParentContainer';
 import getEmptyLayout from '../util/getEmptyLayout';
 import newComponentFactory from '../util/newComponentFactory';
+import replaceTemplate from '../../utils/filterTemplates';
 import {
   BUILDER_PANE_TYPE,
   DASHBOARD_HEADER_ID,
@@ -53,6 +54,14 @@ export default function(bootstrapData) {
   } catch (e) {
     //
   }
+
+  Object.keys(filters).forEach(filterId => {
+    Object.keys(filters[filterId]).forEach(filterItem => {
+      filters[filterId][filterItem] = filters[filterId][filterItem].map(
+        replaceTemplate,
+      );
+    });
+  });
 
   // Priming the color palette with user's label-color mapping provided in
   // the dashboard's JSON metadata
