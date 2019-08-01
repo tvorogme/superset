@@ -53,6 +53,7 @@ from superset import (
     db,
     event_logger,
     get_feature_flags,
+    is_feature_enabled,
     results_backend,
     security_manager,
     sql_lab,
@@ -591,35 +592,6 @@ class DashboardAddView(DashboardModelView):  # noqa
 appbuilder.add_view_no_menu(DashboardAddView)
 
 
-class LogModelView(SupersetModelView):
-    datamodel = SQLAInterface(models.Log)
-
-    list_title = _("Logs")
-    show_title = _("Show Log")
-    add_title = _("Add Log")
-    edit_title = _("Edit Log")
-
-    list_columns = ("user", "action", "dttm")
-    edit_columns = ("user", "action", "dttm", "json")
-    base_order = ("dttm", "desc")
-    label_columns = {
-        "user": _("User"),
-        "action": _("Action"),
-        "dttm": _("dttm"),
-        "json": _("JSON"),
-    }
-
-
-appbuilder.add_view(
-    LogModelView,
-    "Action Log",
-    label=__("Action Log"),
-    category="Security",
-    category_label=__("Security"),
-    icon="fa-list-ol",
-)
-
-
 @app.route("/health")
 def health():
     return "OK"
@@ -1076,12 +1048,18 @@ class Superset(BaseSupersetView):
         payload = viz_obj.get_payload()
         return data_payload_response(*viz_obj.payload_json_and_has_error(payload))
 
+    EXPLORE_JSON_METHODS = ["POST"]
+    if not is_feature_enabled("ENABLE_EXPLORE_JSON_CSRF_PROTECTION"):
+        EXPLORE_JSON_METHODS.append("GET")
+
     @event_logger.log_this
     @api
     @has_access_api
     @handle_api_exception
-    @expose("/explore_json/<datasource_type>/<datasource_id>/", methods=["GET", "POST"])
-    @expose("/explore_json/", methods=["GET", "POST"])
+    @expose(
+        "/explore_json/<datasource_type>/<datasource_id>/", methods=EXPLORE_JSON_METHODS
+    )
+    @expose("/explore_json/", methods=EXPLORE_JSON_METHODS)
     @etag_cache(CACHE_DEFAULT_TIMEOUT, check_perms=check_datasource_perms)
     def explore_json(self, datasource_type=None, datasource_id=None):
         """Serves all request that GET or POST form_data
@@ -2830,7 +2808,7 @@ class Superset(BaseSupersetView):
             return self.dashboard(str(welcome_dashboard_id))
 
         payload = {
-            "user": bootstrap_user_data(),
+            "user": bootstrap_user_data(g.user),
             "common": self.common_bootstrap_payload(),
         }
 
@@ -2848,8 +2826,14 @@ class Superset(BaseSupersetView):
         if not username and g.user:
             username = g.user.username
 
+        user = (
+            db.session.query(ab_models.User).filter_by(username=username).one_or_none()
+        )
+        if not user:
+            abort(404, description=f"User: {username} does not exist.")
+
         payload = {
-            "user": bootstrap_user_data(username, include_perms=True),
+            "user": bootstrap_user_data(user, include_perms=True),
             "common": self.common_bootstrap_payload(),
         }
 
