@@ -85,7 +85,7 @@ class TableLoader extends React.PureComponent {
         {...tableProps}
         className="table"
         itemsPerPage={50}
-        style={{ textTransform: 'capitalize' }}
+        // style={{ textTransform: 'capitalize' }}
       >
         {this.state.data.map((row, i) => (
           <Tr key={i}>
