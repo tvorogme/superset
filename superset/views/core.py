@@ -2492,11 +2492,10 @@ class Superset(BaseSupersetView):
             return json_success(payload)
         except Exception as e:
             logging.exception(e)
-            msg = _(
-                f"{validator.name} was unable to check your query.\nPlease "
-                "make sure that any services it depends on are available\n"
-                f"Exception: {e}"
-            )
+            # f strings are not supported by flask-babel
+            msg = _("{} was unable to check your query.\nPlease " +
+                    "make sure that any services it depends on are available\n" + 
+                    "Exception: {}").format(validator.name, e)
             return json_error_response(f"{msg}")
 
     @has_access_api
