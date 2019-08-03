@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-02 16:51+0300\n"
+"POT-Creation-Date: 2019-08-03 21:41+0300\n"
 "PO-Revision-Date: 2018-03-09 22:26+0200\n"
 "Last-Translator: Vladimir Gladkov <oxydash@github.com>\n"
 "Language: ru\n"
@@ -1031,7 +1031,7 @@ msgid "Copied!"
 msgstr "Копирование завершено"
 
 #: superset/assets/src/components/EditableTitle.jsx:37
-#: superset/views/core.py:488 superset/views/core.py:568
+#: superset/views/core.py:488 superset/views/core.py:569
 msgid "Title"
 msgstr "Заголовок"
 
@@ -1168,7 +1168,7 @@ msgstr ""
 
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:56
 #: superset/connectors/druid/views.py:374 superset/connectors/sqla/views.py:324
-#: superset/views/core.py:493 superset/views/core.py:570
+#: superset/views/core.py:493 superset/views/core.py:571
 #: superset/views/database/__init__.py:185 superset/views/sql_lab.py:115
 msgid "Modified"
 msgstr "Изменено"
@@ -3682,11 +3682,11 @@ msgstr "Изменение этого элемента применяется с
 
 #: superset/assets/src/explore/components/ControlPanelsContainer.jsx:153
 msgid "Data"
-msgstr ""
+msgstr "Данные"
 
 #: superset/assets/src/explore/components/ControlPanelsContainer.jsx:157
 msgid "Customize"
-msgstr ""
+msgstr "Настройки"
 
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:96
 msgid "Sorry, An error occurred"
@@ -3760,7 +3760,7 @@ msgstr "Достигнут предел"
 
 #: superset/assets/src/explore/components/SaveModal.jsx:101
 msgid "Please enter a chart name"
-msgstr ""
+msgstr "Введите имя графика"
 
 #: superset/assets/src/explore/components/SaveModal.jsx:116
 msgid "Please select a dashboard"
@@ -3777,11 +3777,11 @@ msgstr "Сохранить график"
 #: superset/assets/src/explore/components/SaveModal.jsx:180
 #, python-format
 msgid "Overwrite chart %s"
-msgstr ""
+msgstr "Перезаписать отчет %s"
 
 #: superset/assets/src/explore/components/SaveModal.jsx:195
 msgid "[chart name]"
-msgstr ""
+msgstr "[название графика]"
 
 #: superset/assets/src/explore/components/SaveModal.jsx:207
 msgid "Do not add to a dashboard"
@@ -3820,7 +3820,7 @@ msgstr ""
 
 #: superset/assets/src/explore/components/controls/AnnotationLayer.jsx:533
 msgid "Style"
-msgstr ""
+msgstr "Стиль"
 
 #: superset/assets/src/explore/components/controls/AnnotationLayer.jsx:577
 msgid "Line Width"
@@ -4567,7 +4567,7 @@ msgstr "Нет отчётов"
 #: superset/assets/src/profile/components/Favorites.jsx:78
 #: superset/assets/src/welcome/Welcome.jsx:46
 #: superset/assets/src/welcome/Welcome.jsx:49 superset/views/core.py:342
-#: superset/views/core.py:440 superset/views/core.py:547
+#: superset/views/core.py:440 superset/views/core.py:548
 msgid "Dashboards"
 msgstr "Отчёты"
 
@@ -4832,7 +4832,7 @@ msgstr ""
 #: superset/connectors/druid/views.py:408
 #: superset/connectors/druid/views.py:465
 #: superset/connectors/druid/views.py:474 superset/connectors/sqla/views.py:431
-#: superset/views/core.py:2971 superset/views/database/views.py:70
+#: superset/views/core.py:2972 superset/views/database/views.py:70
 msgid "Sources"
 msgstr "Источники"
 
@@ -5192,7 +5192,7 @@ msgid "SQL Query"
 msgstr "SQL запрос"
 
 #: superset/templates/appbuilder/navbar_right.html:35
-#: superset/views/core.py:487 superset/views/core.py:567
+#: superset/views/core.py:487 superset/views/core.py:568
 #: superset/views/schedules.py:194
 msgid "Dashboard"
 msgstr "Отчёт"
@@ -5220,6 +5220,10 @@ msgstr "Записи не найдены"
 #: superset/templates/appbuilder/general/widgets/search.html:24
 msgid "Filter List"
 msgstr "Фильтры"
+
+#: superset/templates/superset/add_slice.html:22
+msgid "Add new slice"
+msgstr "Добавить новый график"
 
 #: superset/templates/superset/import_dashboards.html:21
 msgid "Import dashboards"
@@ -5308,7 +5312,7 @@ msgid "Annotation Layers"
 msgstr "Слои аннотаций"
 
 #: superset/views/annotations.py:113 superset/views/annotations.py:122
-#: superset/views/core.py:2938 superset/views/database/views.py:59
+#: superset/views/core.py:2939 superset/views/database/views.py:59
 #: superset/views/schedules.py:280 superset/views/schedules.py:289
 #: superset/views/sql_lab.py:74
 msgid "Manage"
@@ -5425,7 +5429,7 @@ msgid ""
 msgstr ""
 
 #: superset/views/core.py:341 superset/views/core.py:492
-#: superset/views/core.py:569 superset/views/database/__init__.py:177
+#: superset/views/core.py:570 superset/views/database/__init__.py:177
 msgid "Creator"
 msgstr "Автор"
 
@@ -5484,7 +5488,7 @@ msgstr "Владельцы - это список пользователей, к�
 msgid ""
 "Determines whether or not this dashboard is visible in the list of all "
 "dashboards"
-msgstr ""
+msgstr "Определяет видимость этого отчета в списке всех отчетов"
 
 #: superset/views/core.py:489
 msgid "Slug"
@@ -5498,19 +5502,23 @@ msgstr "Позиция JSON"
 msgid "Underlying Tables"
 msgstr "Базовые таблицы"
 
-#: superset/views/core.py:521
+#: superset/views/core.py:498
+msgid "Published"
+msgstr ""
+
+#: superset/views/core.py:522
 msgid "Export"
 msgstr "Экспорт"
 
-#: superset/views/core.py:521
+#: superset/views/core.py:522
 msgid "Export dashboards?"
 msgstr "Экспортировать отчет?"
 
-#: superset/views/core.py:779
+#: superset/views/core.py:780
 msgid "Access was requested"
 msgstr "Запрошен доступ"
 
-#: superset/views/core.py:844
+#: superset/views/core.py:845
 #, python-format
 msgid ""
 "%(user)s was granted the role %(role)s that gives access to the "
@@ -5519,153 +5527,153 @@ msgstr ""
 "%(user)s была предоставлена роль %(role)s, которая дает доступ к ресурсам"
 " %(datasource)s"
 
-#: superset/views/core.py:867
+#: superset/views/core.py:868
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
 msgstr ""
 "Роль %(r) s была расширена для обеспечения доступа к источнику данных "
 "%(ds)s"
 
-#: superset/views/core.py:884
+#: superset/views/core.py:885
 msgid "You have no permission to approve this request"
 msgstr "У вас нет разрешения на утверждение этого запроса"
 
-#: superset/views/core.py:1111
+#: superset/views/core.py:1112
 #, python-format
 msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
 
-#: superset/views/core.py:1121
+#: superset/views/core.py:1122
 msgid "An unknown error occurred. Please contact your Superset administrator"
 msgstr ""
 
-#: superset/views/core.py:1206 superset/views/core.py:1212
-#: superset/views/core.py:1335 superset/views/core.py:1352
+#: superset/views/core.py:1207 superset/views/core.py:1213
+#: superset/views/core.py:1336 superset/views/core.py:1353
 msgid "You don't have the rights to "
 msgstr "У вас нет прав на "
 
-#: superset/views/core.py:1206 superset/views/core.py:1336
+#: superset/views/core.py:1207 superset/views/core.py:1337
 msgid "alter this "
 msgstr "изменить этот "
 
-#: superset/views/core.py:1206 superset/views/core.py:1212
+#: superset/views/core.py:1207 superset/views/core.py:1213
 msgid "chart"
 msgstr "график"
 
-#: superset/views/core.py:1212 superset/views/core.py:1353
+#: superset/views/core.py:1213 superset/views/core.py:1354
 msgid "create a "
 msgstr "создать "
 
-#: superset/views/core.py:1252
+#: superset/views/core.py:1253
 #, python-format
 msgid "Explore - %(table)s"
 msgstr ""
 
-#: superset/views/core.py:1337 superset/views/core.py:1354
+#: superset/views/core.py:1338 superset/views/core.py:1355
 msgid "dashboard"
 msgstr "отчёт"
 
-#: superset/views/core.py:1342
+#: superset/views/core.py:1343
 msgid "Chart [{}] was added to dashboard [{}]"
 msgstr "График [{}] добавлен в отчет [{}]"
 
-#: superset/views/core.py:1363
+#: superset/views/core.py:1364
 msgid "Dashboard [{}] just got created and chart [{}] was added to it"
 msgstr "Отчет [{}] создан и график [{}] был добавлен в него"
 
-#: superset/views/core.py:1389
+#: superset/views/core.py:1390
 msgid "Chart [{}] has been saved"
 msgstr ""
 
-#: superset/views/core.py:1398
+#: superset/views/core.py:1399
 msgid "Chart [{}] has been overwritten"
 msgstr "График [{}] был перезаписан"
 
-#: superset/views/core.py:1966
+#: superset/views/core.py:1967
 msgid ""
 "Malformed request. slice_id or table_name and db_name arguments are "
 "expected"
 msgstr "Неправильный запрос. Ожидаются аргументы slice_id или table_name и db_name"
 
-#: superset/views/core.py:1976
+#: superset/views/core.py:1977
 #, python-format
 msgid "Chart %(id)s not found"
 msgstr "График %(id)s не найден"
 
-#: superset/views/core.py:1990
+#: superset/views/core.py:1991
 #, python-format
 msgid "Table %(t)s wasn't found in the database %(d)s"
 msgstr "Таблица %(t)s не найдена в базе данных %(d)s"
 
-#: superset/views/core.py:2214
+#: superset/views/core.py:2215
 #, python-format
 msgid "Can't find User '%(name)s', please ask your admin to create one."
 msgstr ""
 "Не удалось найти пользователя ‘%(name)s’. Обратитесь к администратору, "
 "чтобы создать его."
 
-#: superset/views/core.py:2224
+#: superset/views/core.py:2225
 #, python-format
 msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
 msgstr "Не удалось найти DruidCluster с именем cluster_name = ‘%(name)s’"
 
-#: superset/views/core.py:2496
+#: superset/views/core.py:2497
 msgid ""
 "{} was unable to check your query.\n"
 "Please make sure that any services it depends on are available\n"
 "Exception: {}"
 msgstr ""
 
-#: superset/views/core.py:2558
+#: superset/views/core.py:2559
 msgid "Query record was not created as expected."
 msgstr "Запись запроса не была создана должным образом."
 
-#: superset/views/core.py:2594
+#: superset/views/core.py:2595
 msgid ""
 "Failed to start remote query on a worker. Tell your administrator to "
 "verify the availability of the message queue."
 msgstr ""
 
-#: superset/views/core.py:2841
+#: superset/views/core.py:2842
 #, python-format
 msgid "%(user)s's profile"
 msgstr "профиль пользователя %(user)s"
 
-#: superset/views/core.py:2916 superset/views/core.py:2935
+#: superset/views/core.py:2917 superset/views/core.py:2936
 msgid "CSS Templates"
 msgstr "Шаблоны CSS"
 
-#: superset/views/core.py:2917
+#: superset/views/core.py:2918
 msgid "Show CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2918
+#: superset/views/core.py:2919
 msgid "Add CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2919
+#: superset/views/core.py:2920
 msgid "Edit CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2924
+#: superset/views/core.py:2925
 msgid "Template Name"
 msgstr "Имя Шаблона"
 
-#: superset/views/core.py:2947
+#: superset/views/core.py:2948
 msgid "SQL Editor"
 msgstr "Редактор SQL"
 
-#: superset/views/core.py:2952 superset/views/core.py:2962
+#: superset/views/core.py:2953 superset/views/core.py:2963
 msgid "SQL Lab"
 msgstr "Лаборатория"
 
-#: superset/views/core.py:2957
+#: superset/views/core.py:2958
 msgid "Query Search"
 msgstr "Поиск запросов"
 
-#: superset/views/core.py:2967
+#: superset/views/core.py:2968
 msgid "Upload a CSV"
 msgstr "Загрузить CSV"
 

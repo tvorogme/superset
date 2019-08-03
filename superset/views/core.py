@@ -495,6 +495,7 @@ class DashboardModelView(SupersetModelView, DeleteMixin):  # noqa
         "css": _("CSS"),
         "json_metadata": _("JSON Metadata"),
         "table_names": _("Underlying Tables"),
+        "published": _("Published"),
     }
 
     def pre_add(self, obj):

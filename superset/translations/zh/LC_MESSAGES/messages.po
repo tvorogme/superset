@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Apache Superset 0.22.1\n"
 "Report-Msgid-Bugs-To: zhouyao94@qq.com\n"
-"POT-Creation-Date: 2019-08-02 16:51+0300\n"
+"POT-Creation-Date: 2019-08-03 21:41+0300\n"
 "PO-Revision-Date: 2019-01-04 22:19+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -1018,7 +1018,7 @@ msgid "Copied!"
 msgstr "复制成功！"
 
 #: superset/assets/src/components/EditableTitle.jsx:37
-#: superset/views/core.py:488 superset/views/core.py:568
+#: superset/views/core.py:488 superset/views/core.py:569
 msgid "Title"
 msgstr "标题"
 
@@ -1155,7 +1155,7 @@ msgstr ""
 
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:56
 #: superset/connectors/druid/views.py:374 superset/connectors/sqla/views.py:324
-#: superset/views/core.py:493 superset/views/core.py:570
+#: superset/views/core.py:493 superset/views/core.py:571
 #: superset/views/database/__init__.py:185 superset/views/sql_lab.py:115
 msgid "Modified"
 msgstr "已修改"
@@ -4452,7 +4452,7 @@ msgstr "没有看板"
 #: superset/assets/src/profile/components/Favorites.jsx:78
 #: superset/assets/src/welcome/Welcome.jsx:46
 #: superset/assets/src/welcome/Welcome.jsx:49 superset/views/core.py:342
-#: superset/views/core.py:440 superset/views/core.py:547
+#: superset/views/core.py:440 superset/views/core.py:548
 msgid "Dashboards"
 msgstr "看板"
 
@@ -4711,7 +4711,7 @@ msgstr ""
 #: superset/connectors/druid/views.py:408
 #: superset/connectors/druid/views.py:465
 #: superset/connectors/druid/views.py:474 superset/connectors/sqla/views.py:431
-#: superset/views/core.py:2971 superset/views/database/views.py:70
+#: superset/views/core.py:2972 superset/views/database/views.py:70
 msgid "Sources"
 msgstr "数据源"
 
@@ -5048,7 +5048,7 @@ msgid "SQL Query"
 msgstr ""
 
 #: superset/templates/appbuilder/navbar_right.html:35
-#: superset/views/core.py:487 superset/views/core.py:567
+#: superset/views/core.py:487 superset/views/core.py:568
 #: superset/views/schedules.py:194
 msgid "Dashboard"
 msgstr "看板"
@@ -5075,6 +5075,10 @@ msgstr "没有找到任何记录"
 
 #: superset/templates/appbuilder/general/widgets/search.html:24
 msgid "Filter List"
+msgstr ""
+
+#: superset/templates/superset/add_slice.html:22
+msgid "Add new slice"
 msgstr ""
 
 #: superset/templates/superset/import_dashboards.html:21
@@ -5164,7 +5168,7 @@ msgid "Annotation Layers"
 msgstr "注解层"
 
 #: superset/views/annotations.py:113 superset/views/annotations.py:122
-#: superset/views/core.py:2938 superset/views/database/views.py:59
+#: superset/views/core.py:2939 superset/views/database/views.py:59
 #: superset/views/schedules.py:280 superset/views/schedules.py:289
 #: superset/views/sql_lab.py:74
 msgid "Manage"
@@ -5277,7 +5281,7 @@ msgid ""
 msgstr "此图表的缓存超时持续时间(以秒为单位)。注意，如果未定义，这默认为数据源/表超时。"
 
 #: superset/views/core.py:341 superset/views/core.py:492
-#: superset/views/core.py:569 superset/views/database/__init__.py:177
+#: superset/views/core.py:570 superset/views/database/__init__.py:177
 msgid "Creator"
 msgstr "作者"
 
@@ -5347,168 +5351,172 @@ msgstr "位置参数"
 msgid "Underlying Tables"
 msgstr "底层表"
 
-#: superset/views/core.py:521
+#: superset/views/core.py:498
+msgid "Published"
+msgstr ""
+
+#: superset/views/core.py:522
 msgid "Export"
 msgstr "导出"
 
-#: superset/views/core.py:521
+#: superset/views/core.py:522
 msgid "Export dashboards?"
 msgstr "导出仪表盘?"
 
-#: superset/views/core.py:779
+#: superset/views/core.py:780
 msgid "Access was requested"
 msgstr "请求访问"
 
-#: superset/views/core.py:844
+#: superset/views/core.py:845
 #, python-format
 msgid ""
 "%(user)s was granted the role %(role)s that gives access to the "
 "%(datasource)s"
 msgstr "授予 %(user)s %(role)s 角色来访问 %(datasource)s 数据库"
 
-#: superset/views/core.py:867
+#: superset/views/core.py:868
 #, python-format
 msgid "Role %(r)s was extended to provide the access to the datasource %(ds)s"
 msgstr "扩展角色 %(r)s 以提供对 datasource %(ds)s 的访问"
 
-#: superset/views/core.py:884
+#: superset/views/core.py:885
 msgid "You have no permission to approve this request"
 msgstr "您没有权限批准此请求"
 
-#: superset/views/core.py:1111
+#: superset/views/core.py:1112
 #, python-format
 msgid ""
 "Cannot import dashboard: %(db_error)s.\n"
 "Make sure to create the database before importing the dashboard."
 msgstr ""
 
-#: superset/views/core.py:1121
+#: superset/views/core.py:1122
 msgid "An unknown error occurred. Please contact your Superset administrator"
 msgstr ""
 
-#: superset/views/core.py:1206 superset/views/core.py:1212
-#: superset/views/core.py:1335 superset/views/core.py:1352
+#: superset/views/core.py:1207 superset/views/core.py:1213
+#: superset/views/core.py:1336 superset/views/core.py:1353
 msgid "You don't have the rights to "
 msgstr "你没有授权 "
 
-#: superset/views/core.py:1206 superset/views/core.py:1336
+#: superset/views/core.py:1207 superset/views/core.py:1337
 msgid "alter this "
 msgstr "修改这个 "
 
-#: superset/views/core.py:1206 superset/views/core.py:1212
+#: superset/views/core.py:1207 superset/views/core.py:1213
 msgid "chart"
 msgstr "图表"
 
-#: superset/views/core.py:1212 superset/views/core.py:1353
+#: superset/views/core.py:1213 superset/views/core.py:1354
 msgid "create a "
 msgstr "创建一个 "
 
-#: superset/views/core.py:1252
+#: superset/views/core.py:1253
 #, python-format
 msgid "Explore - %(table)s"
 msgstr ""
 
-#: superset/views/core.py:1337 superset/views/core.py:1354
+#: superset/views/core.py:1338 superset/views/core.py:1355
 msgid "dashboard"
 msgstr "看板"
 
-#: superset/views/core.py:1342
+#: superset/views/core.py:1343
 msgid "Chart [{}] was added to dashboard [{}]"
 msgstr ""
 
-#: superset/views/core.py:1363
+#: superset/views/core.py:1364
 msgid "Dashboard [{}] just got created and chart [{}] was added to it"
 msgstr ""
 
-#: superset/views/core.py:1389
+#: superset/views/core.py:1390
 msgid "Chart [{}] has been saved"
 msgstr ""
 
-#: superset/views/core.py:1398
+#: superset/views/core.py:1399
 msgid "Chart [{}] has been overwritten"
 msgstr ""
 
-#: superset/views/core.py:1966
+#: superset/views/core.py:1967
 msgid ""
 "Malformed request. slice_id or table_name and db_name arguments are "
 "expected"
 msgstr "格式错误的请求。需要使用 slice_id 或 table_name 和 db_name 参数"
 
-#: superset/views/core.py:1976
+#: superset/views/core.py:1977
 #, python-format
 msgid "Chart %(id)s not found"
 msgstr "图表 %(id)s 没有找到"
 
-#: superset/views/core.py:1990
+#: superset/views/core.py:1991
 #, python-format
 msgid "Table %(t)s wasn't found in the database %(d)s"
 msgstr "在数据库 %(d)s 中找不到表 %(t)s"
 
-#: superset/views/core.py:2214
+#: superset/views/core.py:2215
 #, python-format
 msgid "Can't find User '%(name)s', please ask your admin to create one."
 msgstr "用户’%(name)s’没有找到，请联系管理员创建。"
 
-#: superset/views/core.py:2224
+#: superset/views/core.py:2225
 #, python-format
 msgid "Can't find DruidCluster with cluster_name = '%(name)s'"
 msgstr "不能找到具有 cluster_name = '%(name)s' 的 Druid 集群"
 
-#: superset/views/core.py:2496
+#: superset/views/core.py:2497
 msgid ""
 "{} was unable to check your query.\n"
 "Please make sure that any services it depends on are available\n"
 "Exception: {}"
 msgstr ""
 
-#: superset/views/core.py:2558
+#: superset/views/core.py:2559
 msgid "Query record was not created as expected."
 msgstr "查询记录没有按预期创建。"
 
-#: superset/views/core.py:2594
+#: superset/views/core.py:2595
 msgid ""
 "Failed to start remote query on a worker. Tell your administrator to "
 "verify the availability of the message queue."
 msgstr ""
 
-#: superset/views/core.py:2841
+#: superset/views/core.py:2842
 #, python-format
 msgid "%(user)s's profile"
 msgstr ""
 
-#: superset/views/core.py:2916 superset/views/core.py:2935
+#: superset/views/core.py:2917 superset/views/core.py:2936
 msgid "CSS Templates"
 msgstr "CSS 模板"
 
-#: superset/views/core.py:2917
+#: superset/views/core.py:2918
 msgid "Show CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2918
+#: superset/views/core.py:2919
 msgid "Add CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2919
+#: superset/views/core.py:2920
 msgid "Edit CSS Template"
 msgstr ""
 
-#: superset/views/core.py:2924
+#: superset/views/core.py:2925
 msgid "Template Name"
 msgstr "模板名称"
 
-#: superset/views/core.py:2947
+#: superset/views/core.py:2948
 msgid "SQL Editor"
 msgstr "SQL 编辑器"
 
-#: superset/views/core.py:2952 superset/views/core.py:2962
+#: superset/views/core.py:2953 superset/views/core.py:2963
 msgid "SQL Lab"
 msgstr "SQL 工具箱"
 
-#: superset/views/core.py:2957
+#: superset/views/core.py:2958
 msgid "Query Search"
 msgstr "查询搜索"
 
-#: superset/views/core.py:2967
+#: superset/views/core.py:2968
 msgid "Upload a CSV"
 msgstr "上传CSV文件"
 
