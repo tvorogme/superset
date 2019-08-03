@@ -616,11 +616,11 @@ msgstr "Экспорт в CSV"
 
 #: superset/assets/src/SqlLab/components/ResultSet.jsx:146
 msgid "Clipboard"
-msgstr ""
+msgstr "Скопировать"
 
 #: superset/assets/src/SqlLab/components/ResultSet.jsx:159
 msgid "Filter Results"
-msgstr ""
+msgstr "Фильтровать результаты"
 
 #: superset/assets/src/SqlLab/components/ResultSet.jsx:185
 msgid "(Request Access)"
@@ -646,7 +646,7 @@ msgstr ""
 
 #: superset/assets/src/SqlLab/components/ResultSet.jsx:239
 msgid "Fetch data preview"
-msgstr "Получить данные для просмотра"
+msgstr "Загрузить данные для предпросмотра"
 
 #: superset/assets/src/SqlLab/components/ResultSet.jsx:259
 msgid "Track Job"
@@ -755,7 +755,7 @@ msgstr "Скопировать в буфер обмена"
 
 #: superset/assets/src/SqlLab/components/ShareSqlLabQuery.jsx:90
 msgid "Share Query"
-msgstr ""
+msgstr "Поделиться запросом"
 
 #: superset/assets/src/SqlLab/components/SouthPane.jsx:103
 msgid "Run a query to display results here"
@@ -764,7 +764,7 @@ msgstr "Выполнить запрос для отображения резул
 #: superset/assets/src/SqlLab/components/SouthPane.jsx:107
 #, python-format
 msgid "Preview: `%s`"
-msgstr ""
+msgstr "Предпросмотр: `%s`"
 
 #: superset/assets/src/SqlLab/components/SouthPane.jsx:133
 msgid "Results"
@@ -777,15 +777,15 @@ msgstr "История запросов"
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:178
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:184
 msgid "Run query"
-msgstr ""
+msgstr "Выполнить запрос"
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:190
 msgid "New tab"
-msgstr ""
+msgstr "Новая вкладка"
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:202
 msgid "Stop query"
-msgstr ""
+msgstr "Остановить запрос"
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:322
 msgid "Create table as with query results"
@@ -813,7 +813,7 @@ msgstr ""
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:429
 msgid "Keyboard shortcuts"
-msgstr ""
+msgstr "Горячие клавиши"
 
 #: superset/assets/src/SqlLab/components/SqlEditorLeftBar.jsx:134
 msgid "Reset State"
@@ -830,11 +830,11 @@ msgstr "Запрос без имени %s"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:218
 msgid "Close tab"
-msgstr ""
+msgstr "Закрыть вкладку"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:224
 msgid "Rename tab"
-msgstr ""
+msgstr "Переименовать вкалдку"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:230
 msgid "Expand tool bar"
@@ -875,7 +875,7 @@ msgstr "Расположение столбцов как в исходной т�
 
 #: superset/assets/src/SqlLab/components/TableElement.jsx:172
 msgid "Copy SELECT statement to the clipboard"
-msgstr ""
+msgstr "Скопировать SELECT запрос в буфер обмена"
 
 #: superset/assets/src/SqlLab/components/TableElement.jsx:178
 msgid "Remove table preview"
@@ -916,7 +916,7 @@ msgstr "Копирование %s"
 
 #: superset/assets/src/addSlice/AddSliceContainer.jsx:80
 msgid "Create a new chart"
-msgstr ""
+msgstr "Создать новый график"
 
 #: superset/assets/src/addSlice/AddSliceContainer.jsx:82
 #: superset/assets/src/addSlice/AddSliceContainer.jsx:90
@@ -939,7 +939,7 @@ msgstr "Выберите тип диаграммы"
 
 #: superset/assets/src/addSlice/AddSliceContainer.jsx:120
 msgid "Create new chart"
-msgstr ""
+msgstr "Создать новый график"
 
 #: superset/assets/src/chart/chartAction.js:297
 msgid "An error occurred while loading the SQL"
@@ -1014,7 +1014,7 @@ msgstr "Нажмите для принудительного обновлени�
 
 #: superset/assets/src/components/CachedLabel.jsx:81
 msgid "cached"
-msgstr ""
+msgstr "из кэша"
 
 #: superset/assets/src/components/CopyToClipboard.jsx:93
 msgid "Not successful"
@@ -1037,7 +1037,7 @@ msgstr "Заголовок"
 
 #: superset/assets/src/components/EditableTitle.jsx:192
 msgid "click to edit"
-msgstr ""
+msgstr "нажмите для редактирования"
 
 #: superset/assets/src/components/EditableTitle.jsx:193
 msgid "You don't have the rights to alter this title."
@@ -1087,7 +1087,7 @@ msgstr "Схема:"
 
 #: superset/assets/src/components/TableSelector.jsx:258
 msgid "Force refresh schema list"
-msgstr ""
+msgstr "Принудительно обновить список схем"
 
 #: superset/assets/src/components/TableSelector.jsx:266
 msgid "Type to search ..."
@@ -1099,19 +1099,19 @@ msgstr ""
 
 #: superset/assets/src/components/TableSelector.jsx:278
 msgid "Select table or type table name"
-msgstr ""
+msgstr "Выберите таблицу или напишите её название"
 
 #: superset/assets/src/components/TableSelector.jsx:299
 msgid "Force refresh table list"
-msgstr ""
+msgstr "Принудительно обновить список таблиц"
 
 #: superset/assets/src/components/TableSelector.jsx:306
 msgid "See table schema"
-msgstr ""
+msgstr "Просмотр схемы таблицы"
 
 #: superset/assets/src/components/TableSelector.jsx:309
 msgid "in"
-msgstr ""
+msgstr "в"
 
 #: superset/assets/src/components/URLShortLinkButton.jsx:56
 #: superset/assets/src/components/URLShortLinkModal.jsx:62
@@ -1121,7 +1121,7 @@ msgstr ""
 
 #: superset/assets/src/components/URLShortLinkModal.jsx:69
 msgid "Share Dashboard"
-msgstr ""
+msgstr "Поделиться отчетом"
 
 #: superset/assets/src/components/FilterableTable/FilterableTable.jsx:247
 msgid "Cell Content"
@@ -1179,11 +1179,11 @@ msgstr ""
 
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:64
 msgid "Data source"
-msgstr ""
+msgstr "Источник данных"
 
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:71
 msgid "Added"
-msgstr ""
+msgstr "Добавлен"
 
 #: superset/assets/src/dashboard/components/CodeModal.jsx:57
 msgid "Active Dashboard Filters"
@@ -1224,7 +1224,7 @@ msgstr "У вас есть несохраненные изменения."
 
 #: superset/assets/src/dashboard/components/DeleteComponentModal.jsx:61
 msgid "Delete dashboard tab?"
-msgstr ""
+msgstr "Удалить вкладку отчета?"
 
 #: superset/assets/src/dashboard/components/DeleteComponentModal.jsx:70
 #: superset/views/base.py:281
@@ -1238,23 +1238,23 @@ msgstr ""
 #: superset/assets/src/dashboard/components/Header.jsx:350
 #: superset/assets/src/dashboard/components/InsertComponentPane.jsx:69
 msgid "Insert components"
-msgstr ""
+msgstr "Добавить компоненты"
 
 #: superset/assets/src/dashboard/components/Header.jsx:360
 msgid "Colors"
-msgstr ""
+msgstr "Цвета"
 
 #: superset/assets/src/dashboard/components/Header.jsx:370
 msgid "Save changes"
-msgstr ""
+msgstr "Сохранить изменения"
 
 #: superset/assets/src/dashboard/components/Header.jsx:381
 msgid "Switch to view mode"
-msgstr ""
+msgstr "Переключиться в режим просмотра"
 
 #: superset/assets/src/dashboard/components/Header.jsx:401
 msgid "Edit dashboard"
-msgstr ""
+msgstr "Редактировать отчет"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:93
 msgid "An error occurred while fetching available CSS templates"
@@ -1275,23 +1275,23 @@ msgstr "Сохранить как"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:170
 msgid "Discard changes"
-msgstr ""
+msgstr "Отменить изменения"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:178
 msgid "Force refresh dashboard"
-msgstr ""
+msgstr "Принудительно обновить отчет"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:184
 msgid "Set auto-refresh interval"
-msgstr ""
+msgstr "Установить интервал автоматического обновления"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:189
 msgid "Edit dashboard metadata"
-msgstr ""
+msgstr "Редактировать параметры отчета"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:203
 msgid "Share dashboard"
-msgstr ""
+msgstr "Поделиться отчетом"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:208
 msgid "Edit CSS"
@@ -1299,11 +1299,11 @@ msgstr "Редактировать CSS"
 
 #: superset/assets/src/dashboard/components/InsertComponentPane.jsx:83
 msgid "Your charts & filters"
-msgstr ""
+msgstr "Ваши графики и фильтры"
 
 #: superset/assets/src/dashboard/components/InsertComponentPane.jsx:102
 msgid "Your charts and filters"
-msgstr ""
+msgstr "Ваши графики и фильтры"
 
 #: superset/assets/src/dashboard/components/MissingChart.jsx:36
 msgid ""
@@ -1330,7 +1330,7 @@ msgstr ""
 
 #: superset/assets/src/dashboard/components/PublishedStatus.jsx:42
 msgid "This dashboard is published. Click to make it a draft."
-msgstr ""
+msgstr "Этот отчет опубликован. Нажмите, чтобы сделать черновиком"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:33
 msgid "Don't refresh"
@@ -1354,23 +1354,23 @@ msgstr "5 минут"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:38
 msgid "30 minutes"
-msgstr ""
+msgstr "30 минут"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:39
 msgid "1 hour"
-msgstr ""
+msgstr "1 час"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:40
 msgid "6 hours"
-msgstr ""
+msgstr "6 часов"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:41
 msgid "12 hours"
-msgstr ""
+msgstr "12 часов"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:42
 msgid "24 hours"
-msgstr ""
+msgstr "24 часа"
 
 #: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:57
 msgid "Refresh Interval"
@@ -1426,11 +1426,11 @@ msgstr ""
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:118
 #, python-format
 msgid "Fetched %s"
-msgstr ""
+msgstr "Загружено %s"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:134
 msgid "Force refresh"
-msgstr ""
+msgstr "Принудительно обновить"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:142
 msgid "Toggle chart description"
@@ -1438,11 +1438,11 @@ msgstr "Переключить описание графика"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:148
 msgid "Edit chart metadata"
-msgstr ""
+msgstr "Редактировать параметры графика"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:153
 msgid "Export CSV"
-msgstr "Export CSV"
+msgstr "Экспортировать CSV"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:158
 msgid "Explore chart"
@@ -1451,7 +1451,7 @@ msgstr "Обзор графика"
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:170
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:171
 msgid "Share chart"
-msgstr ""
+msgstr "Поделиться графиком"
 
 #: superset/assets/src/dashboard/components/gridComponents/new/NewColumn.jsx:31
 #: superset/assets/src/datasource/DatasourceEditor.jsx:116
@@ -1463,19 +1463,19 @@ msgstr "Колонка"
 
 #: superset/assets/src/dashboard/components/gridComponents/new/NewDivider.jsx:31
 msgid "Divider"
-msgstr ""
+msgstr "Разделитель"
 
 #: superset/assets/src/dashboard/components/gridComponents/new/NewHeader.jsx:31
 msgid "Header"
-msgstr ""
+msgstr "Заголовок"
 
 #: superset/assets/src/dashboard/components/gridComponents/new/NewRow.jsx:31
 msgid "Row"
-msgstr ""
+msgstr "Строка"
 
 #: superset/assets/src/dashboard/components/gridComponents/new/NewTabs.jsx:31
 msgid "Tabs"
-msgstr ""
+msgstr "Владки"
 
 #: superset/assets/src/dashboard/components/menu/MarkdownModeDropdown.jsx:34
 #: superset/assets/src/explore/components/controls/TextAreaControl.jsx:117
@@ -1484,7 +1484,7 @@ msgstr "Редактировать"
 
 #: superset/assets/src/dashboard/components/menu/MarkdownModeDropdown.jsx:38
 msgid "Preview"
-msgstr ""
+msgstr "Предпросмотр"
 
 #: superset/assets/src/dashboard/util/backgroundStyleOptions.js:25
 msgid "Transparent"
@@ -3713,7 +3713,7 @@ msgstr "Посмотреть результат"
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:233
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:234
 msgid "View samples"
-msgstr "Посмотреть пример"
+msgstr "Посмотреть образец"
 
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:245
 msgid "Run in SQL Lab"
@@ -4557,7 +4557,7 @@ msgstr "Безопасность и Доступ"
 
 #: superset/assets/src/profile/components/CreatedContent.jsx:52
 msgid "No charts"
-msgstr ""
+msgstr "Нет графиков"
 
 #: superset/assets/src/profile/components/CreatedContent.jsx:68
 msgid "No dashboards"
@@ -4927,7 +4927,7 @@ msgstr "Смещение Времени"
 
 #: superset/connectors/druid/views.py:371
 msgid "Datasource Name"
-msgstr "Название таблицы"
+msgstr "Название источника данных"
 
 #: superset/connectors/druid/views.py:372
 msgid "Fetch Values From"
