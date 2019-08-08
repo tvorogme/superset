@@ -371,7 +371,7 @@ msgstr ""
 
 #: superset/assets/src/CRUD/CollectionTable.jsx:231
 msgid "Add Item"
-msgstr ""
+msgstr "Добавить"
 
 #: superset/assets/src/SqlLab/actions/sqlLab.js:108
 msgid "Your query was saved"
@@ -1147,11 +1147,11 @@ msgstr ""
 
 #: superset/assets/src/dashboard/actions/dashboardState.js:115
 msgid "This dashboard is now ${nowPublished}"
-msgstr ""
+msgstr "Этот отчет сейчас ${nowPublished}"
 
 #: superset/assets/src/dashboard/actions/dashboardState.js:121
 msgid "You do not have permissions to edit this dashboard."
-msgstr ""
+msgstr "У вас нет прав для редактирования этого отчета"
 
 #: superset/assets/src/dashboard/actions/dashboardState.js:178
 msgid "This dashboard was saved successfully."
@@ -1233,7 +1233,7 @@ msgstr "Удалить"
 
 #: superset/assets/src/dashboard/components/Header.jsx:248
 msgid "Your dashboard is too large. Please reduce the size before save it."
-msgstr ""
+msgstr "Отчет слишком большой. Пожалуйста, уменьшите его размер перед сохранением."
 
 #: superset/assets/src/dashboard/components/Header.jsx:350
 #: superset/assets/src/dashboard/components/InsertComponentPane.jsx:69
@@ -1404,11 +1404,11 @@ msgstr "[название отчёта]"
 
 #: superset/assets/src/dashboard/components/SaveModal.jsx:184
 msgid "also copy (duplicate) charts"
-msgstr ""
+msgstr "также скопировать (продублировать) графики"
 
 #: superset/assets/src/dashboard/components/SliceAdder.jsx:225
 msgid "Filter your charts"
-msgstr ""
+msgstr "Фильтровать графики"
 
 #: superset/assets/src/dashboard/components/SliceHeader.jsx:72
 msgid "Annotation layers are still loading."
@@ -1421,7 +1421,7 @@ msgstr "Один или несколько слоев аннотации не у
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:117
 #, python-format
 msgid "Cached %s"
-msgstr ""
+msgstr "Из кэша %s"
 
 #: superset/assets/src/dashboard/components/SliceHeaderControls.jsx:118
 #, python-format
@@ -1500,7 +1500,7 @@ msgstr ""
 msgid "Small"
 msgstr ""
 
-#: superset/assets/src/dashboard/util/headerStyleOptions.js:30
+#: superset/assets/src/dashboard/utсil/headerStyleOptions.js:30
 msgid "Medium"
 msgstr ""
 
@@ -1754,7 +1754,7 @@ msgstr ""
 
 #: superset/assets/src/datasource/DatasourceModal.jsx:81
 msgid "The datasource has been saved"
-msgstr "Отчет был сохранен"
+msgstr "Источник данных был сохранен"
 
 #: superset/assets/src/datasource/DatasourceModal.jsx:118
 msgid ""
@@ -3752,7 +3752,7 @@ msgstr ""
 
 #: superset/assets/src/explore/components/RowCountLabel.jsx:35
 msgid "rows"
-msgstr ""
+msgstr "строк"
 
 #: superset/assets/src/explore/components/RowCountLabel.jsx:45
 msgid "Limit reached"
@@ -5504,7 +5504,7 @@ msgstr "Базовые таблицы"
 
 #: superset/views/core.py:498
 msgid "Published"
-msgstr ""
+msgstr "Опубликован"
 
 #: superset/views/core.py:522
 msgid "Export"

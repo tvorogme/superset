@@ -251,7 +251,7 @@
                 ""
             ],
             "Add Item": [
-                ""
+                "Добавить"
             ],
             "Your query was saved": [
                 "Ваш запрос был сохранен"
@@ -758,10 +758,10 @@
                 ""
             ],
             "This dashboard is now ${nowPublished}": [
-                ""
+                "Этот отчет сейчас ${nowPublished}"
             ],
             "You do not have permissions to edit this dashboard.": [
-                ""
+                "У вас нет прав для редактирования этого отчета"
             ],
             "This dashboard was saved successfully.": [
                 "Отчёт успешно сохранен."
@@ -815,7 +815,7 @@
                 "Удалить"
             ],
             "Your dashboard is too large. Please reduce the size before save it.": [
-                ""
+                "Отчет слишком большой. Пожалуйста, уменьшите его размер перед сохранением."
             ],
             "Insert components": [
                 "Добавить компоненты"
@@ -935,10 +935,10 @@
                 "[название отчёта]"
             ],
             "also copy (duplicate) charts": [
-                ""
+                "также скопировать (продублировать) графики"
             ],
             "Filter your charts": [
-                ""
+                "Фильтровать графики"
             ],
             "Annotation layers are still loading.": [
                 "Слои аннотаций загружаются."
@@ -947,7 +947,7 @@
                 "Один или несколько слоев аннотации не удалось загрузить."
             ],
             "Cached %s": [
-                ""
+                "Из кэша %s"
             ],
             "Fetched %s": [
                 "Загружено %s"
@@ -1151,7 +1151,7 @@
                 ""
             ],
             "The datasource has been saved": [
-                "Отчет был сохранен"
+                "Источник данных был сохранен"
             ],
             "The data source configuration exposed here\n                affects all the charts using this datasource.\n                Be mindful that changing settings\n                here may affect other charts\n                in undesirable ways.": [
                 ""
@@ -2450,7 +2450,7 @@
                 ""
             ],
             "rows": [
-                ""
+                "строк"
             ],
             "Limit reached": [
                 "Достигнут предел"
@@ -3368,7 +3368,7 @@
                 "Фильтры"
             ],
             "Add new slice": [
-                ""
+                "Добавить новый график"
             ],
             "Import dashboards": [
                 "Импортировать отчеты"
@@ -3551,7 +3551,7 @@
                 "Базовые таблицы"
             ],
             "Published": [
-                ""
+                "Опубликован"
             ],
             "Export": [
                 "Экспорт"
