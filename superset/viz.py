@@ -1068,6 +1068,9 @@ class BigNumberTotalViz(BaseViz):
             raise Exception(_("Pick a metric!"))
         d["metrics"] = [self.form_data.get("metric")]
         self.form_data["metric"] = metric
+
+        # Limiting rows is not required as only one cell is returned
+        d["row_limit"] = None
         return d
 
 
@@ -1398,7 +1401,11 @@ class NVD3TimePivotViz(NVD3TimeSeriesViz):
         fd = self.form_data
         df = self.process_data(df)
         freq = to_offset(fd.get("freq"))
-        freq.normalize = True
+        try:
+            freq = type(freq)(freq.n, normalize=True, **freq.kwds)
+        except ValueError:
+            freq = type(freq)(freq.n, **freq.kwds)
+        df.index.name = None
         df[DTTM_ALIAS] = df.index.map(freq.rollback)
         df["ranked"] = df[DTTM_ALIAS].rank(method="dense", ascending=False) - 1
         df.ranked = df.ranked.map(int)

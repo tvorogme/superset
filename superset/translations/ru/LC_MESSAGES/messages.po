@@ -271,7 +271,7 @@ msgstr ""
 
 #: superset/viz.py:1888
 msgid "Heatmap"
-msgstr ""
+msgstr "Тепловая карта"
 
 #: superset/viz.py:1941
 msgid "Horizon Charts"
@@ -739,7 +739,7 @@ msgstr ""
 #: superset/assets/src/SqlLab/components/ShareSqlLabQuery.jsx:45
 #: superset/assets/src/SqlLab/components/ShareSqlLabQuery.jsx:72
 msgid "Loading ..."
-msgstr ""
+msgstr "Загрузка ..."
 
 #: superset/assets/src/SqlLab/components/ShareSqlLabQuery.jsx:63
 msgid "Error"
