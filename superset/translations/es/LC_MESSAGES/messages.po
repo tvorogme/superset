@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-03 21:41+0300\n"
+"POT-Creation-Date: 2019-08-09 16:38+0300\n"
 "PO-Revision-Date: 2018-11-03 00:11+0100\n"
 "Last-Translator: Joe Bordes <joe@tsolucio.com>\n"
 "Language: es\n"
@@ -40,7 +40,7 @@ msgstr ""
 msgid "Viz is missing a datasource"
 msgstr "Falta una fuente de datos"
 
-#: superset/utils/core.py:1098 superset/viz.py:295
+#: superset/utils/core.py:1107 superset/viz.py:295
 msgid "From date cannot be larger than to date"
 msgstr "La fecha de inicio no puede ser superior a la de fin"
 
@@ -62,7 +62,7 @@ msgstr ""
 msgid "Time Table View"
 msgstr ""
 
-#: superset/viz.py:617 superset/viz.py:1529
+#: superset/viz.py:617 superset/viz.py:1536
 msgid "Pick at least one metric"
 msgstr "Elige al menos una métrica"
 
@@ -138,93 +138,93 @@ msgstr "Elige una métrica!"
 msgid "Big Number"
 msgstr "Número Grande"
 
-#: superset/viz.py:1079
+#: superset/viz.py:1082
 msgid "Time Series - Line Chart"
 msgstr "Serie Temporal - Gráfico de Líneas"
 
-#: superset/viz.py:1142 superset/viz.py:1365
+#: superset/viz.py:1145 superset/viz.py:1368
 msgid "Pick a time granularity for your time series"
 msgstr "Elige una granularidad de tiempo para tus series de tiempo."
 
-#: superset/viz.py:1211
+#: superset/viz.py:1214
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr ""
 
-#: superset/viz.py:1281
+#: superset/viz.py:1284
 msgid "Time Series - Multiple Line Charts"
 msgstr ""
 
-#: superset/viz.py:1311
+#: superset/viz.py:1314
 msgid "Time Series - Dual Axis Line Chart"
 msgstr "Series temporales - Gráfico de líneas de doble eje"
 
-#: superset/viz.py:1321
+#: superset/viz.py:1324
 msgid "Pick a metric for left axis!"
 msgstr "Elige una métrica para el eje izquierdo!"
 
-#: superset/viz.py:1323
+#: superset/viz.py:1326
 msgid "Pick a metric for right axis!"
 msgstr "Elige una métrica para el eje derecho!"
 
-#: superset/viz.py:1326
+#: superset/viz.py:1329
 msgid "Please choose different metrics on left and right axis"
 msgstr "Por favor, elige diferentes métricas en el eje izquierdo y derecho"
 
-#: superset/viz.py:1381
+#: superset/viz.py:1384
 msgid "Time Series - Bar Chart"
 msgstr "Series de Tiempo - Gráfico de Barras"
 
-#: superset/viz.py:1390
+#: superset/viz.py:1393
 msgid "Time Series - Period Pivot"
 msgstr ""
 
-#: superset/viz.py:1431
+#: superset/viz.py:1438
 msgid "Time Series - Percent Change"
 msgstr "Series de tiempo - Cambio Porcentual"
 
-#: superset/viz.py:1439
+#: superset/viz.py:1446
 msgid "Time Series - Stacked"
 msgstr "Series de Tiempo - Apiladas"
 
-#: superset/viz.py:1448
+#: superset/viz.py:1455
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr "Distribución - NVD3 - Gráfico Circular"
 
-#: superset/viz.py:1465
+#: superset/viz.py:1472
 msgid "Histogram"
 msgstr "Histograma"
 
-#: superset/viz.py:1476
+#: superset/viz.py:1483
 msgid "Must have at least one numeric column specified"
 msgstr ""
 
-#: superset/viz.py:1518
+#: superset/viz.py:1525
 msgid "Distribution - Bar Chart"
 msgstr "Distribución - Gráfico de Barra"
 
-#: superset/viz.py:1527
+#: superset/viz.py:1534
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr "No se puede superponer Series y Distribuciones"
 
-#: superset/viz.py:1531
+#: superset/viz.py:1538
 msgid "Pick at least one field for [Series]"
 msgstr "Elige al menos un campo para [Series]"
 
-#: superset/viz.py:1575
+#: superset/viz.py:1582
 msgid "Sunburst"
 msgstr "Sunburst"
 
-#: superset/viz.py:1607
+#: superset/viz.py:1614
 msgid "Sankey"
 msgstr "Sankey"
 
-#: superset/viz.py:1614
+#: superset/viz.py:1621
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr "Elige exactamente 2 columnas como [Origen / Destino]"
 
-#: superset/viz.py:1647
+#: superset/viz.py:1654
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
@@ -232,138 +232,138 @@ msgstr ""
 "Hay un bucle en tu Sankey, por favor proporciona un árbol. Aquí hay un "
 "enlace defectuoso: {}"
 
-#: superset/viz.py:1660 superset/viz.py:1681
+#: superset/viz.py:1667 superset/viz.py:1688
 msgid "Directed Force Layout"
 msgstr "Disposición Dirigida Forzado"
 
-#: superset/viz.py:1667
+#: superset/viz.py:1674
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr "Elija exactamente 2 columnas para 'Agrupar por'"
 
-#: superset/viz.py:1711
+#: superset/viz.py:1718
 msgid "Country Map"
 msgstr "Mapa de País"
 
-#: superset/viz.py:1738
+#: superset/viz.py:1745
 msgid "World Map"
 msgstr "Mapa Mundial"
 
 #: superset/assets/src/explore/controlPanels/sections.jsx:60
-#: superset/assets/src/explore/controls.jsx:2035 superset/viz.py:1789
+#: superset/assets/src/explore/controls.jsx:2035 superset/viz.py:1796
 msgid "Filters"
 msgstr "Filtros"
 
-#: superset/viz.py:1807
+#: superset/viz.py:1814
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:1843
+#: superset/viz.py:1850
 msgid "iFrame"
 msgstr "iFrame"
 
-#: superset/viz.py:1866
+#: superset/viz.py:1873
 msgid "Parallel Coordinates"
 msgstr "Coordenadas Paralelas"
 
-#: superset/viz.py:1888
+#: superset/viz.py:1895
 msgid "Heatmap"
 msgstr "Mapa de Calor"
 
-#: superset/viz.py:1941
+#: superset/viz.py:1948
 msgid "Horizon Charts"
 msgstr "Gráficos de Horizontes"
 
-#: superset/viz.py:1953
+#: superset/viz.py:1960
 msgid "Mapbox"
 msgstr "Caja de Mapa"
 
-#: superset/viz.py:1964
+#: superset/viz.py:1971
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:1970
+#: superset/viz.py:1977
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr ""
 "Debe tener una columna [Agrupar por] para tener 'contar' como la "
 "[Etiqueta]"
 
-#: superset/viz.py:1989
+#: superset/viz.py:1996
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr "La opción de [Etiqueta] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:1995
+#: superset/viz.py:2002
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr "La opción de [Radio de puntos] debe estar presente en [Agrupar por]"
 
-#: superset/viz.py:2002
+#: superset/viz.py:2009
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr "Las columnas [Longitud] y [Latitud] deben estar presentes en [Agrupar por]"
 
-#: superset/viz.py:2081
+#: superset/viz.py:2088
 msgid "Deck.gl - Multiple Layers"
 msgstr ""
 
-#: superset/viz.py:2121 superset/viz.py:2152
+#: superset/viz.py:2128 superset/viz.py:2159
 msgid "Bad spatial key"
 msgstr ""
 
-#: superset/viz.py:2138
+#: superset/viz.py:2145
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2174
+#: superset/viz.py:2181
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2262
+#: superset/viz.py:2269
 msgid "Deck.gl - Scatter plot"
 msgstr ""
 
-#: superset/viz.py:2309
+#: superset/viz.py:2316
 msgid "Deck.gl - Screen Grid"
 msgstr ""
 
-#: superset/viz.py:2335
+#: superset/viz.py:2342
 msgid "Deck.gl - 3D Grid"
 msgstr ""
 
-#: superset/viz.py:2362
+#: superset/viz.py:2369
 msgid "Deck.gl - Paths"
 msgstr ""
 
-#: superset/viz.py:2410
+#: superset/viz.py:2417
 msgid "Deck.gl - Polygon"
 msgstr ""
 
-#: superset/viz.py:2437
+#: superset/viz.py:2444
 msgid "Deck.gl - 3D HEX"
 msgstr ""
 
-#: superset/viz.py:2453
+#: superset/viz.py:2460
 msgid "Deck.gl - GeoJSON"
 msgstr ""
 
-#: superset/viz.py:2472
+#: superset/viz.py:2479
 msgid "Deck.gl - Arc"
 msgstr ""
 
-#: superset/viz.py:2501
+#: superset/viz.py:2508
 msgid "Event flow"
 msgstr "Flujo de Evento"
 
-#: superset/viz.py:2533
+#: superset/viz.py:2540
 msgid "Time Series - Paired t-test"
 msgstr "Serie Temportal - Prueba-T Pareada"
 
-#: superset/viz.py:2584
+#: superset/viz.py:2591
 msgid "Time Series - Nightingale Rose Chart"
 msgstr ""
 
-#: superset/viz.py:2616
+#: superset/viz.py:2623
 msgid "Partition Diagram"
 msgstr ""
 
@@ -1161,7 +1161,7 @@ msgstr ""
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:56
 #: superset/connectors/druid/views.py:374 superset/connectors/sqla/views.py:324
 #: superset/views/core.py:493 superset/views/core.py:571
-#: superset/views/database/__init__.py:185 superset/views/sql_lab.py:115
+#: superset/views/database/__init__.py:187 superset/views/sql_lab.py:115
 msgid "Modified"
 msgstr "Modificado"
 
@@ -4638,19 +4638,19 @@ msgstr ""
 msgid "Recently Viewed"
 msgstr ""
 
-#: superset/connectors/druid/models.py:210
+#: superset/connectors/druid/models.py:222
 msgid "Adding new datasource [{}]"
 msgstr ""
 
-#: superset/connectors/druid/models.py:213
+#: superset/connectors/druid/models.py:225
 msgid "Refreshing datasource [{}]"
 msgstr ""
 
-#: superset/connectors/druid/models.py:1024
+#: superset/connectors/druid/models.py:1036
 msgid "Metric(s) {} must be aggregations."
 msgstr ""
 
-#: superset/connectors/druid/models.py:1410
+#: superset/connectors/druid/models.py:1422
 msgid "Unsupported extraction function: "
 msgstr ""
 
@@ -5053,13 +5053,13 @@ msgid ""
 msgstr ""
 
 #: superset/connectors/sqla/views.py:309 superset/connectors/sqla/views.py:310
-#: superset/views/database/__init__.py:176 superset/views/database/forms.py:96
+#: superset/views/database/__init__.py:178 superset/views/database/forms.py:96
 #: superset/views/sql_lab.py:62 superset/views/sql_lab.py:113
 msgid "Database"
 msgstr "Base de datos"
 
 #: superset/connectors/sqla/views.py:311
-#: superset/views/database/__init__.py:178
+#: superset/views/database/__init__.py:180
 msgid "Last Changed"
 msgstr "Último cambio"
 
@@ -5117,12 +5117,12 @@ msgstr ""
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
-#: superset/tasks/schedules.py:93 superset/tasks/schedules.py:283
+#: superset/tasks/schedules.py:92 superset/tasks/schedules.py:285
 #, python-format
 msgid "<b><a href=\"%(url)s\">Explore in Superset</a></b><p></p>"
 msgstr ""
 
-#: superset/tasks/schedules.py:106
+#: superset/tasks/schedules.py:105
 #, python-format
 msgid ""
 "\n"
@@ -5131,12 +5131,12 @@ msgid ""
 "            "
 msgstr ""
 
-#: superset/tasks/schedules.py:240 superset/tasks/schedules.py:340
+#: superset/tasks/schedules.py:239 superset/tasks/schedules.py:342
 #, python-format
 msgid "%(prefix)s %(title)s"
 msgstr ""
 
-#: superset/tasks/schedules.py:282
+#: superset/tasks/schedules.py:284
 #, python-format
 msgid "%(name)s.csv"
 msgstr ""
@@ -5204,7 +5204,7 @@ msgstr "Solicitar Permisos"
 msgid "Test Connection"
 msgstr "Probar Conexión"
 
-#: superset/utils/core.py:638
+#: superset/utils/core.py:647
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
 msgstr "Se ha otorgado Acceso [Superset] a la fuente de datos %(name)"
@@ -5389,7 +5389,7 @@ msgid ""
 msgstr ""
 
 #: superset/views/core.py:341 superset/views/core.py:492
-#: superset/views/core.py:570 superset/views/database/__init__.py:177
+#: superset/views/core.py:570 superset/views/database/__init__.py:179
 msgid "Creator"
 msgstr "Creador"
 
@@ -5800,7 +5800,7 @@ msgstr ""
 "Cuando se permite la opción CREATE TABLE AS en el laboratorio SQL, esta "
 "opción hace que la tabla se cree en este esquema"
 
-#: superset/views/database/__init__.py:149
+#: superset/views/database/__init__.py:151
 msgid ""
 "If Presto, all the queries in SQL Lab are going to be executed as the "
 "currently logged on user who must have permission to run them.<br/>If "
@@ -5809,69 +5809,69 @@ msgid ""
 "hive.server2.proxy.user property."
 msgstr ""
 
-#: superset/views/database/__init__.py:156
+#: superset/views/database/__init__.py:158
 msgid ""
 "Allow SQL Lab to fetch a list of all tables and all views across all "
 "database schemas. For large data warehouse with thousands of tables, this"
 " can be expensive and put strain on the system."
 msgstr ""
 
-#: superset/views/database/__init__.py:161
+#: superset/views/database/__init__.py:163
 msgid ""
 "Duration (in seconds) of the caching timeout for charts of this database."
 " A timeout of 0 indicates that the cache never expires. Note this "
 "defaults to the global timeout if undefined."
 msgstr ""
 
-#: superset/views/database/__init__.py:166
+#: superset/views/database/__init__.py:168
 msgid "If selected, please set the schemas allowed for csv upload in Extra."
 msgstr ""
 
-#: superset/views/database/__init__.py:172
+#: superset/views/database/__init__.py:174
 msgid "Expose in SQL Lab"
 msgstr "Mostrar en el laboratorio SQL"
 
-#: superset/views/database/__init__.py:173
+#: superset/views/database/__init__.py:175
 msgid "Allow CREATE TABLE AS"
 msgstr "Permitir CREATE TABLE AS"
 
-#: superset/views/database/__init__.py:174
+#: superset/views/database/__init__.py:176
 msgid "Allow DML"
 msgstr "Permitir DML"
 
-#: superset/views/database/__init__.py:175
+#: superset/views/database/__init__.py:177
 msgid "CTAS Schema"
 msgstr "Esquema CTAS"
 
-#: superset/views/database/__init__.py:179
+#: superset/views/database/__init__.py:181
 msgid "SQLAlchemy URI"
 msgstr "URI SQLAlchemy"
 
-#: superset/views/database/__init__.py:180
+#: superset/views/database/__init__.py:182
 msgid "Chart Cache Timeout"
 msgstr ""
 
-#: superset/views/database/__init__.py:181
+#: superset/views/database/__init__.py:183
 msgid "Extra"
 msgstr "Extra"
 
-#: superset/views/database/__init__.py:182
+#: superset/views/database/__init__.py:184
 msgid "Asynchronous Query Execution"
 msgstr ""
 
-#: superset/views/database/__init__.py:183
+#: superset/views/database/__init__.py:185
 msgid "Impersonate the logged on user"
 msgstr ""
 
-#: superset/views/database/__init__.py:184
+#: superset/views/database/__init__.py:186
 msgid "Allow Csv Upload"
 msgstr ""
 
-#: superset/views/database/__init__.py:186
+#: superset/views/database/__init__.py:188
 msgid "Allow Multi Schema Metadata Fetch"
 msgstr ""
 
-#: superset/views/database/__init__.py:187
+#: superset/views/database/__init__.py:189
 msgid "Backend"
 msgstr ""
 

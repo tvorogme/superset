@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Apache Superset 0.22.1\n"
 "Report-Msgid-Bugs-To: zhouyao94@qq.com\n"
-"POT-Creation-Date: 2019-08-03 21:41+0300\n"
+"POT-Creation-Date: 2019-08-09 16:38+0300\n"
 "PO-Revision-Date: 2019-01-04 22:19+0800\n"
 "Last-Translator: \n"
 "Language: zh\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Viz is missing a datasource"
 msgstr "Viz 缺少一个数据源"
 
-#: superset/utils/core.py:1098 superset/viz.py:295
+#: superset/utils/core.py:1107 superset/viz.py:295
 msgid "From date cannot be larger than to date"
 msgstr "起始时间不可以大于当前时间"
 
@@ -61,7 +61,7 @@ msgstr "为[分组]和[指标]或[列]选择任何的字段，或者两个都不
 msgid "Time Table View"
 msgstr "时间表视图"
 
-#: superset/viz.py:617 superset/viz.py:1529
+#: superset/viz.py:617 superset/viz.py:1536
 msgid "Pick at least one metric"
 msgstr "选择至少一个指标"
 
@@ -137,228 +137,228 @@ msgstr "选择一个指标！"
 msgid "Big Number"
 msgstr "数字"
 
-#: superset/viz.py:1079
+#: superset/viz.py:1082
 msgid "Time Series - Line Chart"
 msgstr "时间序列-折线图"
 
-#: superset/viz.py:1142 superset/viz.py:1365
+#: superset/viz.py:1145 superset/viz.py:1368
 msgid "Pick a time granularity for your time series"
 msgstr "为您的时间序列选择一个时间粒度"
 
-#: superset/viz.py:1211
+#: superset/viz.py:1214
 msgid ""
 "`Since` and `Until` time bounds should be specified when using the `Time "
 "Shift` feature."
 msgstr "在使用“Time Shift”功能时，应指定“Since”和\"Until\"时间界限。"
 
-#: superset/viz.py:1281
+#: superset/viz.py:1284
 msgid "Time Series - Multiple Line Charts"
 msgstr "时间序列-多线图"
 
-#: superset/viz.py:1311
+#: superset/viz.py:1314
 msgid "Time Series - Dual Axis Line Chart"
 msgstr "时间序列-双轴线图"
 
-#: superset/viz.py:1321
+#: superset/viz.py:1324
 msgid "Pick a metric for left axis!"
 msgstr "为左轴选择一个指标！"
 
-#: superset/viz.py:1323
+#: superset/viz.py:1326
 msgid "Pick a metric for right axis!"
 msgstr "为右轴选择一个指标！"
 
-#: superset/viz.py:1326
+#: superset/viz.py:1329
 msgid "Please choose different metrics on left and right axis"
 msgstr "请在左右轴上选择不同的指标"
 
-#: superset/viz.py:1381
+#: superset/viz.py:1384
 msgid "Time Series - Bar Chart"
 msgstr "时间序列 - 柱状图"
 
-#: superset/viz.py:1390
+#: superset/viz.py:1393
 msgid "Time Series - Period Pivot"
 msgstr "时间序列 - 周期透视表"
 
-#: superset/viz.py:1431
+#: superset/viz.py:1438
 msgid "Time Series - Percent Change"
 msgstr "时间序列 - 百分比变化"
 
-#: superset/viz.py:1439
+#: superset/viz.py:1446
 msgid "Time Series - Stacked"
 msgstr "时间序列 - 堆积图"
 
-#: superset/viz.py:1448
+#: superset/viz.py:1455
 msgid "Distribution - NVD3 - Pie Chart"
 msgstr "分布 - NVD3 - 饼图"
 
-#: superset/viz.py:1465
+#: superset/viz.py:1472
 msgid "Histogram"
 msgstr "直方图"
 
-#: superset/viz.py:1476
+#: superset/viz.py:1483
 msgid "Must have at least one numeric column specified"
 msgstr "必须至少指明一个数值列"
 
-#: superset/viz.py:1518
+#: superset/viz.py:1525
 msgid "Distribution - Bar Chart"
 msgstr "分布 - 柱状图"
 
-#: superset/viz.py:1527
+#: superset/viz.py:1534
 msgid "Can't have overlap between Series and Breakdowns"
 msgstr "Series 和 Breakdown 之间不能有重叠"
 
-#: superset/viz.py:1531
+#: superset/viz.py:1538
 msgid "Pick at least one field for [Series]"
 msgstr "为 [序列] 选择至少一个字段"
 
-#: superset/viz.py:1575
+#: superset/viz.py:1582
 msgid "Sunburst"
 msgstr "环状层次图"
 
-#: superset/viz.py:1607
+#: superset/viz.py:1614
 msgid "Sankey"
 msgstr "蛇形图"
 
-#: superset/viz.py:1614
+#: superset/viz.py:1621
 msgid "Pick exactly 2 columns as [Source / Target]"
 msgstr "为 [来源 / 目标] 选择两个列"
 
-#: superset/viz.py:1647
+#: superset/viz.py:1654
 msgid ""
 "There's a loop in your Sankey, please provide a tree. Here's a faulty "
 "link: {}"
 msgstr "桑基图里面有一个循环，请提供一棵树。这是一个错误的链接：{}"
 
-#: superset/viz.py:1660 superset/viz.py:1681
+#: superset/viz.py:1667 superset/viz.py:1688
 msgid "Directed Force Layout"
 msgstr "有向图"
 
-#: superset/viz.py:1667
+#: superset/viz.py:1674
 msgid "Pick exactly 2 columns to 'Group By'"
 msgstr "为 “Group By” 选择两个列"
 
-#: superset/viz.py:1711
+#: superset/viz.py:1718
 msgid "Country Map"
 msgstr "国家地图"
 
-#: superset/viz.py:1738
+#: superset/viz.py:1745
 msgid "World Map"
 msgstr "世界地图"
 
 #: superset/assets/src/explore/controlPanels/sections.jsx:60
-#: superset/assets/src/explore/controls.jsx:2035 superset/viz.py:1789
+#: superset/assets/src/explore/controls.jsx:2035 superset/viz.py:1796
 msgid "Filters"
 msgstr "过滤"
 
-#: superset/viz.py:1807
+#: superset/viz.py:1814
 msgid "Invalid filter configuration, please select a column"
 msgstr ""
 
-#: superset/viz.py:1843
+#: superset/viz.py:1850
 msgid "iFrame"
 msgstr "内嵌框架"
 
-#: superset/viz.py:1866
+#: superset/viz.py:1873
 msgid "Parallel Coordinates"
 msgstr "平行坐标"
 
-#: superset/viz.py:1888
+#: superset/viz.py:1895
 msgid "Heatmap"
 msgstr "热力图"
 
-#: superset/viz.py:1941
+#: superset/viz.py:1948
 msgid "Horizon Charts"
 msgstr "水平图"
 
-#: superset/viz.py:1953
+#: superset/viz.py:1960
 msgid "Mapbox"
 msgstr "箱图"
 
-#: superset/viz.py:1964
+#: superset/viz.py:1971
 msgid "[Longitude] and [Latitude] must be set"
 msgstr ""
 
-#: superset/viz.py:1970
+#: superset/viz.py:1977
 msgid "Must have a [Group By] column to have 'count' as the [Label]"
 msgstr "[Group By] 列必须要有 ‘count’字段作为 [标签]"
 
-#: superset/viz.py:1989
+#: superset/viz.py:1996
 msgid "Choice of [Label] must be present in [Group By]"
 msgstr "[标签] 的选择项必须出现在 [Group By]"
 
-#: superset/viz.py:1995
+#: superset/viz.py:2002
 msgid "Choice of [Point Radius] must be present in [Group By]"
 msgstr "[点半径] 的选择项必须出现在 [Group By]"
 
-#: superset/viz.py:2002
+#: superset/viz.py:2009
 msgid "[Longitude] and [Latitude] columns must be present in [Group By]"
 msgstr "[经度] 和 [纬度] 的选择项必须出现在 [Group By]"
 
-#: superset/viz.py:2081
+#: superset/viz.py:2088
 msgid "Deck.gl - Multiple Layers"
 msgstr "多图层"
 
-#: superset/viz.py:2121 superset/viz.py:2152
+#: superset/viz.py:2128 superset/viz.py:2159
 msgid "Bad spatial key"
 msgstr "错误的空间字段"
 
-#: superset/viz.py:2138
+#: superset/viz.py:2145
 #, python-format
 msgid "Invalid spatial point encountered: %s"
 msgstr ""
 
-#: superset/viz.py:2174
+#: superset/viz.py:2181
 msgid ""
 "Encountered invalid NULL spatial entry,"
 "                                        please consider filtering those "
 "out"
 msgstr ""
 
-#: superset/viz.py:2262
+#: superset/viz.py:2269
 msgid "Deck.gl - Scatter plot"
 msgstr "Deck.gl - 散点图"
 
-#: superset/viz.py:2309
+#: superset/viz.py:2316
 msgid "Deck.gl - Screen Grid"
 msgstr "Deck.gl - 屏幕网格"
 
-#: superset/viz.py:2335
+#: superset/viz.py:2342
 msgid "Deck.gl - 3D Grid"
 msgstr "Deck.gl - 3D网格"
 
-#: superset/viz.py:2362
+#: superset/viz.py:2369
 msgid "Deck.gl - Paths"
 msgstr "Deck.gl - 路径"
 
-#: superset/viz.py:2410
+#: superset/viz.py:2417
 msgid "Deck.gl - Polygon"
 msgstr "Deck.gl - 多角形"
 
-#: superset/viz.py:2437
+#: superset/viz.py:2444
 msgid "Deck.gl - 3D HEX"
 msgstr "Deck.gl - 3D六角曲面"
 
-#: superset/viz.py:2453
+#: superset/viz.py:2460
 msgid "Deck.gl - GeoJSON"
 msgstr "Deck.gl - GeoJson"
 
-#: superset/viz.py:2472
+#: superset/viz.py:2479
 msgid "Deck.gl - Arc"
 msgstr "Deck.gl - 弧度"
 
-#: superset/viz.py:2501
+#: superset/viz.py:2508
 msgid "Event flow"
 msgstr "事件流"
 
-#: superset/viz.py:2533
+#: superset/viz.py:2540
 msgid "Time Series - Paired t-test"
 msgstr "时间序列 - 配对t检验"
 
-#: superset/viz.py:2584
+#: superset/viz.py:2591
 msgid "Time Series - Nightingale Rose Chart"
 msgstr "时间序列 - 南丁格尔玫瑰图"
 
-#: superset/viz.py:2616
+#: superset/viz.py:2623
 msgid "Partition Diagram"
 msgstr "分区图"
 
@@ -1156,7 +1156,7 @@ msgstr ""
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:56
 #: superset/connectors/druid/views.py:374 superset/connectors/sqla/views.py:324
 #: superset/views/core.py:493 superset/views/core.py:571
-#: superset/views/database/__init__.py:185 superset/views/sql_lab.py:115
+#: superset/views/database/__init__.py:187 superset/views/sql_lab.py:115
 msgid "Modified"
 msgstr "已修改"
 
@@ -4566,19 +4566,19 @@ msgstr ""
 msgid "Recently Viewed"
 msgstr "最近浏览"
 
-#: superset/connectors/druid/models.py:210
+#: superset/connectors/druid/models.py:222
 msgid "Adding new datasource [{}]"
 msgstr ""
 
-#: superset/connectors/druid/models.py:213
+#: superset/connectors/druid/models.py:225
 msgid "Refreshing datasource [{}]"
 msgstr ""
 
-#: superset/connectors/druid/models.py:1024
+#: superset/connectors/druid/models.py:1036
 msgid "Metric(s) {} must be aggregations."
 msgstr "度量(s) {} 必须是聚合。"
 
-#: superset/connectors/druid/models.py:1410
+#: superset/connectors/druid/models.py:1422
 msgid "Unsupported extraction function: "
 msgstr "不支持的提取函数："
 
@@ -4951,13 +4951,13 @@ msgid ""
 msgstr "此表的缓存超时持续时间(以秒为单位)。超时为0表示缓存永远不会过期。注意，如果未定义，这默认为数据库的超时。"
 
 #: superset/connectors/sqla/views.py:309 superset/connectors/sqla/views.py:310
-#: superset/views/database/__init__.py:176 superset/views/database/forms.py:96
+#: superset/views/database/__init__.py:178 superset/views/database/forms.py:96
 #: superset/views/sql_lab.py:62 superset/views/sql_lab.py:113
 msgid "Database"
 msgstr "数据库"
 
 #: superset/connectors/sqla/views.py:311
-#: superset/views/database/__init__.py:178
+#: superset/views/database/__init__.py:180
 msgid "Last Changed"
 msgstr "更新时间"
 
@@ -5015,12 +5015,12 @@ msgstr "为下表刷新元数据:%(tables)s"
 msgid "Unable to retrieve metadata for the following table(s): %(tables)s"
 msgstr ""
 
-#: superset/tasks/schedules.py:93 superset/tasks/schedules.py:283
+#: superset/tasks/schedules.py:92 superset/tasks/schedules.py:285
 #, python-format
 msgid "<b><a href=\"%(url)s\">Explore in Superset</a></b><p></p>"
 msgstr ""
 
-#: superset/tasks/schedules.py:106
+#: superset/tasks/schedules.py:105
 #, python-format
 msgid ""
 "\n"
@@ -5029,12 +5029,12 @@ msgid ""
 "            "
 msgstr ""
 
-#: superset/tasks/schedules.py:240 superset/tasks/schedules.py:340
+#: superset/tasks/schedules.py:239 superset/tasks/schedules.py:342
 #, python-format
 msgid "%(prefix)s %(title)s"
 msgstr ""
 
-#: superset/tasks/schedules.py:282
+#: superset/tasks/schedules.py:284
 #, python-format
 msgid "%(name)s.csv"
 msgstr ""
@@ -5102,7 +5102,7 @@ msgstr "请求权限"
 msgid "Test Connection"
 msgstr "测试连接"
 
-#: superset/utils/core.py:638
+#: superset/utils/core.py:647
 #, python-format
 msgid "[Superset] Access to the datasource %(name)s was granted"
 msgstr "[Superset] 允许访问数据源 %(name)s"
@@ -5281,7 +5281,7 @@ msgid ""
 msgstr "此图表的缓存超时持续时间(以秒为单位)。注意，如果未定义，这默认为数据源/表超时。"
 
 #: superset/views/core.py:341 superset/views/core.py:492
-#: superset/views/core.py:570 superset/views/database/__init__.py:177
+#: superset/views/core.py:570 superset/views/database/__init__.py:179
 msgid "Creator"
 msgstr "作者"
 
@@ -5674,7 +5674,7 @@ msgid ""
 "table to be created in this schema"
 msgstr "当在 SQL 编辑器中允许 CREATE TABLE AS 选项时，此选项可以此模式中强制创建表"
 
-#: superset/views/database/__init__.py:149
+#: superset/views/database/__init__.py:151
 msgid ""
 "If Presto, all the queries in SQL Lab are going to be executed as the "
 "currently logged on user who must have permission to run them.<br/>If "
@@ -5685,69 +5685,69 @@ msgstr ""
 "如果使用Presto，SQL 工具箱中的所有查询都将被当前登录的用户执行，并且这些用户必须拥有运行它们的权限。<br/>如果启用 Hive "
 "和hive.server2.enable.doAs，将作为服务帐户运行查询，但会根据hive.server2.proxy.user的属性伪装当前登录用户。"
 
-#: superset/views/database/__init__.py:156
+#: superset/views/database/__init__.py:158
 msgid ""
 "Allow SQL Lab to fetch a list of all tables and all views across all "
 "database schemas. For large data warehouse with thousands of tables, this"
 " can be expensive and put strain on the system."
 msgstr "允许 sql lab 获取所有数据库架构中的所有表和所有视图的列表。对于具有数千个表的大型数据仓库, 这可能会很耗费性能, 并给系统带来压力。"
 
-#: superset/views/database/__init__.py:161
+#: superset/views/database/__init__.py:163
 msgid ""
 "Duration (in seconds) of the caching timeout for charts of this database."
 " A timeout of 0 indicates that the cache never expires. Note this "
 "defaults to the global timeout if undefined."
 msgstr "此数据库图表的缓存超时持续时间(以秒为单位)。超时为0表示缓存永远不会过期。注意，如果未定义，这默认为全局超时。"
 
-#: superset/views/database/__init__.py:166
+#: superset/views/database/__init__.py:168
 msgid "If selected, please set the schemas allowed for csv upload in Extra."
 msgstr "如果选择，请额外设置csv上传允许的模式。"
 
-#: superset/views/database/__init__.py:172
+#: superset/views/database/__init__.py:174
 msgid "Expose in SQL Lab"
 msgstr "在 SQL 工具箱中公开"
 
-#: superset/views/database/__init__.py:173
+#: superset/views/database/__init__.py:175
 msgid "Allow CREATE TABLE AS"
 msgstr "允许 CREATE TABLE AS"
 
-#: superset/views/database/__init__.py:174
+#: superset/views/database/__init__.py:176
 msgid "Allow DML"
 msgstr "允许 DML"
 
-#: superset/views/database/__init__.py:175
+#: superset/views/database/__init__.py:177
 msgid "CTAS Schema"
 msgstr "CTAS 模式"
 
-#: superset/views/database/__init__.py:179
+#: superset/views/database/__init__.py:181
 msgid "SQLAlchemy URI"
 msgstr "SQLAlchemy URI"
 
-#: superset/views/database/__init__.py:180
+#: superset/views/database/__init__.py:182
 msgid "Chart Cache Timeout"
 msgstr "表缓存超时"
 
-#: superset/views/database/__init__.py:181
+#: superset/views/database/__init__.py:183
 msgid "Extra"
 msgstr "扩展"
 
-#: superset/views/database/__init__.py:182
+#: superset/views/database/__init__.py:184
 msgid "Asynchronous Query Execution"
 msgstr "异步执行查询"
 
-#: superset/views/database/__init__.py:183
+#: superset/views/database/__init__.py:185
 msgid "Impersonate the logged on user"
 msgstr "模拟登录用户"
 
-#: superset/views/database/__init__.py:184
+#: superset/views/database/__init__.py:186
 msgid "Allow Csv Upload"
 msgstr "允许Csv上传"
 
-#: superset/views/database/__init__.py:186
+#: superset/views/database/__init__.py:188
 msgid "Allow Multi Schema Metadata Fetch"
 msgstr ""
 
-#: superset/views/database/__init__.py:187
+#: superset/views/database/__init__.py:189
 msgid "Backend"
 msgstr ""
 
