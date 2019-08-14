@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-09 16:38+0300\n"
+"POT-Creation-Date: 2019-08-14 07:51+0300\n"
 "PO-Revision-Date: 2017-10-20 14:36+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -41,7 +41,7 @@ msgstr ""
 msgid "Viz is missing a datasource"
 msgstr ""
 
-#: superset/utils/core.py:1107 superset/viz.py:295
+#: superset/utils/core.py:1105 superset/viz.py:295
 msgid "From date cannot be larger than to date"
 msgstr "'Von Datum' kann nicht größer als 'bis Datum' sein"
 
@@ -246,7 +246,7 @@ msgid "World Map"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/sections.jsx:60
-#: superset/assets/src/explore/controls.jsx:2035 superset/viz.py:1796
+#: superset/assets/src/explore/controls.jsx:2045 superset/viz.py:1796
 msgid "Filters"
 msgstr ""
 
@@ -521,7 +521,7 @@ msgid " and not greater than %s"
 msgstr ""
 
 #: superset/assets/src/SqlLab/components/LimitControl.jsx:85
-#: superset/assets/src/explore/controls.jsx:1006
+#: superset/assets/src/explore/controls.jsx:1016
 msgid "Row limit"
 msgstr ""
 
@@ -1022,11 +1022,11 @@ msgstr ""
 msgid "Title"
 msgstr "Titel"
 
-#: superset/assets/src/components/EditableTitle.jsx:192
+#: superset/assets/src/components/EditableTitle.jsx:194
 msgid "click to edit"
 msgstr ""
 
-#: superset/assets/src/components/EditableTitle.jsx:193
+#: superset/assets/src/components/EditableTitle.jsx:195
 msgid "You don't have the rights to alter this title."
 msgstr ""
 
@@ -1110,7 +1110,7 @@ msgstr ""
 msgid "Share Dashboard"
 msgstr ""
 
-#: superset/assets/src/components/FilterableTable/FilterableTable.jsx:247
+#: superset/assets/src/components/FilterableTable/FilterableTable.jsx:261
 msgid "Cell Content"
 msgstr ""
 
@@ -1184,7 +1184,7 @@ msgstr ""
 
 #: superset/assets/src/dashboard/components/ColorComponentPane.jsx:89
 #: superset/assets/src/explore/controlPanels/sections.jsx:43
-#: superset/assets/src/explore/controls.jsx:2091
+#: superset/assets/src/explore/controls.jsx:2101
 msgid "Color Scheme"
 msgstr "Farbschema"
 
@@ -1220,6 +1220,10 @@ msgstr "Löschen"
 
 #: superset/assets/src/dashboard/components/Header.jsx:248
 msgid "Your dashboard is too large. Please reduce the size before save it."
+msgstr ""
+
+#: superset/assets/src/dashboard/components/Header.jsx:254
+msgid "Your dashboard is near the size limit."
 msgstr ""
 
 #: superset/assets/src/dashboard/components/Header.jsx:350
@@ -1268,19 +1272,23 @@ msgstr ""
 msgid "Force refresh dashboard"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:184
+#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:188
 msgid "Set auto-refresh interval"
 msgstr ""
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:189
+msgid "Auto-refresh dashboard"
+msgstr ""
+
+#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:196
 msgid "Edit dashboard metadata"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:203
+#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:210
 msgid "Share dashboard"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:208
+#: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:215
 msgid "Edit CSS"
 msgstr ""
 
@@ -1319,51 +1327,51 @@ msgstr ""
 msgid "This dashboard is published. Click to make it a draft."
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:33
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:34
 msgid "Don't refresh"
 msgstr "Nicht aktualisieren"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:34
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:35
 msgid "10 seconds"
 msgstr "10 Sekunden"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:35
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:36
 msgid "30 seconds"
 msgstr "30 Sekunden"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:36
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:37
 msgid "1 minute"
 msgstr "1 Minute"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:37
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:38
 msgid "5 minutes"
 msgstr "5 Minuten"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:38
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:39
 msgid "30 minutes"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:39
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:40
 msgid "1 hour"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:40
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:41
 msgid "6 hours"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:41
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:42
 msgid "12 hours"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:42
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:43
 msgid "24 hours"
 msgstr ""
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:57
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:68
 msgid "Refresh Interval"
 msgstr "Aktualisierung Zwischenzeit"
 
-#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:60
+#: superset/assets/src/dashboard/components/RefreshIntervalModal.jsx:71
 msgid "Choose the refresh frequency for this dashboard"
 msgstr "Aktualisierungsfrequenz auswählen für dieses Dashboard"
 
@@ -1482,8 +1490,8 @@ msgid "White"
 msgstr ""
 
 #: superset/assets/src/dashboard/util/headerStyleOptions.js:25
-#: superset/assets/src/explore/controls.jsx:1423
-#: superset/assets/src/explore/controls.jsx:1454
+#: superset/assets/src/explore/controls.jsx:1433
+#: superset/assets/src/explore/controls.jsx:1464
 msgid "Small"
 msgstr ""
 
@@ -1492,8 +1500,8 @@ msgid "Medium"
 msgstr ""
 
 #: superset/assets/src/dashboard/util/headerStyleOptions.js:35
-#: superset/assets/src/explore/controls.jsx:1431
-#: superset/assets/src/explore/controls.jsx:1462
+#: superset/assets/src/explore/controls.jsx:1441
+#: superset/assets/src/explore/controls.jsx:1472
 msgid "Large"
 msgstr ""
 
@@ -1626,13 +1634,13 @@ msgid "Owners of the datasource"
 msgstr ""
 
 #: superset/assets/src/datasource/DatasourceEditor.jsx:400
-#: superset/assets/src/explore/controlPanels/DeckArc.js:50
+#: superset/assets/src/explore/controlPanels/DeckArc.js:51
 #: superset/assets/src/explore/controlPanels/DeckGeojson.js:50
 #: superset/assets/src/explore/controlPanels/DeckGrid.js:43
 #: superset/assets/src/explore/controlPanels/DeckHex.js:43
 #: superset/assets/src/explore/controlPanels/DeckPath.js:43
 #: superset/assets/src/explore/controlPanels/DeckPolygon.js:59
-#: superset/assets/src/explore/controlPanels/DeckScatter.js:69
+#: superset/assets/src/explore/controlPanels/DeckScatter.js:70
 #: superset/assets/src/explore/controlPanels/DeckScreengrid.js:50
 msgid "Advanced"
 msgstr ""
@@ -1711,8 +1719,8 @@ msgid "Settings"
 msgstr ""
 
 #: superset/assets/src/datasource/DatasourceEditor.jsx:585
-#: superset/assets/src/explore/controls.jsx:635
-#: superset/assets/src/explore/controls.jsx:642
+#: superset/assets/src/explore/controls.jsx:645
+#: superset/assets/src/explore/controls.jsx:652
 #: superset/connectors/druid/views.py:51 superset/connectors/sqla/views.py:50
 msgid "Columns"
 msgstr ""
@@ -1857,184 +1865,192 @@ msgid "Choose the position of the legend"
 msgstr ""
 
 #: superset/assets/src/explore/controls.jsx:314
-msgid "Fill Color"
+msgid "Legend Format"
 msgstr ""
 
 #: superset/assets/src/explore/controls.jsx:315
-#: superset/assets/src/explore/controls.jsx:323
+msgid "Choose the format for legend values"
+msgstr ""
+
+#: superset/assets/src/explore/controls.jsx:324
+msgid "Fill Color"
+msgstr ""
+
+#: superset/assets/src/explore/controls.jsx:325
+#: superset/assets/src/explore/controls.jsx:333
 msgid ""
 " Set the opacity to 0 if you do not want to override the color specified "
 "in the GeoJSON"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:322
+#: superset/assets/src/explore/controls.jsx:332
 msgid "Stroke Color"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:331
+#: superset/assets/src/explore/controls.jsx:341
 msgid "Right Axis Metric"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:333
+#: superset/assets/src/explore/controls.jsx:343
 msgid "Choose a metric for right axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:338
+#: superset/assets/src/explore/controls.jsx:348
 msgid "Stacked Style"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:351
+#: superset/assets/src/explore/controls.jsx:361
 msgid "Sort X Axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:359
+#: superset/assets/src/explore/controls.jsx:369
 msgid "Sort Y Axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:367
+#: superset/assets/src/explore/controls.jsx:377
 msgid "Linear Color Scheme"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:381
+#: superset/assets/src/explore/controls.jsx:391
 msgid "Normalize Across"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:388
+#: superset/assets/src/explore/controls.jsx:398
 msgid ""
 "Color will be rendered based on a ratio of the cell against the sum of "
 "across this criteria"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:396
+#: superset/assets/src/explore/controls.jsx:406
 msgid "Value Domain"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:403
+#: superset/assets/src/explore/controls.jsx:413
 msgid ""
 "series: Treat each series independently; overall: All series use the same"
 " scale; change: Show changes compared to the first data point in each "
 "series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:408
+#: superset/assets/src/explore/controls.jsx:418
 msgid "Rendering"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:415
+#: superset/assets/src/explore/controls.jsx:425
 msgid ""
 "image-rendering CSS attribute of the canvas object that defines how the "
 "browser scales up the image"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:421
+#: superset/assets/src/explore/controls.jsx:431
 msgid "XScale Interval"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:426
+#: superset/assets/src/explore/controls.jsx:436
 msgid "Number of steps to take between ticks when displaying the X scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:432
+#: superset/assets/src/explore/controls.jsx:442
 msgid "YScale Interval"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:437
+#: superset/assets/src/explore/controls.jsx:447
 msgid "Number of steps to take between ticks when displaying the Y scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:443
+#: superset/assets/src/explore/controls.jsx:453
 msgid "Include Time"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:444
+#: superset/assets/src/explore/controls.jsx:454
 msgid "Whether to include the time granularity as defined in the time section"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:450
+#: superset/assets/src/explore/controls.jsx:460
 msgid "Auto Zoom"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:453
+#: superset/assets/src/explore/controls.jsx:463
 msgid "When checked, the map will zoom to your data after each query"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:458
+#: superset/assets/src/explore/controls.jsx:468
 msgid "Show percentage"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:460
+#: superset/assets/src/explore/controls.jsx:470
 msgid "Whether to include the percentage in the tooltip"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:466
+#: superset/assets/src/explore/controls.jsx:476
 msgid "Stacked Bars"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:474
+#: superset/assets/src/explore/controls.jsx:484
 msgid "Show totals"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:477
+#: superset/assets/src/explore/controls.jsx:487
 msgid "Display total row/column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:482
+#: superset/assets/src/explore/controls.jsx:492
 msgid "Transpose Pivot"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:484
+#: superset/assets/src/explore/controls.jsx:494
 msgid "Swap Groups and Columns"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:489
+#: superset/assets/src/explore/controls.jsx:499
 msgid "Show Markers"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:492
+#: superset/assets/src/explore/controls.jsx:502
 msgid "Show data points as circle markers on the lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:497
+#: superset/assets/src/explore/controls.jsx:507
 msgid "Bar Values"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:500
+#: superset/assets/src/explore/controls.jsx:510
 msgid "Show the value on top of the bar"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:505
+#: superset/assets/src/explore/controls.jsx:515
 msgid "Sort Bars"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:508
+#: superset/assets/src/explore/controls.jsx:518
 msgid "Sort bars by x labels."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:513
+#: superset/assets/src/explore/controls.jsx:523
 msgid "Combine Metrics"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:515
+#: superset/assets/src/explore/controls.jsx:525
 msgid ""
 "Display metrics side by side within each column, as opposed to each "
 "column being displayed side by side for each metric."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:521
+#: superset/assets/src/explore/controls.jsx:531
 msgid "Extra Controls"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:524
+#: superset/assets/src/explore/controls.jsx:534
 msgid ""
 "Whether to show extra controls or not. Extra controls include things like"
 " making mulitBar charts stacked or side by side."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:531
+#: superset/assets/src/explore/controls.jsx:541
 msgid "Reduce X ticks"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:534
+#: superset/assets/src/explore/controls.jsx:544
 msgid ""
 "Reduces the number of X-axis ticks to be rendered. If true, the x-axis "
 "will not overflow and labels may be missing. If false, a minimum width "
@@ -2042,45 +2058,45 @@ msgid ""
 "scroll."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:543
+#: superset/assets/src/explore/controls.jsx:553
 msgid "Include Series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:546
+#: superset/assets/src/explore/controls.jsx:556
 msgid "Include series name as an axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:551
+#: superset/assets/src/explore/controls.jsx:561
 msgid "Color Metric"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:554
+#: superset/assets/src/explore/controls.jsx:564
 msgid "A metric to use for color"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:558
+#: superset/assets/src/explore/controls.jsx:568
 msgid "Country Name"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:585
+#: superset/assets/src/explore/controls.jsx:595
 msgid "The name of the country that Superset should display"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:589
+#: superset/assets/src/explore/controls.jsx:599
 msgid "Country Field Type"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:597
+#: superset/assets/src/explore/controls.jsx:607
 msgid ""
 "The country code standard that Superset should expect to find in the "
 "[country] column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:603
+#: superset/assets/src/explore/controls.jsx:613
 msgid "Frequency"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:615
+#: superset/assets/src/explore/controls.jsx:625
 msgid ""
 "The periodicity over which to pivot time. Users can provide\n"
 "      \"Pandas\" offset alias.\n"
@@ -2088,189 +2104,189 @@ msgid ""
 "expressions."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:628
+#: superset/assets/src/explore/controls.jsx:638
 msgid "Dimension"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:629
+#: superset/assets/src/explore/controls.jsx:639
 msgid "Select a dimension"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:636
+#: superset/assets/src/explore/controls.jsx:646
 msgid "One or many controls to pivot as columns"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:644
-#: superset/assets/src/explore/controls.jsx:758
+#: superset/assets/src/explore/controls.jsx:654
 #: superset/assets/src/explore/controls.jsx:768
+#: superset/assets/src/explore/controls.jsx:778
 msgid "Columns to display"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:658
+#: superset/assets/src/explore/controls.jsx:668
 msgid "Longitude & Latitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:660
 #: superset/assets/src/explore/controls.jsx:670
 #: superset/assets/src/explore/controls.jsx:680
+#: superset/assets/src/explore/controls.jsx:690
 msgid "Point to your spatial columns"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:668
+#: superset/assets/src/explore/controls.jsx:678
 msgid "Start Longitude & Latitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:678
+#: superset/assets/src/explore/controls.jsx:688
 msgid "End Longitude & Latitude"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/Mapbox.js:68
-#: superset/assets/src/explore/controls.jsx:688
+#: superset/assets/src/explore/controls.jsx:698
 msgid "Longitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:691
+#: superset/assets/src/explore/controls.jsx:701
 msgid "Select the longitude column"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/Mapbox.js:72
-#: superset/assets/src/explore/controls.jsx:699
+#: superset/assets/src/explore/controls.jsx:709
 msgid "Latitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:702
+#: superset/assets/src/explore/controls.jsx:712
 msgid "Select the latitude column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:710
+#: superset/assets/src/explore/controls.jsx:720
 msgid "Ignore null locations"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:712
+#: superset/assets/src/explore/controls.jsx:722
 msgid "Whether to ignore locations that are null"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:717
+#: superset/assets/src/explore/controls.jsx:727
 msgid "GeoJson Column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:719
+#: superset/assets/src/explore/controls.jsx:729
 msgid "Select the geojson column"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/DeckPolygon.js:73
-#: superset/assets/src/explore/controls.jsx:727
+#: superset/assets/src/explore/controls.jsx:737
 msgid "Polygon Column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:729
+#: superset/assets/src/explore/controls.jsx:739
 msgid ""
 "Select the polygon column. Each row should contain JSON.array(N) of "
 "[longitude, latitude] points"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:738
+#: superset/assets/src/explore/controls.jsx:748
 msgid "Point Radius Scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:747
+#: superset/assets/src/explore/controls.jsx:757
 msgid "Stroke Width"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:777
+#: superset/assets/src/explore/controls.jsx:787
 msgid "Origin"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:783
+#: superset/assets/src/explore/controls.jsx:793
 msgid ""
 "Defines the origin where time buckets start, accepts natural dates as in "
 "`now`, `sunday` or `1970-01-01`"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:791
+#: superset/assets/src/explore/controls.jsx:801
 msgid "Bottom Margin"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:795
+#: superset/assets/src/explore/controls.jsx:805
 msgid "Bottom margin, in pixels, allowing for more room for axis labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:800
+#: superset/assets/src/explore/controls.jsx:810
 msgid "X Tick Layout"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:805
+#: superset/assets/src/explore/controls.jsx:815
 msgid "The way the ticks are laid out on the X-axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:812
+#: superset/assets/src/explore/controls.jsx:822
 msgid "Left Margin"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:816
+#: superset/assets/src/explore/controls.jsx:826
 msgid "Left margin, in pixels, allowing for more room for axis labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:822
+#: superset/assets/src/explore/controls.jsx:832
 msgid "Time Granularity"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:842
+#: superset/assets/src/explore/controls.jsx:852
 msgid ""
 "The time granularity for the visualization. Note that you can type and "
 "use simple natural language as in `10 seconds`, `1 day` or `56 weeks`"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:849
+#: superset/assets/src/explore/controls.jsx:859
 msgid "Domain"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:852
+#: superset/assets/src/explore/controls.jsx:862
 msgid "The time unit used for the grouping of blocks"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:857
+#: superset/assets/src/explore/controls.jsx:867
 msgid "Subdomain"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:860
+#: superset/assets/src/explore/controls.jsx:870
 msgid ""
 "The time unit for each block. Should be a smaller unit than "
 "domain_granularity. Should be larger or equal to Time Grain"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:868
+#: superset/assets/src/explore/controls.jsx:878
 msgid "Link Length"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:871
+#: superset/assets/src/explore/controls.jsx:881
 msgid "Link length in the force layout"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:878
+#: superset/assets/src/explore/controls.jsx:888
 msgid "Charge"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:892
+#: superset/assets/src/explore/controls.jsx:902
 msgid "Charge in the force layout"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:897
+#: superset/assets/src/explore/controls.jsx:907
 msgid "Time Column"
 msgstr "Zeitspalte"
 
-#: superset/assets/src/explore/controls.jsx:898
+#: superset/assets/src/explore/controls.jsx:908
 msgid ""
 "The time column for the visualization. Note that you can define arbitrary"
 " expression that return a DATETIME column in the table. Also note that "
 "the filter below is applied against this column or expression"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:925
+#: superset/assets/src/explore/controls.jsx:935
 msgid "Time Grain"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:927
+#: superset/assets/src/explore/controls.jsx:937
 msgid ""
 "The time granularity for the visualization. This applies a date "
 "transformation to alter your time column and defines a new time "
@@ -2278,63 +2294,63 @@ msgid ""
 "in the Superset source code."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:940
+#: superset/assets/src/explore/controls.jsx:950
 msgid "Rule"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:943
+#: superset/assets/src/explore/controls.jsx:953
 msgid "Pandas resample rule"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:949
+#: superset/assets/src/explore/controls.jsx:959
 msgid "Method"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:952
+#: superset/assets/src/explore/controls.jsx:962
 msgid "Pandas resample method"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:958
+#: superset/assets/src/explore/controls.jsx:968
 #: superset/assets/src/visualizations/FilterBox/FilterBox.jsx:143
 msgid "Time range"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:959
+#: superset/assets/src/explore/controls.jsx:969
 msgid "Last week"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:965
+#: superset/assets/src/explore/controls.jsx:975
 msgid "Max Bubble Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:973
+#: superset/assets/src/explore/controls.jsx:983
 msgid "Whisker/outlier options"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:975
+#: superset/assets/src/explore/controls.jsx:985
 msgid "Determines how whiskers and outliers are calculated."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:986
+#: superset/assets/src/explore/controls.jsx:996
 msgid "Ratio"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:990
+#: superset/assets/src/explore/controls.jsx:1000
 msgid "Target aspect ratio for treemap tiles."
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/BigNumber.js:52
 #: superset/assets/src/explore/controlPanels/BigNumberTotal.js:50
 #: superset/assets/src/explore/controlPanels/Chord.js:46
-#: superset/assets/src/explore/controls.jsx:996
+#: superset/assets/src/explore/controls.jsx:1006
 msgid "Number format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1015
+#: superset/assets/src/explore/controls.jsx:1025
 msgid "Series limit"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1018
+#: superset/assets/src/explore/controls.jsx:1028
 msgid ""
 "Limits the number of time series that get displayed. A sub query (or an "
 "extra phase where sub queries are not supported) is applied to limit the "
@@ -2342,95 +2358,95 @@ msgid ""
 "useful when grouping by high cardinality dimension(s)."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1027
+#: superset/assets/src/explore/controls.jsx:1037
 msgid "Sort By"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1029
+#: superset/assets/src/explore/controls.jsx:1039
 msgid "Metric used to define the top series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1039
+#: superset/assets/src/explore/controls.jsx:1049
 msgid "Sort Descending"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1041
+#: superset/assets/src/explore/controls.jsx:1051
 msgid "Whether to sort descending or ascending"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1046
+#: superset/assets/src/explore/controls.jsx:1056
 msgid "Rolling"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1049
+#: superset/assets/src/explore/controls.jsx:1059
 msgid ""
 "Defines a rolling window function to apply, works along with the "
 "[Periods] text box"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1055
+#: superset/assets/src/explore/controls.jsx:1065
 msgid "Multiplier"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1059
+#: superset/assets/src/explore/controls.jsx:1069
 msgid "Factor to multiply the metric by"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1064
+#: superset/assets/src/explore/controls.jsx:1074
 msgid "Periods"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1066
+#: superset/assets/src/explore/controls.jsx:1076
 msgid ""
 "Defines the size of the rolling window function, relative to the time "
 "granularity selected"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1076
+#: superset/assets/src/explore/controls.jsx:1086
 msgid "Cell Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1077
+#: superset/assets/src/explore/controls.jsx:1087
 msgid "The size of the square cell, in pixels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1086
+#: superset/assets/src/explore/controls.jsx:1096
 msgid "Cell Padding"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1087
+#: superset/assets/src/explore/controls.jsx:1097
 msgid "The distance between cells, in pixels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1096
+#: superset/assets/src/explore/controls.jsx:1106
 msgid "Cell Radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1097
+#: superset/assets/src/explore/controls.jsx:1107
 msgid "The pixel radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1106
+#: superset/assets/src/explore/controls.jsx:1116
 msgid "Color Steps"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1107
+#: superset/assets/src/explore/controls.jsx:1117
 msgid "The number color \"steps\""
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1112
+#: superset/assets/src/explore/controls.jsx:1122
 msgid "Grid Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1116
+#: superset/assets/src/explore/controls.jsx:1126
 msgid "Defines the grid size in pixels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1121
+#: superset/assets/src/explore/controls.jsx:1131
 msgid "Min Periods"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1123
+#: superset/assets/src/explore/controls.jsx:1133
 msgid ""
 "The minimum number of rolling periods required to show a value. For "
 "instance if you do a cumulative sum on 7 days you may want your \"Min "
@@ -2440,21 +2456,21 @@ msgid ""
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/DistBar.js:57
-#: superset/assets/src/explore/controls.jsx:1132
+#: superset/assets/src/explore/controls.jsx:1142
 msgid "Series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1135
+#: superset/assets/src/explore/controls.jsx:1145
 msgid ""
 "Defines the grouping of entities. Each series is shown as a specific "
 "color on the chart and has a legend toggle"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1142
+#: superset/assets/src/explore/controls.jsx:1152
 msgid "Entity"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1146
+#: superset/assets/src/explore/controls.jsx:1156
 msgid "This defines the element to be plotted on the chart"
 msgstr ""
 
@@ -2466,11 +2482,11 @@ msgstr ""
 #: superset/assets/src/explore/controlPanels/Line.js:38
 #: superset/assets/src/explore/controlPanels/LineMulti.js:37
 #: superset/assets/src/explore/controlPanels/TimePivot.js:43
-#: superset/assets/src/explore/controls.jsx:1151
+#: superset/assets/src/explore/controls.jsx:1161
 msgid "X Axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1152
+#: superset/assets/src/explore/controls.jsx:1162
 msgid "Metric assigned to the [X] axis"
 msgstr ""
 
@@ -2480,512 +2496,512 @@ msgstr ""
 #: superset/assets/src/explore/controlPanels/Compare.js:44
 #: superset/assets/src/explore/controlPanels/Line.js:47
 #: superset/assets/src/explore/controlPanels/TimePivot.js:51
-#: superset/assets/src/explore/controls.jsx:1158
+#: superset/assets/src/explore/controls.jsx:1168
 msgid "Y Axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1160
+#: superset/assets/src/explore/controls.jsx:1170
 msgid "Metric assigned to the [Y] axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1165
+#: superset/assets/src/explore/controls.jsx:1175
 msgid "Bubble Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1171
+#: superset/assets/src/explore/controls.jsx:1181
 msgid "URL"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1172
+#: superset/assets/src/explore/controls.jsx:1182
 msgid ""
 "The URL, this control is templated, so you can integrate {{ width }} "
 "and/or {{ height }} in your URL string."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1179
+#: superset/assets/src/explore/controls.jsx:1189
 msgid "X Axis Label"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1186
+#: superset/assets/src/explore/controls.jsx:1196
 msgid "Y Axis Label"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1193
+#: superset/assets/src/explore/controls.jsx:1203
 msgid "Comparison Period Lag"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1195
+#: superset/assets/src/explore/controls.jsx:1205
 msgid "Based on granularity, number of time periods to compare against"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1200
+#: superset/assets/src/explore/controls.jsx:1210
 msgid "Comparison suffix"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1201
+#: superset/assets/src/explore/controls.jsx:1211
 msgid "Suffix to apply after the percentage display"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1207
+#: superset/assets/src/explore/controls.jsx:1217
 msgid "Table Timestamp Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1213
+#: superset/assets/src/explore/controls.jsx:1223
 msgid "Timestamp Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1220
+#: superset/assets/src/explore/controls.jsx:1230
 msgid "Series Height"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1223
+#: superset/assets/src/explore/controls.jsx:1233
 msgid "Pixel height of each series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1230
+#: superset/assets/src/explore/controls.jsx:1240
 msgid "Page Length"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1233
+#: superset/assets/src/explore/controls.jsx:1243
 msgid "Rows per page, 0 means no pagination"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1239
 #: superset/assets/src/explore/controls.jsx:1249
+#: superset/assets/src/explore/controls.jsx:1259
 msgid "X Axis Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1259
+#: superset/assets/src/explore/controls.jsx:1269
 msgid "Y Axis Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1271
+#: superset/assets/src/explore/controls.jsx:1281
 msgid ""
 "When `Calculation type` is set to \"Percentage change\", the Y Axis "
 "Format is forced to `.1%`"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1281
+#: superset/assets/src/explore/controls.jsx:1291
 msgid "Right Axis Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1290
+#: superset/assets/src/explore/controls.jsx:1300
 msgid "Date Time Format"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1299
+#: superset/assets/src/explore/controls.jsx:1309
 msgid "Markup Type"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1304
+#: superset/assets/src/explore/controls.jsx:1314
 msgid "Pick your favorite markup language"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1309
+#: superset/assets/src/explore/controls.jsx:1319
 msgid "Word Rotation"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1314
+#: superset/assets/src/explore/controls.jsx:1324
 msgid "Rotation to apply to words in the cloud"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1319
+#: superset/assets/src/explore/controls.jsx:1329
 msgid "Line Style"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1324
+#: superset/assets/src/explore/controls.jsx:1334
 msgid "Line interpolation as defined by d3.js"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1329
+#: superset/assets/src/explore/controls.jsx:1339
 msgid "Label Type"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1339
+#: superset/assets/src/explore/controls.jsx:1349
 msgid "What should be shown on the label?"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/Markup.js:24
 #: superset/assets/src/explore/controlPanels/Separator.js:24
-#: superset/assets/src/explore/controls.jsx:1344
+#: superset/assets/src/explore/controls.jsx:1354
 msgid "Code"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1345
+#: superset/assets/src/explore/controls.jsx:1355
 msgid "Put your code here"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1354
+#: superset/assets/src/explore/controls.jsx:1364
 msgid "Aggregation function"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1365
+#: superset/assets/src/explore/controls.jsx:1375
 msgid ""
 "Aggregate function to apply when pivoting and computing the total rows "
 "and columns"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1371
+#: superset/assets/src/explore/controls.jsx:1381
 msgid "Dynamic Aggregation Function"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1372
+#: superset/assets/src/explore/controls.jsx:1382
 msgid "The function to use when aggregating points into groups"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1395
+#: superset/assets/src/explore/controls.jsx:1405
 msgid "Minimum Font Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1398
+#: superset/assets/src/explore/controls.jsx:1408
 msgid "Font size for the smallest value in the list"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1404
+#: superset/assets/src/explore/controls.jsx:1414
 msgid "Maximum Font Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1407
+#: superset/assets/src/explore/controls.jsx:1417
 msgid "Font size for the biggest value in the list"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1412
+#: superset/assets/src/explore/controls.jsx:1422
 msgid "Header Font Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1419
-#: superset/assets/src/explore/controls.jsx:1450
+#: superset/assets/src/explore/controls.jsx:1429
+#: superset/assets/src/explore/controls.jsx:1460
 msgid "Tiny"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1427
-#: superset/assets/src/explore/controls.jsx:1458
+#: superset/assets/src/explore/controls.jsx:1437
+#: superset/assets/src/explore/controls.jsx:1468
 msgid "Normal"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1435
-#: superset/assets/src/explore/controls.jsx:1466
+#: superset/assets/src/explore/controls.jsx:1445
+#: superset/assets/src/explore/controls.jsx:1476
 msgid "Huge"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1443
+#: superset/assets/src/explore/controls.jsx:1453
 msgid "Subheader Font Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1474
+#: superset/assets/src/explore/controls.jsx:1484
 msgid "Instant Filtering"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1485
+#: superset/assets/src/explore/controls.jsx:1495
 msgid "Extruded"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1493
+#: superset/assets/src/explore/controls.jsx:1503
 msgid "Show Range Filter"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1502
+#: superset/assets/src/explore/controls.jsx:1512
 msgid "Whether to display the time range interactive selector"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1507
+#: superset/assets/src/explore/controls.jsx:1517
 msgid "Date Filter"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1509
+#: superset/assets/src/explore/controls.jsx:1519
 msgid "Whether to include a time filter"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1514
+#: superset/assets/src/explore/controls.jsx:1524
 msgid "Show SQL Granularity Dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1516
+#: superset/assets/src/explore/controls.jsx:1526
 msgid "Check to include SQL Granularity dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1521
+#: superset/assets/src/explore/controls.jsx:1531
 msgid "Show SQL Time Column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1523
+#: superset/assets/src/explore/controls.jsx:1533
 msgid "Check to include Time Column dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1528
+#: superset/assets/src/explore/controls.jsx:1538
 msgid "Show Druid Granularity Dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1530
+#: superset/assets/src/explore/controls.jsx:1540
 msgid "Check to include Druid Granularity dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1535
+#: superset/assets/src/explore/controls.jsx:1545
 msgid "Show Druid Time Origin"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1537
+#: superset/assets/src/explore/controls.jsx:1547
 msgid "Check to include Time Origin dropdown"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1542
+#: superset/assets/src/explore/controls.jsx:1552
 msgid "Data Table"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1545
+#: superset/assets/src/explore/controls.jsx:1555
 msgid "Whether to display the interactive data table"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1550
+#: superset/assets/src/explore/controls.jsx:1560
 msgid "Search Box"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1553
+#: superset/assets/src/explore/controls.jsx:1563
 msgid "Whether to include a client-side search box"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1558
+#: superset/assets/src/explore/controls.jsx:1568
 msgid "Emit Filter Events"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1561
+#: superset/assets/src/explore/controls.jsx:1571
 msgid "Whether to apply filter when items are clicked"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1566
+#: superset/assets/src/explore/controls.jsx:1576
 msgid "Align +/-"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1569
+#: superset/assets/src/explore/controls.jsx:1579
 msgid "Whether to align the background chart for +/- values"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1574
+#: superset/assets/src/explore/controls.jsx:1584
 msgid "Color +/-"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1577
+#: superset/assets/src/explore/controls.jsx:1587
 msgid "Whether to color +/- values"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1582
+#: superset/assets/src/explore/controls.jsx:1592
 msgid "Show Bubbles"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1585
+#: superset/assets/src/explore/controls.jsx:1595
 msgid "Whether to display bubbles on top of countries"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1590
+#: superset/assets/src/explore/controls.jsx:1600
 msgid "Legend"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1593
+#: superset/assets/src/explore/controls.jsx:1603
 msgid "Whether to display the legend (toggles)"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1598
+#: superset/assets/src/explore/controls.jsx:1608
 msgid "Propagate"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1601
+#: superset/assets/src/explore/controls.jsx:1611
 msgid "Send range filter events to other charts"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1606
+#: superset/assets/src/explore/controls.jsx:1616
 msgid "Multiple filtering"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1609
+#: superset/assets/src/explore/controls.jsx:1619
 msgid "Allow sending multiple polygons as a filter event"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1616
+#: superset/assets/src/explore/controls.jsx:1626
 msgid "Number of buckets to group data"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1619
+#: superset/assets/src/explore/controls.jsx:1629
 msgid "How many buckets should the data be grouped in."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1627
+#: superset/assets/src/explore/controls.jsx:1637
 msgid "Bucket break points"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1629
+#: superset/assets/src/explore/controls.jsx:1639
 msgid "List of n+1 values for bucketing metric into n buckets."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1635
+#: superset/assets/src/explore/controls.jsx:1645
 msgid "Show Labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1638
+#: superset/assets/src/explore/controls.jsx:1648
 msgid ""
 "Whether to display the labels. Note that the label only displays when the"
 " the 5% threshold."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1645
+#: superset/assets/src/explore/controls.jsx:1655
 msgid "Show Values"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1648
+#: superset/assets/src/explore/controls.jsx:1658
 msgid "Whether to display the numerical values within the cells"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1653
+#: superset/assets/src/explore/controls.jsx:1663
 msgid "Show Metric Names"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1656
+#: superset/assets/src/explore/controls.jsx:1666
 msgid "Whether to display the metric name as a title"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1661
+#: superset/assets/src/explore/controls.jsx:1671
 msgid "Show Trend Line"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1664
+#: superset/assets/src/explore/controls.jsx:1674
 msgid "Whether to display the trend line"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1669
+#: superset/assets/src/explore/controls.jsx:1679
 msgid "Start y-axis at 0"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1672
+#: superset/assets/src/explore/controls.jsx:1682
 msgid ""
 "Start y-axis at zero. Uncheck to start y-axis at minimum value in the "
 "data."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1677
+#: superset/assets/src/explore/controls.jsx:1687
 msgid "X bounds"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1680
+#: superset/assets/src/explore/controls.jsx:1690
 msgid "Whether to display the min and max values of the X-axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1685
+#: superset/assets/src/explore/controls.jsx:1695
 msgid "Y bounds"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1688
+#: superset/assets/src/explore/controls.jsx:1698
 msgid "Whether to display the min and max values of the Y-axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1693
+#: superset/assets/src/explore/controls.jsx:1703
 msgid "Rich Tooltip"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1696
+#: superset/assets/src/explore/controls.jsx:1706
 msgid "The rich tooltip shows a list of all series for that point in time"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1702
+#: superset/assets/src/explore/controls.jsx:1712
 msgid "Y Log Scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1705
+#: superset/assets/src/explore/controls.jsx:1715
 msgid "Use a log scale for the Y-axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1710
+#: superset/assets/src/explore/controls.jsx:1720
 msgid "X Log Scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1713
+#: superset/assets/src/explore/controls.jsx:1723
 msgid "Use a log scale for the X-axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1718
+#: superset/assets/src/explore/controls.jsx:1728
 msgid "Log Scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1721
+#: superset/assets/src/explore/controls.jsx:1731
 msgid "Use a log scale"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1726
+#: superset/assets/src/explore/controls.jsx:1736
 msgid "Donut"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1729
+#: superset/assets/src/explore/controls.jsx:1739
 msgid "Do you want a donut or a pie?"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1734
+#: superset/assets/src/explore/controls.jsx:1744
 msgid "Put labels outside"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1737
+#: superset/assets/src/explore/controls.jsx:1747
 msgid "Put the labels outside the pie?"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1742
+#: superset/assets/src/explore/controls.jsx:1752
 msgid "Contribution"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1744
+#: superset/assets/src/explore/controls.jsx:1754
 msgid "Compute the contribution to the total"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1751
+#: superset/assets/src/explore/controls.jsx:1761
 msgid "Time Shift"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1760
+#: superset/assets/src/explore/controls.jsx:1770
 msgid ""
 "Overlay one or more timeseries from a relative time period. Expects "
 "relative time deltas in natural language (example:  24 hours, 7 days, 56 "
 "weeks, 365 days)"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1768
+#: superset/assets/src/explore/controls.jsx:1778
 msgid "Calculation type"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1776
+#: superset/assets/src/explore/controls.jsx:1786
 msgid ""
 "How to display time shifts: as individual lines; as the absolute "
 "difference between the main time series and each time shift; as the "
 "percentage change; or as the ratio between series and time shifts."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1783
+#: superset/assets/src/explore/controls.jsx:1793
 msgid "Subheader"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1784
+#: superset/assets/src/explore/controls.jsx:1794
 msgid "Description text that shows up below your Big Number"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1790
+#: superset/assets/src/explore/controls.jsx:1800
 msgid "label"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1792
+#: superset/assets/src/explore/controls.jsx:1802
 msgid ""
 "`count` is COUNT(*) if a group by is used. Numerical columns will be "
 "aggregated with the aggregator. Non-numerical columns will be used to "
 "label points. Leave empty to get a count of points in each cluster."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1803
+#: superset/assets/src/explore/controls.jsx:1813
 msgid "Map Style"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1815
+#: superset/assets/src/explore/controls.jsx:1825
 msgid "Base layer map style"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1821
+#: superset/assets/src/explore/controls.jsx:1831
 msgid "Clustering Radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1834
+#: superset/assets/src/explore/controls.jsx:1844
 msgid ""
 "The radius (in pixels) the algorithm uses to define a cluster. Choose 0 "
 "to turn off clustering, but beware that a large number of points (>1000) "
@@ -2993,244 +3009,244 @@ msgid ""
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/DeckScatter.js:54
-#: superset/assets/src/explore/controls.jsx:1841
+#: superset/assets/src/explore/controls.jsx:1851
 msgid "Point Size"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1843
+#: superset/assets/src/explore/controls.jsx:1853
 msgid "Fixed point radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1851
+#: superset/assets/src/explore/controls.jsx:1861
 msgid "Point Radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1853
+#: superset/assets/src/explore/controls.jsx:1863
 msgid ""
 "The radius of individual points (ones that are not in a cluster). Either "
 "a numerical column or `Auto`, which scales the point based on the largest"
 " cluster"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1863
+#: superset/assets/src/explore/controls.jsx:1873
 msgid "Point Radius Unit"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1866
-#: superset/assets/src/explore/controls.jsx:1882
+#: superset/assets/src/explore/controls.jsx:1876
+#: superset/assets/src/explore/controls.jsx:1892
 msgid "The unit of measure for the specified point radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1871
+#: superset/assets/src/explore/controls.jsx:1881
 msgid "Point Unit"
 msgstr ""
 
 #: superset/assets/src/explore/components/controls/AnnotationLayer.jsx:546
-#: superset/assets/src/explore/controls.jsx:1887
-#: superset/assets/src/explore/controls.jsx:1896
+#: superset/assets/src/explore/controls.jsx:1897
+#: superset/assets/src/explore/controls.jsx:1906
 msgid "Opacity"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1890
+#: superset/assets/src/explore/controls.jsx:1900
 msgid "Opacity of all clusters, points, and labels. Between 0 and 1."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1902
+#: superset/assets/src/explore/controls.jsx:1912
 msgid "Opacity, expects values between 0 and 100"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/Mapbox.js:58
-#: superset/assets/src/explore/controls.jsx:1907
+#: superset/assets/src/explore/controls.jsx:1917
 msgid "Viewport"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1909
+#: superset/assets/src/explore/controls.jsx:1919
 msgid "Parameters related to the view and perspective on the map"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1918
+#: superset/assets/src/explore/controls.jsx:1928
 msgid "Zoom"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1922
+#: superset/assets/src/explore/controls.jsx:1932
 msgid "Zoom level of the map"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1930
+#: superset/assets/src/explore/controls.jsx:1940
 msgid "Default latitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1934
+#: superset/assets/src/explore/controls.jsx:1944
 msgid "Latitude of default viewport"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1942
+#: superset/assets/src/explore/controls.jsx:1952
 msgid "Default longitude"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1946
+#: superset/assets/src/explore/controls.jsx:1956
 msgid "Longitude of default viewport"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1954
+#: superset/assets/src/explore/controls.jsx:1964
 msgid "Live render"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1956
+#: superset/assets/src/explore/controls.jsx:1966
 msgid "Points and clusters will update as the viewport is being changed"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1962
+#: superset/assets/src/explore/controls.jsx:1972
 msgid "RGB Color"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1972
+#: superset/assets/src/explore/controls.jsx:1982
 msgid "The color for points and clusters in RGB"
 msgstr ""
 
 #: superset/assets/src/explore/components/controls/AnnotationLayer.jsx:558
-#: superset/assets/src/explore/controls.jsx:1977
+#: superset/assets/src/explore/controls.jsx:1987
 msgid "Color"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1979
+#: superset/assets/src/explore/controls.jsx:1989
 msgid "Pick a color"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1984
+#: superset/assets/src/explore/controls.jsx:1994
 msgid "Ranges"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1986
+#: superset/assets/src/explore/controls.jsx:1996
 msgid "Ranges to highlight with shading"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1991
+#: superset/assets/src/explore/controls.jsx:2001
 msgid "Range labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1993
+#: superset/assets/src/explore/controls.jsx:2003
 msgid "Labels for the ranges"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:1998
+#: superset/assets/src/explore/controls.jsx:2008
 msgid "Markers"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2000
+#: superset/assets/src/explore/controls.jsx:2010
 msgid "List of values to mark with triangles"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2005
+#: superset/assets/src/explore/controls.jsx:2015
 msgid "Marker labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2007
+#: superset/assets/src/explore/controls.jsx:2017
 msgid "Labels for the markers"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2012
+#: superset/assets/src/explore/controls.jsx:2022
 msgid "Marker lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2014
+#: superset/assets/src/explore/controls.jsx:2024
 msgid "List of values to mark with lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2019
+#: superset/assets/src/explore/controls.jsx:2029
 msgid "Marker line labels"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2021
+#: superset/assets/src/explore/controls.jsx:2031
 msgid "Labels for the marker lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2052
+#: superset/assets/src/explore/controls.jsx:2062
 msgid "Chart ID"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2054
+#: superset/assets/src/explore/controls.jsx:2064
 msgid "The id of the active chart"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2059
+#: superset/assets/src/explore/controls.jsx:2069
 msgid "Cache Timeout (seconds)"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2061
+#: superset/assets/src/explore/controls.jsx:2071
 msgid "The number of seconds before expiring the cache"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2066
+#: superset/assets/src/explore/controls.jsx:2076
 msgid "URL Parameters"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2068
+#: superset/assets/src/explore/controls.jsx:2078
 msgid "Extra parameters for use in jinja templated queries"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2073
+#: superset/assets/src/explore/controls.jsx:2083
 msgid "Order by entity id"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2074
+#: superset/assets/src/explore/controls.jsx:2084
 msgid ""
 "Important! Select this if the table is not already sorted by entity id, "
 "else there is no guarantee that all events for each entity are returned."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2082
+#: superset/assets/src/explore/controls.jsx:2092
 msgid "Minimum leaf node event count"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2085
+#: superset/assets/src/explore/controls.jsx:2095
 msgid ""
 "Leaf nodes that represent fewer than this number of events will be "
 "initially hidden in the visualization"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2095
+#: superset/assets/src/explore/controls.jsx:2105
 msgid "The color scheme for rendering chart"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2101
+#: superset/assets/src/explore/controls.jsx:2111
 msgid "Color Map"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2112
+#: superset/assets/src/explore/controls.jsx:2122
 msgid "Significance Level"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2114
+#: superset/assets/src/explore/controls.jsx:2124
 msgid "Threshold alpha level for determining significance"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2119
+#: superset/assets/src/explore/controls.jsx:2129
 msgid "p-value precision"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2121
+#: superset/assets/src/explore/controls.jsx:2131
 msgid "Number of decimal places with which to display p-values"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2126
+#: superset/assets/src/explore/controls.jsx:2136
 msgid "Lift percent precision"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2128
+#: superset/assets/src/explore/controls.jsx:2138
 msgid "Number of decimal places with which to display lift values"
 msgstr ""
 
 #: superset/assets/src/explore/components/controls/TimeSeriesColumnControl.jsx:49
-#: superset/assets/src/explore/controls.jsx:2133
+#: superset/assets/src/explore/controls.jsx:2143
 msgid "Time Series Columns"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2140
+#: superset/assets/src/explore/controls.jsx:2150
 msgid "Use Area Proportions"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2141
+#: superset/assets/src/explore/controls.jsx:2151
 msgid ""
 "Check if the Rose Chart should use segment area instead of segment radius"
 " for proportioning"
@@ -3244,200 +3260,200 @@ msgstr ""
 #: superset/assets/src/explore/controlPanels/Para.js:35
 #: superset/assets/src/explore/controlPanels/Table.js:53
 #: superset/assets/src/explore/controlPanels/WordCloud.js:35
-#: superset/assets/src/explore/controls.jsx:2151
+#: superset/assets/src/explore/controls.jsx:2161
 msgid "Options"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2157
+#: superset/assets/src/explore/controls.jsx:2167
 msgid "Not Time Series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2159
+#: superset/assets/src/explore/controls.jsx:2169
 msgid "Ignore time"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2162
+#: superset/assets/src/explore/controls.jsx:2172
 msgid "Time Series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2164
+#: superset/assets/src/explore/controls.jsx:2174
 msgid "Standard time series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2167
+#: superset/assets/src/explore/controls.jsx:2177
 msgid "Aggregate Mean"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2169
+#: superset/assets/src/explore/controls.jsx:2179
 msgid "Mean of values over specified period"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2172
+#: superset/assets/src/explore/controls.jsx:2182
 msgid "Aggregate Sum"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2174
+#: superset/assets/src/explore/controls.jsx:2184
 msgid "Sum of values over specified period"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2177
+#: superset/assets/src/explore/controls.jsx:2187
 msgid "Difference"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2179
+#: superset/assets/src/explore/controls.jsx:2189
 msgid "Metric change in value from `since` to `until`"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2182
+#: superset/assets/src/explore/controls.jsx:2192
 msgid "Percent Change"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2184
+#: superset/assets/src/explore/controls.jsx:2194
 msgid "Metric percent change in value from `since` to `until`"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2187
+#: superset/assets/src/explore/controls.jsx:2197
 msgid "Factor"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2189
+#: superset/assets/src/explore/controls.jsx:2199
 msgid "Metric factor change from `since` to `until`"
 msgstr ""
 
 #: superset/assets/src/explore/controlPanels/sections.jsx:89
-#: superset/assets/src/explore/controls.jsx:2192
+#: superset/assets/src/explore/controls.jsx:2202
 msgid "Advanced Analytics"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2194
+#: superset/assets/src/explore/controls.jsx:2204
 msgid "Use the Advanced Analytics options below"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2199
+#: superset/assets/src/explore/controls.jsx:2209
 msgid "Settings for time series"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2204
+#: superset/assets/src/explore/controls.jsx:2214
 msgid "Equal Date Sizes"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2207
+#: superset/assets/src/explore/controls.jsx:2217
 msgid "Check to force date partitions to have the same height"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2212
+#: superset/assets/src/explore/controls.jsx:2222
 msgid "Partition Limit"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2216
+#: superset/assets/src/explore/controls.jsx:2226
 msgid ""
 "The maximum number of subdivisions of each group; lower values are pruned"
 " first"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2222
+#: superset/assets/src/explore/controls.jsx:2232
 msgid "Minimum Radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2228
+#: superset/assets/src/explore/controls.jsx:2238
 msgid ""
 "Minimum radius size of the circle, in pixels. As the zoom level changes, "
 "this insures that the circle respects this minimum radius."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2234
+#: superset/assets/src/explore/controls.jsx:2244
 msgid "Maximum Radius"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2240
+#: superset/assets/src/explore/controls.jsx:2250
 msgid ""
 "Maxium radius size of the circle, in pixels. As the zoom level changes, "
 "this insures that the circle respects this maximum radius."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2246
+#: superset/assets/src/explore/controls.jsx:2256
 msgid "Partition Threshold"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2250
+#: superset/assets/src/explore/controls.jsx:2260
 msgid ""
 "Partitions whose height to parent height proportions are below this value"
 " are pruned"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2256
+#: superset/assets/src/explore/controls.jsx:2266
 msgid "Lines column"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2258
+#: superset/assets/src/explore/controls.jsx:2268
 msgid "The database columns that contains lines information"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2266
+#: superset/assets/src/explore/controls.jsx:2276
 msgid "Lines encoding"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2269
+#: superset/assets/src/explore/controls.jsx:2279
 msgid "The encoding format of the lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2279
+#: superset/assets/src/explore/controls.jsx:2289
 msgid "Line width"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2283
+#: superset/assets/src/explore/controls.jsx:2293
 msgid "The width of the lines"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2289
+#: superset/assets/src/explore/controls.jsx:2299
 msgid "Line charts"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2292
+#: superset/assets/src/explore/controls.jsx:2302
 msgid "Pick a set of line charts to layer on top of one another"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2294
-#: superset/assets/src/explore/controls.jsx:2312
-#: superset/assets/src/explore/controls.jsx:2343
+#: superset/assets/src/explore/controls.jsx:2304
+#: superset/assets/src/explore/controls.jsx:2322
+#: superset/assets/src/explore/controls.jsx:2353
 msgid "Select charts"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2295
-#: superset/assets/src/explore/controls.jsx:2313
-#: superset/assets/src/explore/controls.jsx:2344
+#: superset/assets/src/explore/controls.jsx:2305
+#: superset/assets/src/explore/controls.jsx:2323
+#: superset/assets/src/explore/controls.jsx:2354
 msgid "Error while fetching charts"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2307
+#: superset/assets/src/explore/controls.jsx:2317
 msgid "Right Axis chart(s)"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2310
+#: superset/assets/src/explore/controls.jsx:2320
 msgid "Choose one or more charts for right axis"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2324
+#: superset/assets/src/explore/controls.jsx:2334
 msgid "Prefix metric name with slice name"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2331
+#: superset/assets/src/explore/controls.jsx:2341
 msgid "Reverse Lat & Long"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2338
+#: superset/assets/src/explore/controls.jsx:2348
 msgid "deck.gl charts"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2341
+#: superset/assets/src/explore/controls.jsx:2351
 msgid "Pick a set of deck.gl charts to layer on top of one another"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2354
+#: superset/assets/src/explore/controls.jsx:2364
 msgid "Javascript data interceptor"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2355
+#: superset/assets/src/explore/controls.jsx:2365
 msgid ""
 "Define a javascript function that receives the data array used in the "
 "visualization and is expected to return a modified version of that array."
@@ -3445,67 +3461,67 @@ msgid ""
 "array."
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2361
+#: superset/assets/src/explore/controls.jsx:2371
 msgid "Javascript data mutator"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2362
+#: superset/assets/src/explore/controls.jsx:2372
 msgid ""
 "Define a function that receives intercepts the data objects and can "
 "mutate it"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2366
+#: superset/assets/src/explore/controls.jsx:2376
 msgid "Javascript tooltip generator"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2367
+#: superset/assets/src/explore/controls.jsx:2377
 msgid ""
 "Define a function that receives the input and outputs the content for a "
 "tooltip"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2371
+#: superset/assets/src/explore/controls.jsx:2381
 msgid "Javascript onClick href"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2372
+#: superset/assets/src/explore/controls.jsx:2382
 msgid "Define a function that returns a URL to navigate to when user clicks"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2377
+#: superset/assets/src/explore/controls.jsx:2387
 msgid "Extra data for JS"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2379
+#: superset/assets/src/explore/controls.jsx:2389
 msgid "List of extra columns made available in Javascript functions"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2384
+#: superset/assets/src/explore/controls.jsx:2394
 msgid "Stroked"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2386
+#: superset/assets/src/explore/controls.jsx:2396
 msgid "Whether to display the stroke"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2392
+#: superset/assets/src/explore/controls.jsx:2402
 msgid "Filled"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2394
+#: superset/assets/src/explore/controls.jsx:2404
 msgid "Whether to fill the objects"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2401
+#: superset/assets/src/explore/controls.jsx:2411
 msgid "Filter configuration for the filter box"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2409
+#: superset/assets/src/explore/controls.jsx:2419
 msgid "Normalized"
 msgstr ""
 
-#: superset/assets/src/explore/controls.jsx:2411
+#: superset/assets/src/explore/controls.jsx:2421
 msgid "Whether to normalize the histogram"
 msgstr ""
 
@@ -4054,13 +4070,13 @@ msgstr ""
 msgid "Arc"
 msgstr ""
 
-#: superset/assets/src/explore/controlPanels/DeckArc.js:61
-#: superset/assets/src/explore/controlPanels/DeckScatter.js:80
+#: superset/assets/src/explore/controlPanels/DeckArc.js:62
+#: superset/assets/src/explore/controlPanels/DeckScatter.js:81
 msgid "Categorical Color"
 msgstr ""
 
-#: superset/assets/src/explore/controlPanels/DeckArc.js:62
-#: superset/assets/src/explore/controlPanels/DeckScatter.js:81
+#: superset/assets/src/explore/controlPanels/DeckArc.js:63
+#: superset/assets/src/explore/controlPanels/DeckScatter.js:82
 msgid "Pick a dimension from which categorical colors are defined"
 msgstr ""
 

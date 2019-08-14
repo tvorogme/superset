@@ -542,7 +542,7 @@
                 "Закрыть вкладку"
             ],
             "Rename tab": [
-                "Переименовать вкалдку"
+                "Переименовать вкладку"
             ],
             "Expand tool bar": [
                 ""
@@ -752,10 +752,10 @@
                 ""
             ],
             "There was an issue fetching the favorite status of this dashboard.": [
-                ""
+                "Не удалось определить статус Избранное"
             ],
             "There was an issue favoriting this dashboard.": [
-                ""
+                "Возникла проблема при добавлении в Избранное"
             ],
             "This dashboard is now ${nowPublished}": [
                 "Этот отчет сейчас ${nowPublished}"
@@ -776,7 +776,7 @@
                 "Изменено"
             ],
             "Visualization": [
-                ""
+                "Визуализация"
             ],
             "Data source": [
                 "Источник данных"
@@ -817,6 +817,9 @@
             "Your dashboard is too large. Please reduce the size before save it.": [
                 "Отчет слишком большой. Пожалуйста, уменьшите его размер перед сохранением."
             ],
+            "Your dashboard is near the size limit.": [
+                "Ваш отчет приближается к максимальному размеру."
+            ],
             "Insert components": [
                 "Добавить компоненты"
             ],
@@ -836,7 +839,7 @@
                 ""
             ],
             "Superset Dashboard": [
-                ""
+                "Superset Отчет"
             ],
             "Check out this dashboard: ": [
                 ""
@@ -852,6 +855,9 @@
             ],
             "Set auto-refresh interval": [
                 "Установить интервал автоматического обновления"
+            ],
+            "Auto-refresh dashboard": [
+                ""
             ],
             "Edit dashboard metadata": [
                 "Редактировать параметры отчета"
@@ -872,7 +878,7 @@
                 ""
             ],
             "Delete this container and save to remove this message.": [
-                ""
+                "Удалите этот контейнер и сохраните, чтобы убрать это сообщение."
             ],
             "This dashboard is not published, it will not show up in the list of dashboards. Click here to publish this dashboard.": [
                 ""
@@ -1136,19 +1142,19 @@
                 "Столбцы"
             ],
             "This option is not yet available for views": [
-                ""
+                "Эта опция еще не доступна для представлений"
             ],
             "Sync columns from source": [
-                ""
+                "Синхронизировать столбцы из источника"
             ],
             "Calculated Columns": [
-                ""
+                "Вычисляемые столбцы"
             ],
             "Metrics": [
                 "Показатели"
             ],
             "Confirm save": [
-                ""
+                "Подтвердить сохранение"
             ],
             "The datasource has been saved": [
                 "Источник данных был сохранен"
@@ -1157,13 +1163,13 @@
                 ""
             ],
             "Are you sure you want to save and apply changes?": [
-                ""
+                "Вы уверены, что хотите сохранить и применить изменения?"
             ],
             "Datasource Editor for ": [
-                ""
+                "Редактор источника данных для "
             ],
             "Use Legacy Datasource Editor": [
-                ""
+                "Использовать старый редактор источника данных"
             ],
             "A reference to the [Time] configuration, taking granularity into account": [
                 ""
@@ -1226,6 +1232,12 @@
                 ""
             ],
             "Choose the position of the legend": [
+                ""
+            ],
+            "Legend Format": [
+                ""
+            ],
+            "Choose the format for legend values": [
                 ""
             ],
             "Fill Color": [

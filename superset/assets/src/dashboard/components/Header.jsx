@@ -251,7 +251,7 @@ class Header extends React.PureComponent {
       );
     } else {
       if (positionJSONLength >= limit * 0.9) {
-        this.props.addWarningToast('Your dashboard is near the size limit.');
+        this.props.addWarningToast(t('Your dashboard is near the size limit.'));
       }
 
       this.props.onSave(data, dashboardInfo.id, SAVE_TYPE_OVERWRITE);
