@@ -64,6 +64,14 @@ const COMMON_TIME_FRAMES = [
   'Last year',
   'No filter',
 ];
+const RU_TRANSLATE = {
+  'Last day': 'Последний день',
+  'Last week': 'Последняя неделя',
+  'Last month': 'Последний месяц',
+  'Last quarter': 'Последний квартал',
+  'Last year': 'Последний год',
+  'No filter': 'Нет фильтра',
+};
 const TIME_GRAIN_OPTIONS = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
 
 const MOMENT_FORMAT = 'YYYY-MM-DD[T]HH:mm:ss';
@@ -87,7 +95,7 @@ const propTypes = {
 
 const defaultProps = {
   animation: true,
-  onChange: () => {},
+  onChange: () => { },
   value: 'Last week',
 };
 
@@ -290,7 +298,7 @@ export default class DateFilterControl extends React.Component {
             type="text"
             onKeyPress={this.onEnter}
             onFocus={this.setTypeCustomStartEnd}
-            onClick={() => {}}
+            onClick={() => { }}
           />
           <InputGroup.Button onClick={() => this.toggleCalendar(key)}>
             <Button>
@@ -311,7 +319,7 @@ export default class DateFilterControl extends React.Component {
       >
         {grain}
       </MenuItem>
-      ));
+    ));
     const timeFrames = COMMON_TIME_FRAMES.map((timeFrame) => {
       const nextState = getStateFromCommonTimeFrame(timeFrame);
       return (
@@ -330,7 +338,7 @@ export default class DateFilterControl extends React.Component {
               checked={this.state.common === timeFrame}
               onChange={() => this.setState(nextState)}
             >
-              {timeFrame}
+              {RU_TRANSLATE[timeFrame]}
             </Radio>
           </div>
         </OverlayTrigger>
@@ -345,10 +353,10 @@ export default class DateFilterControl extends React.Component {
             className="time-filter-tabs"
             onSelect={this.changeTab}
           >
-            <Tab eventKey={1} title="Defaults">
+            <Tab eventKey={1} title={t('Defaults')}>
               <FormGroup>{timeFrames}</FormGroup>
             </Tab>
-            <Tab eventKey={2} title="Custom">
+            <Tab eventKey={2} title={t('Custom')}>
               <FormGroup>
                 <PopoverSection
                   title="Relative to today"
@@ -475,7 +483,7 @@ export default class DateFilterControl extends React.Component {
           placement="right"
           overlay={this.renderPopover()}
         >
-          <Label style={{ cursor: 'pointer' }}>{value}</Label>
+          <Label style={{ cursor: 'pointer' }}>{value in RU_TRANSLATE ? RU_TRANSLATE[value] : value}</Label>
         </OverlayTrigger>
       </div>
     );

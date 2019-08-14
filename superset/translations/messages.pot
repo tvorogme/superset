@@ -8,14 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-14 07:51+0300\n"
+"POT-Creation-Date: 2019-08-14 09:45+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.7.0\n"
+"Generated-By: Babel 2.5.3\n"
 
 #: superset/sql_lab.py:163
 msgid "Only `SELECT` statements are allowed against this database"
@@ -3817,10 +3817,18 @@ msgstr ""
 msgid "Expand/collapse datasource configuration"
 msgstr ""
 
-#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:73
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:81
 msgid ""
 "Superset supports smart date parsing. Strings like `last sunday` or `last"
 " october` can be used."
+msgstr ""
+
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:356
+msgid "Defaults"
+msgstr ""
+
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:359
+msgid "Custom"
 msgstr ""
 
 #: superset/assets/src/explore/components/controls/FilterBoxItemControl.jsx:99

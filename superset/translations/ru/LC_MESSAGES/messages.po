@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-08-14 07:51+0300\n"
+"POT-Creation-Date: 2019-08-14 09:45+0300\n"
 "PO-Revision-Date: 2018-03-09 22:26+0200\n"
 "Last-Translator: Vladimir Gladkov <oxydash@github.com>\n"
 "Language: ru\n"
@@ -3931,11 +3931,19 @@ msgstr ""
 msgid "Expand/collapse datasource configuration"
 msgstr ""
 
-#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:73
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:81
 msgid ""
 "Superset supports smart date parsing. Strings like `last sunday` or `last"
 " october` can be used."
 msgstr ""
+
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:356
+msgid "Defaults"
+msgstr "Заданный"
+
+#: superset/assets/src/explore/components/controls/DateFilterControl.jsx:359
+msgid "Custom"
+msgstr "Произвольный"
 
 #: superset/assets/src/explore/components/controls/FilterBoxItemControl.jsx:99
 msgid "Default"

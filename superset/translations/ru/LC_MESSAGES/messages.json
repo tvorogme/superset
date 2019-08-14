@@ -2581,6 +2581,12 @@
             "Superset supports smart date parsing. Strings like `last sunday` or `last october` can be used.": [
                 ""
             ],
+            "Defaults": [
+                "Заданный"
+            ],
+            "Custom": [
+                "Произвольный"
+            ],
             "Default": [
                 ""
             ],
