@@ -443,7 +443,7 @@ class DashboardModelView(SupersetModelView, DeleteMixin):  # noqa
     edit_title = _("Edit Dashboard")
 
     list_columns = ["dashboard_link", "creator", "published", "modified"]
-    order_columns = ["creator", "modified", "published"]
+    order_columns = ["modified", "published"]
     edit_columns = [
         "dashboard_title",
         "slug",
