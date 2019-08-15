@@ -66,9 +66,9 @@ const COMMON_TIME_FRAMES = [
 ];
 const RU_TRANSLATE = {
   'Last day': 'Последний день',
-  'Last week': 'Последняя неделя',
-  'Last month': 'Последний месяц',
-  'Last quarter': 'Последний квартал',
+  'Last week': 'Последние 7 дней',
+  'Last month': 'Последние 30 дней',
+  'Last quarter': 'Последние 90 дней',
   'Last year': 'Последний год',
   'No filter': 'Нет фильтра',
 };
