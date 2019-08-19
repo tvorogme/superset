@@ -1328,6 +1328,8 @@ msgid ""
 "This dashboard is not published, it will not show up in the list of "
 "dashboards. Click here to publish this dashboard."
 msgstr ""
+"Этот отчет еще не опубликован, он не будет показан в списке отчетов."
+"Нажмите, чтобы опубликовать отчет"
 
 #: superset/assets/src/dashboard/components/PublishedStatus.jsx:37
 msgid ""
@@ -1335,6 +1337,8 @@ msgid ""
 "list of dashboards. Favorite it to see it there or access it by using the"
 " URL directly."
 msgstr ""
+"Этот отчет еще не опубликован, он не будет показан в списке отчетов."
+"Добавьте в избранное, чтобы увидеть отчет в списке 'Избранное' или используйте прямую ссылку."
 
 #: superset/assets/src/dashboard/components/PublishedStatus.jsx:42
 msgid "This dashboard is published. Click to make it a draft."
