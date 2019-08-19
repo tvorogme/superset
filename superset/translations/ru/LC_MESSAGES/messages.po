@@ -140,7 +140,7 @@ msgstr "Выберите показатель!"
 
 #: superset/viz.py:1060
 msgid "Big Number"
-msgstr ""
+msgstr "Большое число"
 
 #: superset/viz.py:1082
 msgid "Time Series - Line Chart"
@@ -503,7 +503,7 @@ msgstr ""
 
 #: superset/assets/src/SqlLab/components/ExploreResultsButton.jsx:192
 msgid "Explore the result set in the data exploration view"
-msgstr ""
+msgstr "Исследовать результат в конструкторе графиков"
 
 #: superset/assets/src/SqlLab/components/HighlightedSql.jsx:78
 msgid "Raw SQL"
@@ -838,15 +838,15 @@ msgstr "Переименовать вкладку"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:230
 msgid "Expand tool bar"
-msgstr ""
+msgstr "Показать панель инструментов"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:230
 msgid "Hide tool bar"
-msgstr ""
+msgstr "Скрыть панель инструментов"
 
 #: superset/assets/src/SqlLab/components/TabbedSqlEditors.jsx:236
 msgid "Close all other tabs"
-msgstr ""
+msgstr "Закрыть все остальные вкладки"
 
 #: superset/assets/src/SqlLab/components/TableElement.jsx:101
 msgid "Copy partition query to clipboard"
@@ -943,7 +943,7 @@ msgstr "Создать новый график"
 
 #: superset/assets/src/chart/chartAction.js:297
 msgid "An error occurred while loading the SQL"
-msgstr ""
+msgstr "Произошла ошибка при загрузке SQL"
 
 #: superset/assets/src/chart/chartReducer.js:67
 msgid "Updating chart was stopped"
@@ -985,7 +985,7 @@ msgstr "Изменения"
 
 #: superset/assets/src/components/AlteredSliceTag.jsx:183
 msgid "Chart changes"
-msgstr ""
+msgstr "Изменения графика"
 
 #: superset/assets/src/components/AnchorLink.jsx:77
 msgid "Superset Chart"
@@ -993,7 +993,7 @@ msgstr ""
 
 #: superset/assets/src/components/AnchorLink.jsx:78
 msgid "Check out this chart in dashboard:"
-msgstr ""
+msgstr "Посмотреть этот график в отчете: "
 
 #: superset/assets/src/components/AsyncSelect.jsx:41
 #: superset/assets/src/explore/components/controls/SelectAsyncControl.jsx:47
@@ -1045,7 +1045,7 @@ msgstr "Недостаточно прав для изменения заголо
 
 #: superset/assets/src/components/ErrorBoundary.jsx:51
 msgid "Unexpected error"
-msgstr ""
+msgstr "Неожиданная ошибка"
 
 #: superset/assets/src/components/FaveStar.jsx:51
 msgid "Click to favorite/unfavorite"
@@ -1054,7 +1054,7 @@ msgstr "Отметить как избранное"
 #: superset/assets/src/components/OmniContainer.jsx:46
 #: superset/assets/src/welcome/DashboardTable.jsx:50
 msgid "An error occurred while fethching Dashboards"
-msgstr ""
+msgstr "Произошла ошибка при загрузке отчетов"
 
 #: superset/assets/src/components/TableSelector.jsx:152
 msgid "Error while fetching table list"
@@ -1095,7 +1095,7 @@ msgstr "Введите для поиска…"
 
 #: superset/assets/src/components/TableSelector.jsx:268
 msgid "Select table "
-msgstr ""
+msgstr "Выберите таблицу "
 
 #: superset/assets/src/components/TableSelector.jsx:278
 msgid "Select table or type table name"
@@ -1164,7 +1164,7 @@ msgstr ""
 
 #: superset/assets/src/dashboard/actions/sliceEntities.js:96
 msgid "Sorry there was an error fetching saved charts: "
-msgstr ""
+msgstr "Извините, произошла ошибка при загрузке избранных графиков: "
 
 #: superset/assets/src/dashboard/components/AddSliceCard.jsx:56
 #: superset/connectors/druid/views.py:374 superset/connectors/sqla/views.py:324
@@ -1270,7 +1270,7 @@ msgstr "Superset Отчет"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:133
 msgid "Check out this dashboard: "
-msgstr ""
+msgstr "Посмотреть этот отчет: "
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:159
 #: superset/assets/src/explore/components/SaveModal.jsx:191
@@ -1291,7 +1291,7 @@ msgstr "Установить интервал автоматического о�
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:189
 msgid "Auto-refresh dashboard"
-msgstr ""
+msgstr "Автообновление отчета"
 
 #: superset/assets/src/dashboard/components/HeaderActionsDropdown.jsx:196
 msgid "Edit dashboard metadata"
@@ -5575,7 +5575,7 @@ msgstr ""
 
 #: superset/views/core.py:1122
 msgid "An unknown error occurred. Please contact your Superset administrator"
-msgstr ""
+msgstr "Произошла неизвестная ошибка. Пожалуйста, обратитель к администратору Superset"
 
 #: superset/views/core.py:1207 superset/views/core.py:1213
 #: superset/views/core.py:1336 superset/views/core.py:1353
@@ -5597,7 +5597,7 @@ msgstr "создать "
 #: superset/views/core.py:1253
 #, python-format
 msgid "Explore - %(table)s"
-msgstr ""
+msgstr "Исследовать - %(table)s"
 
 #: superset/views/core.py:1338 superset/views/core.py:1355
 msgid "dashboard"
