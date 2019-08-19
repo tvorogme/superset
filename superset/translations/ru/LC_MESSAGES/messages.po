@@ -3797,7 +3797,7 @@ msgstr "Сохранить график"
 #: superset/assets/src/explore/components/SaveModal.jsx:180
 #, python-format
 msgid "Overwrite chart %s"
-msgstr "Перезаписать отчет %s"
+msgstr "Перезаписать график %s"
 
 #: superset/assets/src/explore/components/SaveModal.jsx:195
 msgid "[chart name]"
