@@ -360,7 +360,7 @@ Here's a list of some of the recommended packages.
 |                  |                                       | For JDBC                                        |
 |                  |                                       | ``drill+jdbc://``                               |
 +------------------+---------------------------------------+-------------------------------------------------+
-| Apache Druid     | ``pip install pyduid``                | ``druid://``                                    |
+| Apache Druid     | ``pip install pydruid``                | ``druid://``                                    |
 +------------------+---------------------------------------+-------------------------------------------------+
 | Apache Hive      | ``pip install pyhive``                | ``hive://``                                     |
 +------------------+---------------------------------------+-------------------------------------------------+
@@ -846,6 +846,12 @@ look something like:
     RESULTS_BACKEND = RedisCache(
         host='localhost', port=6379, key_prefix='superset_results')
 
+For performance gains, `MessagePack <https://github.com/msgpack/msgpack-python>`_
+and `PyArrow <https://arrow.apache.org/docs/python/>`_ are now used for results
+serialization. This can be disabled by setting ``RESULTS_BACKEND_USE_MSGPACK = False``
+in your configuration, should any issues arise. Please clear your existing results
+cache store when upgrading an existing environment.
+
 **Important notes**
 
 * It is important that all the worker nodes and web servers in
@@ -1185,7 +1191,8 @@ You can enable or disable features with flag from ``superset_config.py``:
 
      DEFAULT_FEATURE_FLAGS = {
          'CLIENT_CACHE': False,
-         'ENABLE_EXPLORE_JSON_CSRF_PROTECTION': False
+         'ENABLE_EXPLORE_JSON_CSRF_PROTECTION': False,
+         'PRESTO_EXPAND_DATA': False,
      }
 
 Here is a list of flags and descriptions:
@@ -1195,3 +1202,7 @@ Here is a list of flags and descriptions:
   * For some security concerns, you may need to enforce CSRF protection on all query request to explore_json endpoint. In Superset, we use `flask-csrf <https://sjl.bitbucket.io/flask-csrf/>`_ add csrf protection for all POST requests, but this protection doesn't apply to GET method.
 
   * When ENABLE_EXPLORE_JSON_CSRF_PROTECTION is set to true, your users cannot make GET request to explore_json. The default value for this feature False (current behavior), explore_json accepts both GET and POST request. See `PR 7935 <https://github.com/apache/incubator-superset/pull/7935>`_ for more details.
+
+* PRESTO_EXPAND_DATA
+
+  * When this feature is enabled, nested types in Presto will be expanded into extra columns and/or arrays. This is experimental, and doesn't work with all nested types.
