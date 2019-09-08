@@ -818,10 +818,10 @@
         "Удалить"
       ],
       "%s more filters": [
-        ""
+        "ещё фильтры: %s"
       ],
       "Not filtered": [
-        ""
+        "Нет фильтра"
       ],
       "Your dashboard is too large. Please reduce the size before save it.": [
         "Отчет слишком большой. Пожалуйста, уменьшите его размер перед сохранением."

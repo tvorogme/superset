@@ -1238,11 +1238,11 @@ msgstr "Удалить"
 #: superset/assets/src/dashboard/components/FilterIndicatorGroup.jsx:50
 #, python-format
 msgid "%s more filters"
-msgstr ""
+msgstr "ещё фильтры: %s"
 
 #: superset/assets/src/dashboard/components/FilterIndicatorTooltip.jsx:41
 msgid "Not filtered"
-msgstr ""
+msgstr "Нет фильтра"
 
 #: superset/assets/src/dashboard/components/Header.jsx:248
 msgid "Your dashboard is too large. Please reduce the size before save it."
