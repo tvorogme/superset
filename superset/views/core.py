@@ -46,7 +46,6 @@ import pandas as pd
 import pyarrow as pa
 import simplejson as json
 from sqlalchemy import and_, or_, select
-from sqlalchemy.exc import DatabaseError
 from werkzeug.routing import BaseConverter
 
 from superset import (
@@ -2451,10 +2450,7 @@ class Superset(BaseSupersetView):
         )
         if rejected_tables:
             return json_error_response(
-                security_manager.get_table_access_error_msg(
-                    "{}".format(rejected_tables)
-                ),
-                status=403,
+                security_manager.get_table_access_error_msg(rejected_tables), status=403
             )
 
         payload = utils.zlib_decompress(blob, decode=not results_backend_use_msgpack)
@@ -2473,7 +2469,7 @@ class Superset(BaseSupersetView):
     @event_logger.log_this
     @backoff.on_exception(
         backoff.constant,
-        DatabaseError,
+        Exception,
         interval=1,
         on_backoff=lambda details: db.session.rollback(),
         on_giveup=lambda details: db.session.rollback(),
