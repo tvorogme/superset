@@ -527,7 +527,7 @@
         ""
       ],
       "You must run the query successfully first": [
-        ""
+        "Вы должны сначала успешно выполнить запрос"
       ],
       "Keyboard shortcuts": [
         "Горячие клавиши"
@@ -790,8 +790,11 @@
       "Active Dashboard Filters": [
         "Фильтр активного отчёта"
       ],
+      "Color Settings": [
+        "Настройки цвета"
+      ],
       "Any color palette selected here will override the colors applied to this dashboard's individual charts": [
-        ""
+        "Любая выбранная здесь палитра цветов заменит цвета применненные ко всем графикам этого отчета"
       ],
       "Color Scheme": [
         "Цветовая схема"
@@ -1058,7 +1061,7 @@
         ""
       ],
       "An error has occurred": [
-        ""
+        "Произошла ошибка"
       ],
       "Column name [%s] is duplicated": [
         ""
@@ -1100,7 +1103,7 @@
         "Владельцы"
       ],
       "Owners of the datasource": [
-        ""
+        "Владельцы источника данных"
       ],
       "Advanced": [
         "Дополнительно"
@@ -1268,10 +1271,10 @@
         "Стиль области"
       ],
       "Sort X Axis": [
-        ""
+        "Сортировать ось X"
       ],
       "Sort Y Axis": [
-        ""
+        "Сортировать ось Y"
       ],
       "Linear Color Scheme": [
         "Цветовая Схема"
@@ -1295,7 +1298,7 @@
         ""
       ],
       "XScale Interval": [
-        "Интевал XScale"
+        "Интервал XScale"
       ],
       "Number of steps to take between ticks when displaying the X scale": [
         "Количество шагов между делениями горизонтальной оси X"
@@ -2579,7 +2582,7 @@
         "Изменить источник данных"
       ],
       "Expand/collapse datasource configuration": [
-        ""
+        "Показать скрыть конфигурацию источника данных"
       ],
       "Last": [
         "Последние"

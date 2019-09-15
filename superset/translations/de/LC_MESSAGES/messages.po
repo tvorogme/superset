@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-08 16:05+0300\n"
+"POT-Creation-Date: 2019-09-15 18:40+0300\n"
 "PO-Revision-Date: 2017-10-20 14:36+0100\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: de\n"
@@ -574,6 +574,7 @@ msgstr ""
 #: superset/assets/src/SqlLab/components/QuerySearch.jsx:258
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:164
 #: superset/assets/src/explore/components/controls/VizTypeControl.jsx:179
+#: superset/assets/src/welcome/Welcome.jsx:55
 msgid "Search"
 msgstr "Suche"
 
@@ -1180,6 +1181,10 @@ msgstr ""
 msgid "Active Dashboard Filters"
 msgstr ""
 
+#: superset/assets/src/dashboard/components/ColorComponentPane.jsx:73
+msgid "Color Settings"
+msgstr ""
+
 #: superset/assets/src/dashboard/components/ColorComponentPane.jsx:86
 msgid ""
 "Any color palette selected here will override the colors applied to this "
@@ -1709,6 +1714,7 @@ msgstr ""
 #: superset/assets/src/explore/controlPanels/CountryMap.js:47
 #: superset/assets/src/explore/controls.jsx:180
 #: superset/assets/src/explore/controls.jsx:181
+#: superset/assets/src/visualizations/TimeTable/TimeTable.jsx:264
 #: superset/connectors/druid/views.py:175 superset/connectors/sqla/views.py:184
 msgid "Metric"
 msgstr "Metrik"

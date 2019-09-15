@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2019-09-08 16:05+0300\n"
+"POT-Creation-Date: 2019-09-15 18:40+0300\n"
 "PO-Revision-Date: 2018-03-09 22:26+0200\n"
 "Last-Translator: Vladimir Gladkov <oxydash@github.com>\n"
 "Language: ru\n"
@@ -581,6 +581,7 @@ msgstr ""
 #: superset/assets/src/SqlLab/components/QuerySearch.jsx:258
 #: superset/assets/src/explore/components/DisplayQueryButton.jsx:164
 #: superset/assets/src/explore/components/controls/VizTypeControl.jsx:179
+#: superset/assets/src/welcome/Welcome.jsx:55
 msgid "Search"
 msgstr "Поиск"
 
@@ -1193,11 +1194,17 @@ msgstr "Добавлен"
 msgid "Active Dashboard Filters"
 msgstr "Фильтр активного отчёта"
 
+#: superset/assets/src/dashboard/components/ColorComponentPane.jsx:73
+msgid "Color Settings"
+msgstr "Настройки цвета"
+
 #: superset/assets/src/dashboard/components/ColorComponentPane.jsx:86
 msgid ""
 "Any color palette selected here will override the colors applied to this "
 "dashboard's individual charts"
 msgstr ""
+"Любая выбранная здесь палитра цветов заменит цвета применненные ко всем "
+"графикам этого отчета"
 
 #: superset/assets/src/dashboard/components/ColorComponentPane.jsx:89
 #: superset/assets/src/explore/controlPanels/sections.jsx:43
@@ -1727,6 +1734,7 @@ msgstr ""
 #: superset/assets/src/explore/controlPanels/CountryMap.js:47
 #: superset/assets/src/explore/controls.jsx:180
 #: superset/assets/src/explore/controls.jsx:181
+#: superset/assets/src/visualizations/TimeTable/TimeTable.jsx:264
 #: superset/connectors/druid/views.py:175 superset/connectors/sqla/views.py:184
 msgid "Metric"
 msgstr "Показатель"

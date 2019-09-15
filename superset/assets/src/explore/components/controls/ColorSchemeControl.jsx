@@ -105,7 +105,7 @@ export default class ColorSchemeControl extends React.PureComponent {
     const selectProps = {
       multi: false,
       name: `select-${this.props.name}`,
-      placeholder: `Select (${options.length})`,
+      placeholder: `${t('Select')} (${options.length})`,
       default: this.props.default,
       options,
       value: this.props.value,
