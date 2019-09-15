@@ -813,7 +813,7 @@ msgstr ""
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:370
 msgid "You must run the query successfully first"
-msgstr ""
+msgstr "Вы должны сначала успешно выполнить запрос"
 
 #: superset/assets/src/SqlLab/components/SqlEditor.jsx:429
 msgid "Keyboard shortcuts"
@@ -1593,7 +1593,7 @@ msgstr ""
 #: superset/assets/src/datasource/DatasourceEditor.jsx:277
 #: superset/assets/src/datasource/DatasourceModal.jsx:94
 msgid "An error has occurred"
-msgstr ""
+msgstr "Произошла ошибка"
 
 #: superset/assets/src/datasource/DatasourceEditor.jsx:304
 #, python-format
@@ -1662,7 +1662,7 @@ msgstr "Владельцы"
 
 #: superset/assets/src/datasource/DatasourceEditor.jsx:380
 msgid "Owners of the datasource"
-msgstr ""
+msgstr "Владельцы источника данных"
 
 #: superset/assets/src/datasource/DatasourceEditor.jsx:400
 #: superset/assets/src/explore/controlPanels/DeckArc.js:51
@@ -1934,11 +1934,11 @@ msgstr "Стиль области"
 
 #: superset/assets/src/explore/controls.jsx:363
 msgid "Sort X Axis"
-msgstr ""
+msgstr "Сортировать ось X"
 
 #: superset/assets/src/explore/controls.jsx:371
 msgid "Sort Y Axis"
-msgstr ""
+msgstr "Сортировать ось Y"
 
 #: superset/assets/src/explore/controls.jsx:379
 msgid "Linear Color Scheme"
@@ -1977,7 +1977,7 @@ msgstr ""
 
 #: superset/assets/src/explore/controls.jsx:433
 msgid "XScale Interval"
-msgstr "Интевал XScale"
+msgstr "Интервал XScale"
 
 #: superset/assets/src/explore/controls.jsx:438
 msgid "Number of steps to take between ticks when displaying the X scale"
@@ -3937,7 +3937,7 @@ msgstr "Изменить источник данных"
 
 #: superset/assets/src/explore/components/controls/DatasourceControl.jsx:172
 msgid "Expand/collapse datasource configuration"
-msgstr ""
+msgstr "Показать скрыть конфигурацию источника данных"
 
 #: superset/assets/src/explore/components/controls/DateFilterControl.jsx:61
 #: superset/assets/src/explore/components/controls/DateFilterControl.jsx:396
