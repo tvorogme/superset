@@ -3945,7 +3945,7 @@ msgstr "Изменить источник данных"
 
 #: superset/assets/src/explore/components/controls/DatasourceControl.jsx:172
 msgid "Expand/collapse datasource configuration"
-msgstr "Показать скрыть конфигурацию источника данных"
+msgstr "Показать/скрыть конфигурацию источника данных"
 
 #: superset/assets/src/explore/components/controls/DateFilterControl.jsx:61
 #: superset/assets/src/explore/components/controls/DateFilterControl.jsx:396
