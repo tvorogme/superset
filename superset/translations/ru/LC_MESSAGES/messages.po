@@ -5787,7 +5787,7 @@ msgstr "Редактор SQL"
 
 #: superset/views/core.py:3023 superset/views/core.py:3033
 msgid "SQL Lab"
-msgstr "Лаборатория"
+msgstr "SQL Lab"
 
 #: superset/views/core.py:3028
 msgid "Query Search"
