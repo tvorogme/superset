@@ -32,7 +32,7 @@ import signal
 import smtplib
 from time import struct_time
 import traceback
-from typing import List, NamedTuple, Optional, Tuple, Union
+from typing import Iterator, List, NamedTuple, Optional, Tuple, Union
 from urllib.parse import unquote_plus
 import uuid
 import zlib
@@ -349,6 +349,23 @@ def datetime_f(dttm):
     return "<nobr>{}</nobr>".format(dttm)
 
 
+def format_timedelta(td: timedelta) -> str:
+    """
+    Ensures negative time deltas are easily interpreted by humans
+
+    >>> td = timedelta(0) - timedelta(days=1, hours=5,minutes=6)
+    >>> str(td)
+    '-2 days, 18:54:00'
+    >>> format_timedelta(td)
+    '-1 day, 5:06:00'
+    """
+    if td < timedelta(0):
+        return "-" + str(abs(td))
+    else:
+        # Change this to format positive time deltas the way you want
+        return str(td)
+
+
 def base_json_conv(obj):
     if isinstance(obj, memoryview):
         obj = obj.tobytes()
@@ -363,7 +380,7 @@ def base_json_conv(obj):
     elif isinstance(obj, uuid.UUID):
         return str(obj)
     elif isinstance(obj, timedelta):
-        return str(obj)
+        return format_timedelta(obj)
     elif isinstance(obj, bytes):
         try:
             return obj.decode("utf-8")
@@ -438,8 +455,8 @@ def error_msg_from_exception(e):
         if isinstance(e.message, dict):
             msg = e.message.get("message")
         elif e.message:
-            msg = "{}".format(e.message)
-    return msg or "{}".format(e)
+            msg = e.message
+    return msg or str(e)
 
 
 def markdown(s: str, markup_wrap: Optional[bool] = False) -> str:
@@ -936,10 +953,6 @@ def user_label(user: User) -> Optional[str]:
     return None
 
 
-def get_or_create_main_db():
-    get_main_database()
-
-
 def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     from superset import db
     from superset.models import core as models
@@ -955,12 +968,6 @@ def get_or_create_db(database_name, sqlalchemy_uri, *args, **kwargs):
     database.set_sqlalchemy_uri(sqlalchemy_uri)
     db.session.commit()
     return database
-
-
-def get_main_database():
-    from superset import conf
-
-    return get_or_create_db("main", conf.get("SQLALCHEMY_DATABASE_URI"))
 
 
 def get_example_database():
@@ -1204,3 +1211,35 @@ class DatasourceName(NamedTuple):
 def get_stacktrace():
     if current_app.config.get("SHOW_STACKTRACE"):
         return traceback.format_exc()
+
+
+def split(
+    s: str, delimiter: str = " ", quote: str = '"', escaped_quote: str = r"\""
+) -> Iterator[str]:
+    """
+    A split function that is aware of quotes and parentheses.
+
+    :param s: string to split
+    :param delimiter: string defining where to split, usually a comma or space
+    :param quote: string, either a single or a double quote
+    :param escaped_quote: string representing an escaped quote
+    :return: list of strings
+    """
+    parens = 0
+    quotes = False
+    i = 0
+    for j, c in enumerate(s):
+        complete = parens == 0 and not quotes
+        if complete and c == delimiter:
+            yield s[i:j]
+            i = j + len(delimiter)
+        elif c == "(":
+            parens += 1
+        elif c == ")":
+            parens -= 1
+        elif c == quote:
+            if quotes and s[j - len(escaped_quote) + 1 : j + 1] != escaped_quote:
+                quotes = False
+            elif not quotes:
+                quotes = True
+    yield s[i:]

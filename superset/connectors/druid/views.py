@@ -151,7 +151,6 @@ class DruidMetricInlineView(CompactCRUDMixin, SupersetModelView):  # noqa
         "json",
         "datasource",
         "d3format",
-        "is_restricted",
         "warning_text",
     ]
     add_columns = edit_columns
@@ -163,13 +162,7 @@ class DruidMetricInlineView(CompactCRUDMixin, SupersetModelView):  # noqa
             "[Druid Post Aggregation]"
             "(http://druid.io/docs/latest/querying/post-aggregations.html)",
             True,
-        ),
-        "is_restricted": _(
-            "Whether access to this metric is restricted "
-            "to certain roles. Only roles with the permission "
-            "'metric access on XXX (the name of this metric)' "
-            "are allowed to access this metric"
-        ),
+        )
     }
     label_columns = {
         "metric_name": _("Metric"),
@@ -179,7 +172,6 @@ class DruidMetricInlineView(CompactCRUDMixin, SupersetModelView):  # noqa
         "json": _("JSON"),
         "datasource": _("Druid Datasource"),
         "warning_text": _("Warning Message"),
-        "is_restricted": _("Is Restricted"),
     }
 
     add_form_extra_fields = {
@@ -192,18 +184,6 @@ class DruidMetricInlineView(CompactCRUDMixin, SupersetModelView):  # noqa
     }
 
     edit_form_extra_fields = add_form_extra_fields
-
-    def post_add(self, metric):
-        if metric.is_restricted:
-            security_manager.add_permission_view_menu(
-                "metric_access", metric.get_perm()
-            )
-
-    def post_update(self, metric):
-        if metric.is_restricted:
-            security_manager.add_permission_view_menu(
-                "metric_access", metric.get_perm()
-            )
 
 
 appbuilder.add_view_no_menu(DruidMetricInlineView)
@@ -415,7 +395,7 @@ class Druid(BaseSupersetView):
 
     @has_access
     @expose("/refresh_datasources/")
-    def refresh_datasources(self, refreshAll=True):
+    def refresh_datasources(self, refresh_all=True):
         """endpoint that refreshes druid datasources metadata"""
         session = db.session()
         DruidCluster = ConnectorRegistry.sources["druid"].cluster_class
@@ -423,7 +403,7 @@ class Druid(BaseSupersetView):
             cluster_name = cluster.cluster_name
             valid_cluster = True
             try:
-                cluster.refresh_datasources(refreshAll=refreshAll)
+                cluster.refresh_datasources(refresh_all=refresh_all)
             except Exception as e:
                 valid_cluster = False
                 flash(
@@ -452,7 +432,7 @@ class Druid(BaseSupersetView):
         Calling this endpoint will cause a scan for new
         datasources only and add them.
         """
-        return self.refresh_datasources(refreshAll=False)
+        return self.refresh_datasources(refresh_all=False)
 
 
 appbuilder.add_view_no_menu(Druid)

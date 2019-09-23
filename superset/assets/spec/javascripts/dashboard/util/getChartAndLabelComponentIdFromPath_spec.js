@@ -16,24 +16,23 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import { t } from '@superset-ui/translation';
-import { ChartMetadata, ChartPlugin } from '@superset-ui/chart';
-import thumbnail from './images/thumbnail.png';
-import transformProps from '../../transformProps';
+import getChartAndLabelComponentIdFromPath from '../../../../src/dashboard/util/getChartAndLabelComponentIdFromPath';
 
-const metadata = new ChartMetadata({
-  name: t('deck.gl Scatterplot'),
-  description: '',
-  credits: ['https://uber.github.io/deck.gl'],
-  thumbnail,
-});
+describe('getChartAndLabelComponentIdFromPath', () => {
+  it('should return label and component id', () => {
+    const directPathToChild = [
+      'ROOT_ID',
+      'TABS-aX1uNK-ryo',
+      'TAB-ZRgxfD2ktj',
+      'ROW-46632bc2',
+      'COLUMN-XjlxaS-flc',
+      'CHART-x-RMdAtlDb',
+      'LABEL-region',
+    ];
 
-export default class ScatterChartPlugin extends ChartPlugin {
-  constructor() {
-    super({
-      metadata,
-      loadChart: () => import('./Scatter.jsx'),
-      transformProps,
+    expect(getChartAndLabelComponentIdFromPath(directPathToChild)).toEqual({
+      label: 'LABEL-region',
+      chart: 'CHART-x-RMdAtlDb',
     });
-  }
-}
+  });
+});
