@@ -3740,10 +3740,10 @@
         "Загрузить CSV"
       ],
       "Schedule Email Reports for Dashboards": [
-        ""
+        "Запланировать email отчеты для дэшбордов"
       ],
       "Manage Email Reports for Dashboards": [
-        ""
+        "Управление email отчетами для дэшбордов"
       ],
       "Changed On": [
         ""
@@ -3764,31 +3764,31 @@
         ""
       ],
       "Schedule Email Reports for Charts": [
-        ""
+        "Запланировать email отчеты для графиков"
       ],
       "Manage Email Reports for Charts": [
-        ""
+        "Управление email отчетами для графиков"
       ],
       "Email Format": [
         ""
       ],
       "Dashboard Emails": [
-        ""
+        "Email отчеты"
       ],
       "Chart Email Schedules": [
-        ""
+        "Email графики"
       ],
       "List Query": [
         ""
       ],
       "Show Query": [
-        ""
+        "Показать запрос"
       ],
       "Add Query": [
-        ""
+        "Добавить запрос"
       ],
       "Edit Query": [
-        ""
+        "Изменить запрсо"
       ],
       "Status": [
         "Статус"

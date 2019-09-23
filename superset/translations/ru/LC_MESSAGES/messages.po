@@ -5799,11 +5799,11 @@ msgstr "Загрузить CSV"
 
 #: superset/views/schedules.py:156
 msgid "Schedule Email Reports for Dashboards"
-msgstr ""
+msgstr "Запланировать email отчеты для дэшбордов"
 
 #: superset/views/schedules.py:158
 msgid "Manage Email Reports for Dashboards"
-msgstr ""
+msgstr "Управление email отчетами для дэшбордов"
 
 #: superset/views/schedules.py:196 superset/views/schedules.py:256
 msgid "Changed On"
@@ -5831,11 +5831,11 @@ msgstr ""
 
 #: superset/views/schedules.py:214
 msgid "Schedule Email Reports for Charts"
-msgstr ""
+msgstr "Запланировать email отчеты для графиков"
 
 #: superset/views/schedules.py:216
 msgid "Manage Email Reports for Charts"
-msgstr ""
+msgstr "Управление email отчетами для графиков"
 
 #: superset/views/schedules.py:263
 msgid "Email Format"
@@ -5843,11 +5843,11 @@ msgstr ""
 
 #: superset/views/schedules.py:278
 msgid "Dashboard Emails"
-msgstr ""
+msgstr "Email отчеты"
 
 #: superset/views/schedules.py:287
 msgid "Chart Email Schedules"
-msgstr ""
+msgstr "Email графики"
 
 #: superset/views/sql_lab.py:51
 msgid "List Query"
@@ -5855,15 +5855,15 @@ msgstr ""
 
 #: superset/views/sql_lab.py:52
 msgid "Show Query"
-msgstr ""
+msgstr "Показать запрос"
 
 #: superset/views/sql_lab.py:53
 msgid "Add Query"
-msgstr ""
+msgstr "Добавить запрос"
 
 #: superset/views/sql_lab.py:54
 msgid "Edit Query"
-msgstr ""
+msgstr "Изменить запрсо"
 
 #: superset/views/sql_lab.py:63
 msgid "Status"
