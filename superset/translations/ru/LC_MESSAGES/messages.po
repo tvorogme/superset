@@ -2381,7 +2381,7 @@ msgstr ""
 
 #: superset/assets/src/explore/controls.jsx:970
 msgid "Time range"
-msgstr "Период времени"
+msgstr "Временной промежуток"
 
 #: superset/assets/src/explore/components/controls/DateFilterControl.jsx:75
 #: superset/assets/src/explore/controls.jsx:971
