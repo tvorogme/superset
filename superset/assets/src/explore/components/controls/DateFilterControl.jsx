@@ -52,10 +52,16 @@ const TABS = Object.freeze({
   DEFAULTS: 'defaults',
   CUSTOM: 'custom',
 });
+
 const RELATIVE_TIME_OPTIONS = Object.freeze({
   LAST: 'Last',
   NEXT: 'Next',
 });
+const RELATIVE_TIME_OPTIONS_TRANSLATION = {
+  'Last': t('Last'),
+  'Next': t('Next'),
+};
+
 const COMMON_TIME_FRAMES = [
   'Last day',
   'Last week',
@@ -64,7 +70,25 @@ const COMMON_TIME_FRAMES = [
   'Last year',
   'No filter',
 ];
+const COMMON_TIME_FRAMES_TRANSLATE = {
+  'Last day': t('Last day'),
+  'Last week': t('Last week'),
+  'Last month': t('Last month'),
+  'Last quarter': t('Last quarter'),
+  'Last year': t('Last year'),
+  'No filter': t('No filter'),
+};
+
 const TIME_GRAIN_OPTIONS = ['seconds', 'minutes', 'hours', 'days', 'weeks', 'months', 'years'];
+const TIME_GRAIN_OPTIONS_TRANSLATION = {
+  'seconds': t('seconds'),
+  'minutes': t('minutes'),
+  'hours': t('hours'),
+  'days': t('days'),
+  'weeks': t('weeks'),
+  'months': t('months'),
+  'years': t('years')
+};
 
 const MOMENT_FORMAT = 'YYYY-MM-DD[T]HH:mm:ss';
 const DEFAULT_SINCE = moment().startOf('day').subtract(7, 'days').format(MOMENT_FORMAT);
@@ -75,6 +99,8 @@ const FREEFORM_TOOLTIP = t(
   '`last october` can be used.',
 );
 
+const DATE_FILTER_POPOVER_STYLE = { width: '250px' };
+
 const propTypes = {
   animation: PropTypes.bool,
   name: PropTypes.string.isRequired,
@@ -83,12 +109,16 @@ const propTypes = {
   onChange: PropTypes.func,
   value: PropTypes.string,
   height: PropTypes.number,
+  onOpenDateFilterControl: PropTypes.func,
+  onCloseDateFilterControl: PropTypes.func,
 };
 
 const defaultProps = {
   animation: true,
-  onChange: () => {},
+  onChange: () => { },
   value: 'Last week',
+  onOpenDateFilterControl: () => {},
+  onCloseDateFilterControl: () => {},
 };
 
 function isValidMoment(s) {
@@ -182,6 +212,7 @@ export default class DateFilterControl extends React.Component {
 
     this.close = this.close.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleClickTrigger = this.handleClickTrigger.bind(this);
     this.isValidSince = this.isValidSince.bind(this);
     this.isValidUntil = this.isValidUntil.bind(this);
     this.onEnter = this.onEnter.bind(this);
@@ -242,11 +273,35 @@ export default class DateFilterControl extends React.Component {
   }
 
   handleClick(e) {
+    const target = e.target;
     // switch to `TYPES.CUSTOM_START_END` when the calendar is clicked
-    if (this.startEndSectionRef && this.startEndSectionRef.contains(e.target)) {
+    if (this.startEndSectionRef && this.startEndSectionRef.contains(target)) {
       this.setTypeCustomStartEnd();
     }
+
+    // if user click outside popover, popover will hide and we will call onCloseDateFilterControl,
+    // but need to exclude OverlayTrigger component to avoid handle click events twice.
+    if (target.getAttribute('name') !== 'popover-trigger') {
+      if (
+        this.popoverContainer &&
+        !this.popoverContainer.contains(target)
+      ) {
+        this.props.onCloseDateFilterControl();
+      }
+    }
   }
+
+  handleClickTrigger() {
+    // when user clicks OverlayTrigger,
+    // popoverContainer component will be created after handleClickTrigger
+    // and before handleClick handler
+    if (!this.popoverContainer) {
+      this.props.onOpenDateFilterControl();
+    } else {
+      this.props.onCloseDateFilterControl();
+    }
+  }
+
   close() {
     let val;
     if (this.state.type === TYPES.DEFAULTS || this.state.tab === TABS.DEFAULTS) {
@@ -256,6 +311,7 @@ export default class DateFilterControl extends React.Component {
     } else {
       val = [this.state.since, this.state.until].join(SEPARATOR);
     }
+    this.props.onCloseDateFilterControl();
     this.props.onChange(val);
     this.refs.trigger.hide();
     this.setState({ showSinceCalendar: false, showUntilCalendar: false });
@@ -290,7 +346,7 @@ export default class DateFilterControl extends React.Component {
             type="text"
             onKeyPress={this.onEnter}
             onFocus={this.setTypeCustomStartEnd}
-            onClick={() => {}}
+            onClick={() => { }}
           />
           <InputGroup.Button onClick={() => this.toggleCalendar(key)}>
             <Button>
@@ -309,9 +365,9 @@ export default class DateFilterControl extends React.Component {
         eventKey={grain}
         active={grain === this.state.grain}
       >
-        {grain}
+        {TIME_GRAIN_OPTIONS_TRANSLATION[grain]}
       </MenuItem>
-      ));
+    ));
     const timeFrames = COMMON_TIME_FRAMES.map((timeFrame) => {
       const nextState = getStateFromCommonTimeFrame(timeFrame);
       return (
@@ -330,7 +386,7 @@ export default class DateFilterControl extends React.Component {
               checked={this.state.common === timeFrame}
               onChange={() => this.setState(nextState)}
             >
-              {timeFrame}
+              {COMMON_TIME_FRAMES_TRANSLATE[timeFrame]}
             </Radio>
           </div>
         </OverlayTrigger>
@@ -338,30 +394,30 @@ export default class DateFilterControl extends React.Component {
     });
     return (
       <Popover id="filter-popover" placement="top" positionTop={0}>
-        <div style={{ width: '250px' }}>
+        <div style={DATE_FILTER_POPOVER_STYLE} ref={(ref) => { this.popoverContainer = ref; }}>
           <Tabs
             defaultActiveKey={this.state.tab === TABS.DEFAULTS ? 1 : 2}
             id="type"
             className="time-filter-tabs"
             onSelect={this.changeTab}
           >
-            <Tab eventKey={1} title="Defaults">
+            <Tab eventKey={1} title={t('Defaults')}>
               <FormGroup>{timeFrames}</FormGroup>
             </Tab>
-            <Tab eventKey={2} title="Custom">
+            <Tab eventKey={2} title={t('Custom')}>
               <FormGroup>
                 <PopoverSection
-                  title="Relative to today"
+                  title={t("Relative to today")}
                   isSelected={this.state.type === TYPES.CUSTOM_RANGE}
                   onSelect={this.setTypeCustomRange}
                 >
                   <div className="clearfix centered" style={{ marginTop: '12px' }}>
-                    <div style={{ width: '60px', marginTop: '-4px' }} className="input-inline">
+                    <div style={{ marginTop: '-4px' }} className="input-inline">
                       <DropdownButton
                         bsSize="small"
                         componentClass={InputGroup.Button}
                         id="input-dropdown-rel"
-                        title={this.state.rel}
+                        title={RELATIVE_TIME_OPTIONS_TRANSLATION[this.state.rel]}
                         onFocus={this.setTypeCustomRange}
                       >
                         <MenuItem
@@ -369,14 +425,14 @@ export default class DateFilterControl extends React.Component {
                           key={RELATIVE_TIME_OPTIONS.LAST}
                           eventKey={RELATIVE_TIME_OPTIONS.LAST}
                           active={this.state.rel === RELATIVE_TIME_OPTIONS.LAST}
-                        >Last
+                        >{t('Last')}
                         </MenuItem>
                         <MenuItem
                           onSelect={value => this.setCustomRange('rel', value)}
                           key={RELATIVE_TIME_OPTIONS.NEXT}
                           eventKey={RELATIVE_TIME_OPTIONS.NEXT}
                           active={this.state.rel === RELATIVE_TIME_OPTIONS.NEXT}
-                        >Next
+                        >{t('Next')}
                         </MenuItem>
                       </DropdownButton>
                     </div>
@@ -396,7 +452,7 @@ export default class DateFilterControl extends React.Component {
                         bsSize="small"
                         componentClass={InputGroup.Button}
                         id="input-dropdown-grain"
-                        title={this.state.grain}
+                        title={TIME_GRAIN_OPTIONS_TRANSLATION[this.state.grain]}
                         onFocus={this.setTypeCustomRange}
                       >
                         {grainOptions}
@@ -405,7 +461,7 @@ export default class DateFilterControl extends React.Component {
                   </div>
                 </PopoverSection>
                 <PopoverSection
-                  title="Start / end"
+                  title={t("Start / end")}
                   isSelected={this.state.type === TYPES.CUSTOM_START_END}
                   onSelect={this.setTypeCustomStartEnd}
                   info={FREEFORM_TOOLTIP}
@@ -414,6 +470,7 @@ export default class DateFilterControl extends React.Component {
                     <InputGroup>
                       <div style={{ margin: '5px 0' }}>
                         <Datetime
+                          locale="ru"
                           value={this.state.since}
                           defaultValue={this.state.since}
                           viewDate={this.state.since}
@@ -428,6 +485,7 @@ export default class DateFilterControl extends React.Component {
                       </div>
                       <div style={{ margin: '5px 0' }}>
                         <Datetime
+                          locale="ru"
                           value={this.state.until}
                           defaultValue={this.state.until}
                           viewDate={this.state.until}
@@ -462,7 +520,20 @@ export default class DateFilterControl extends React.Component {
   }
   render() {
     let value = this.props.value || defaultProps.value;
-    value = value.split(SEPARATOR).map((v, idx) => v.replace('T00:00:00', '') || (idx === 0 ? '-∞' : '∞')).join(SEPARATOR);
+    // value = value.split(SEPARATOR).map((v, idx) => v.replace('T00:00:00', '') || (idx === 0 ? '-∞' : '∞')).join(SEPARATOR);
+    
+    if (value.indexOf(SEPARATOR) >= 0) {
+      value = value.split(SEPARATOR).map((v, idx) => v.replace('T00:00:00', '') || (idx === 0 ? '-∞' : '∞')).join(SEPARATOR);
+    } else if (value in COMMON_TIME_FRAMES_TRANSLATE) {
+      value = COMMON_TIME_FRAMES_TRANSLATE[value];
+    } else {
+      value = value.split(' ').map(v => {
+        return v in RELATIVE_TIME_OPTIONS_TRANSLATION ? RELATIVE_TIME_OPTIONS_TRANSLATION[v]
+             : v in TIME_GRAIN_OPTIONS_TRANSLATION ? TIME_GRAIN_OPTIONS_TRANSLATION[v]
+             : v;
+      }).join(' ')
+    }
+
     return (
       <div>
         <ControlHeader {...this.props} />
@@ -474,8 +545,9 @@ export default class DateFilterControl extends React.Component {
           ref="trigger"
           placement="right"
           overlay={this.renderPopover()}
+          onClick={this.handleClickTrigger}
         >
-          <Label style={{ cursor: 'pointer' }}>{value}</Label>
+          <Label name="popover-trigger" style={{ cursor: 'pointer' }}>{value}</Label>
         </OverlayTrigger>
       </div>
     );

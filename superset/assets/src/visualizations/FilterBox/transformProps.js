@@ -16,18 +16,25 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+const NOOP = () => {};
+
 export default function transformProps(chartProps) {
   const {
     datasource,
-    filters,
     formData,
-    onAddFilter,
-    payload,
+    hooks,
+    initialValues,
+    queryData,
     rawDatasource,
   } = chartProps;
   const {
+    onAddFilter = NOOP,
+    onFilterMenuOpen =  NOOP,
+    onFilterMenuClose = NOOP,
+  } = hooks;
+  const {
+    sliceId,
     dateFilter,
-    filterConfigs,
     instantFiltering,
     showDruidTimeGranularity,
     showDruidTimeOrigin,
@@ -35,6 +42,7 @@ export default function transformProps(chartProps) {
     showSqlaTimeGranularity,
   } = formData;
   const { verboseMap } = datasource;
+  const filterConfigs = formData.filterConfigs || [];
 
   const filtersFields = filterConfigs.map(flt => ({
     ...flt,
@@ -43,12 +51,15 @@ export default function transformProps(chartProps) {
   }));
 
   return {
+    chartId: sliceId,
     datasource: rawDatasource,
+    filtersChoices: queryData.data,
     filtersFields,
-    filtersChoices: payload.data,
     instantFiltering,
     onChange: onAddFilter,
-    origSelectedValues: filters || {},
+    onFilterMenuOpen,
+    onFilterMenuClose,
+    origSelectedValues: initialValues || {},
     showDateFilter: dateFilter,
     showDruidTimeGrain: showDruidTimeGranularity,
     showDruidTimeOrigin,

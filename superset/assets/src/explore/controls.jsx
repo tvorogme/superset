@@ -80,6 +80,10 @@ const D3_FORMAT_DOCS = 'D3 format syntax: https://github.com/d3/d3-format';
 // input choices & options
 const D3_FORMAT_OPTIONS = [
   ['SMART_NUMBER', 'Adaptative formating'],
+  ['.0f', '.0f (12345.432 => 12345)'],
+  [',.0f', ',.0f (12345.432 => 12,345)'],
+  ['.0%', '.0% (0.432 => 43%)'],
+  ['.2%', '.2% (0.4321 => 43.21%)'],
   ['.1s', '.1s (12345.432 => 10k)'],
   ['.3s', '.3s (12345.432 => 12.3k)'],
   [',.1%', ',.1% (12345.432 => 1,234,543.2%)'],
@@ -88,6 +92,8 @@ const D3_FORMAT_OPTIONS = [
   [',.3f', ',.3f (12345.432 => 12,345.432)'],
   ['+,', '+, (12345.432 => +12,345.432)'],
   ['$,.2f', '$,.2f (12345.432 => $12,345.43)'],
+  ['DURATION', 'Duration in ms (66000 => 1m 6s)'],
+  ['DURATION_SUB', 'Duration in ms (100.40008 => 100ms 400µs 80ns)'],
 ];
 
 const ROW_LIMIT_OPTIONS = [10, 50, 100, 250, 500, 1000, 5000, 10000, 50000];
@@ -96,9 +102,10 @@ const SERIES_LIMITS = [0, 5, 10, 25, 50, 100, 500];
 
 export const D3_TIME_FORMAT_OPTIONS = [
   ['smart_date', 'Adaptative formating'],
+  ['%d-%m-%Y', '%d-%m-%Y | 14-01-2019'],
+  ['%Y-%m-%d', '%Y-%m-%d | 2019-01-14'],
   ['%d/%m/%Y', '%d/%m/%Y | 14/01/2019'],
   ['%m/%d/%Y', '%m/%d/%Y | 01/14/2019'],
-  ['%Y-%m-%d', '%Y-%m-%d | 2019-01-14'],
   ['%Y-%m-%d %H:%M:%S', '%Y-%m-%d %H:%M:%S | 2019-01-14 01:32:10'],
   ['%d-%m-%Y %H:%M:%S', '%Y-%m-%d %H:%M:%S | 14-01-2019 01:32:10'],
   ['%H:%M:%S', '%H:%M:%S | 01:32:10'],
@@ -171,6 +178,7 @@ const metric = {
   ...metrics,
   multi: false,
   label: t('Metric'),
+  description: t('Metric'),
   default: props => mainMetric(props.savedMetrics),
 };
 
@@ -301,6 +309,16 @@ export const controls = {
       ['bl', 'Bottom left'],
       ['br', 'Bottom right'],
     ],
+    renderTrigger: true,
+  },
+
+  legend_format: {
+    label: t('Legend Format'),
+    description: t('Choose the format for legend values'),
+    type: 'SelectControl',
+    clearable: false,
+    default: D3_FORMAT_OPTIONS[0],
+    choices: D3_FORMAT_OPTIONS,
     renderTrigger: true,
   },
 
@@ -471,6 +489,13 @@ export const controls = {
     description: t('Display total row/column'),
   },
 
+  transpose_pivot: {
+    type: 'CheckboxControl',
+    label: t('Transpose Pivot'),
+    default: false,
+    description: t('Swap Groups and Columns'),
+  },
+
   show_markers: {
     type: 'CheckboxControl',
     label: t('Show Markers'),
@@ -552,6 +577,7 @@ export const controls = {
       'Egypt',
       'France',
       'Germany',
+      'India',
       'Italy',
       'Japan',
       'Morocco',
@@ -569,19 +595,6 @@ export const controls = {
       'Zambia',
     ].map(s => [s, s]),
     description: t('The name of the country that Superset should display'),
-  },
-  country_fieldtype: {
-    type: 'SelectControl',
-    label: t('Country Field Type'),
-    default: 'cca2',
-    choices: [
-      ['name', 'Full name'],
-      ['cioc', 'code International Olympic Committee (cioc)'],
-      ['cca2', 'code ISO 3166-1 alpha-2 (cca2)'],
-      ['cca3', 'code ISO 3166-1 alpha-3 (cca3)'],
-    ],
-    description: t('The country code standard that Superset should expect ' +
-    'to find in the [country] column'),
   },
 
   freq: {
@@ -925,26 +938,17 @@ export const controls = {
     freeForm: true,
     label: t('Rule'),
     default: null,
-    choices: formatSelectOptions(['', '1T', '1H', '1D', '7D', '1M', '1AS']),
+    choices: formatSelectOptions(['1T', '1H', '1D', '7D', '1M', '1AS']),
     description: t('Pandas resample rule'),
   },
 
-  resample_how: {
+  resample_method: {
     type: 'SelectControl',
     freeForm: true,
-    label: t('How'),
+    label: t('Method'),
     default: null,
-    choices: formatSelectOptions(['', 'mean', 'sum', 'median']),
-    description: t('Pandas resample how'),
-  },
-
-  resample_fillmethod: {
-    type: 'SelectControl',
-    freeForm: true,
-    label: t('Fill Method'),
-    default: null,
-    choices: formatSelectOptions(['', 'ffill', 'bfill']),
-    description: t('Pandas resample fill method'),
+    choices: formatSelectOptions(['asfreq', 'bfill', 'ffill', 'median', 'mean', 'sum']),
+    description: t('Pandas resample method'),
   },
 
   time_range: {
@@ -1299,16 +1303,6 @@ export const controls = {
     description: t('Pick your favorite markup language'),
   },
 
-  rotation: {
-    type: 'SelectControl',
-    label: t('Word Rotation'),
-    choices: formatSelectOptions(['random', 'flat', 'square']),
-    renderTrigger: true,
-    default: 'square',
-    clearable: false,
-    description: t('Rotation to apply to words in the cloud'),
-  },
-
   line_interpolation: {
     type: 'SelectControl',
     label: t('Line Style'),
@@ -1384,24 +1378,6 @@ export const controls = {
     ]),
   },
 
-  size_from: {
-    type: 'TextControl',
-    isInt: true,
-    label: t('Minimum Font Size'),
-    renderTrigger: true,
-    default: '20',
-    description: t('Font size for the smallest value in the list'),
-  },
-
-  size_to: {
-    type: 'TextControl',
-    isInt: true,
-    label: t('Maximum Font Size'),
-    renderTrigger: true,
-    default: '150',
-    description: t('Font size for the biggest value in the list'),
-  },
-
   header_font_size: {
     type: 'SelectControl',
     label: t('Header Font Size'),
@@ -1470,7 +1446,7 @@ export const controls = {
     renderTrigger: true,
     default: true,
     description: (
-      'Whether to apply filters as they change, or wait for' +
+      'Whether to apply filters as they change, or wait for ' +
       'users to hit an [Apply] button'
     ),
   },
@@ -1570,14 +1546,6 @@ export const controls = {
     renderTrigger: true,
     default: true,
     description: t('Whether to color +/- values'),
-  },
-
-  show_bubbles: {
-    type: 'CheckboxControl',
-    label: t('Show Bubbles'),
-    default: false,
-    renderTrigger: true,
-    description: t('Whether to display bubbles on top of countries'),
   },
 
   show_legend: {
@@ -1849,7 +1817,7 @@ export const controls = {
     'Either a numerical column or `Auto`, which scales the point based ' +
     'on the largest cluster'),
     mapStateToProps: state => ({
-      choices: columnChoices(state.datasource),
+      choices: formatSelectOptions(['Auto']).concat(columnChoices(state.datasource)),
     }),
   },
 
@@ -2102,43 +2070,11 @@ export const controls = {
     }),
   },
 
-  significance_level: {
-    type: 'TextControl',
-    label: t('Significance Level'),
-    default: 0.05,
-    description: t('Threshold alpha level for determining significance'),
-  },
-
-  pvalue_precision: {
-    type: 'TextControl',
-    label: t('p-value precision'),
-    default: 6,
-    description: t('Number of decimal places with which to display p-values'),
-  },
-
-  liftvalue_precision: {
-    type: 'TextControl',
-    label: t('Lift percent precision'),
-    default: 4,
-    description: t('Number of decimal places with which to display lift values'),
-  },
-
   column_collection: {
     type: 'CollectionControl',
     label: t('Time Series Columns'),
     validators: [v.nonEmpty],
     controlName: 'TimeSeriesColumnControl',
-  },
-
-  rose_area_proportion: {
-    type: 'CheckboxControl',
-    label: t('Use Area Proportions'),
-    description: t(
-      'Check if the Rose Chart should use segment area instead of ' +
-      'segment radius for proportioning',
-    ),
-    default: false,
-    renderTrigger: true,
   },
 
   time_series_option: {

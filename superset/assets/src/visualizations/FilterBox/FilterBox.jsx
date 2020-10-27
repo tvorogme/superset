@@ -22,14 +22,18 @@ import VirtualizedSelect from 'react-virtualized-select';
 import { Creatable } from 'react-select';
 import { Button } from 'react-bootstrap';
 import { t } from '@superset-ui/translation';
-import replaceTemplate from '../../utils/filterTemplates';
+
 import DateFilterControl from '../../explore/components/controls/DateFilterControl';
 import ControlRow from '../../explore/components/ControlRow';
 import Control from '../../explore/components/Control';
 import controls from '../../explore/controls';
 import OnPasteSelect from '../../components/OnPasteSelect';
 import VirtualizedRendererWrap from '../../components/VirtualizedRendererWrap';
+import { getFilterColorKey, getFilterColorMap } from '../../dashboard/util/dashboardFiltersColorMap';
+import FilterBadgeIcon from '../../components/FilterBadgeIcon';
+
 import './FilterBox.css';
+import replaceTemplate from '../../utils/filterTemplates';
 
 // maps control names to their key in extra_filters
 const TIME_FILTER_MAP = {
@@ -40,9 +44,13 @@ const TIME_FILTER_MAP = {
   granularity: '__granularity',
 };
 
-const TIME_RANGE = '__time_range';
+export const TIME_RANGE = '__time_range';
+export const FILTER_LABELS = {
+  [TIME_RANGE]: 'Time range',
+};
 
 const propTypes = {
+  chartId: PropTypes.number.isRequired,
   origSelectedValues: PropTypes.object,
   datasource: PropTypes.object.isRequired,
   instantFiltering: PropTypes.bool,
@@ -57,6 +65,8 @@ const propTypes = {
     metric: PropTypes.number,
   }))),
   onChange: PropTypes.func,
+  onFilterMenuOpen: PropTypes.func,
+  onFilterMenuClose: PropTypes.func,
   showDateFilter: PropTypes.bool,
   showSqlaTimeGrain: PropTypes.bool,
   showSqlaTimeColumn: PropTypes.bool,
@@ -66,6 +76,8 @@ const propTypes = {
 const defaultProps = {
   origSelectedValues: {},
   onChange: () => {},
+  onFilterMenuOpen: () => {},
+  onFilterMenuClose: () => {},
   showDateFilter: false,
   showSqlaTimeGrain: false,
   showSqlaTimeColumn: false,
@@ -75,13 +87,28 @@ const defaultProps = {
 };
 
 class FilterBox extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       selectedValues: props.origSelectedValues,
+      // this flag is used by non-instant filter, to make the apply button enabled/disabled
       hasChanged: false,
     };
     this.changeFilter = this.changeFilter.bind(this);
+    this.onFilterMenuOpen = this.onFilterMenuOpen.bind(this, props.chartId);
+    this.onFilterMenuClose = this.onFilterMenuClose.bind(this);
+    this.onFocus = this.onFilterMenuOpen;
+    this.onBlur = this.onFilterMenuClose;
+    this.onOpenDateFilterControl = this.onFilterMenuOpen.bind(props.chartId, TIME_RANGE);
+  }
+
+  onFilterMenuOpen(chartId, column) {
+    this.props.onFilterMenuOpen(chartId, column);
+  }
+
+  onFilterMenuClose() {
+    this.props.onFilterMenuClose();
   }
 
   getControlData(controlName) {
@@ -100,46 +127,50 @@ class FilterBox extends React.Component {
 
   clickApply() {
     const { selectedValues } = this.state;
-    Object.keys(selectedValues).forEach((fltr, i, arr) => {
-      let refresh = false;
-      if (i === arr.length - 1) {
-        refresh = true;
-      }
-      this.props.onChange(fltr, selectedValues[fltr], false, refresh);
+    this.setState({ hasChanged: false }, () => {
+      this.props.onChange(selectedValues, false);
     });
-    this.setState({ hasChanged: false });
   }
+
   changeFilter(filter, options) {
     const fltr = TIME_FILTER_MAP[filter] || filter;
     let vals = null;
     if (options !== null) {
       if (Array.isArray(options)) {
-        vals = options.map(opt => replaceTemplate(opt.value));
+        vals = options.map(opt => opt.value);
       } else if (options.value) {
-        vals = replaceTemplate(options.value);
+        vals = options.value;
       } else {
         vals = options;
       }
     }
-    const selectedValues = Object.assign({}, this.state.selectedValues);
-    selectedValues[fltr] = vals;
-    this.setState({ selectedValues, hasChanged: true });
-    if (this.props.instantFiltering) {
-      this.props.onChange(fltr, vals, false, true);
-    }
+    const selectedValues = {
+      ...this.state.selectedValues,
+      [fltr]: vals,
+    };
+
+    this.setState({ selectedValues, hasChanged: true }, () => {
+      if (this.props.instantFiltering) {
+        this.props.onChange({ [fltr]: vals }, false);
+      }
+    });
   }
 
   renderDateFilter() {
-    const { showDateFilter } = this.props;
+    const { showDateFilter, chartId } = this.props;
+    const label = t(FILTER_LABELS[TIME_RANGE]);
     if (showDateFilter) {
       return (
         <div className="row space-1">
-          <div className="col-lg-12 col-xs-12">
+          <div className="col-lg-12 col-xs-12 filter-container">
+            {this.renderFilterBadge(chartId, TIME_RANGE, label)}
             <DateFilterControl
               name={TIME_RANGE}
-              label={t('Time range')}
+              label={label}
               description={t('Select start and end date')}
               onChange={(...args) => { this.changeFilter(TIME_RANGE, ...args); }}
+              onOpenDateFilterControl={this.onOpenDateFilterControl}
+              onCloseDateFilterControl={this.onFilterMenuClose}
               value={this.state.selectedValues[TIME_RANGE] || 'No filter'}
             />
           </div>
@@ -217,6 +248,7 @@ class FilterBox extends React.Component {
     const data = this.props.filtersChoices[key];
     const max = Math.max(...data.map(d => d.metric));
     let value = selectedValues[key] || null;
+
     // Assign default value if required
     if (!value && filterConfig.defaultValue) {
       if (filterConfig.multiple) {
@@ -224,6 +256,14 @@ class FilterBox extends React.Component {
         value = filterConfig.defaultValue.split(';');
       } else {
         value = filterConfig.defaultValue;
+      }
+    }
+
+    if (value && value.length > 0) {
+      if (filterConfig.multiple) {
+        value = value.map(replaceTemplate);
+      } else {
+        value = replaceTemplate(value);
       }
     }
 
@@ -247,28 +287,50 @@ class FilterBox extends React.Component {
           return { value: opt.id, label: opt.id, style };
         })}
         onChange={(...args) => { this.changeFilter(key, ...args); }}
+        onFocus={this.onFocus}
+        onBlur={this.onBlur}
+        onOpen={(...args) => { this.onFilterMenuOpen(key, ...args); }}
+        onClose={this.onFilterMenuClose}
         selectComponent={Creatable}
         selectWrap={VirtualizedSelect}
         optionRenderer={VirtualizedRendererWrap(opt => opt.label)}
+        noResultsText={t('No results found')}
       />);
   }
 
   renderFilters() {
-
-    const { filtersFields } = this.props;
+    const { filtersFields, chartId } = this.props;
     return filtersFields.map((filterConfig) => {
       const { label, key } = filterConfig;
       return (
-        <div key={key} className="m-b-5">
-          {label}
-          {this.renderSelect(filterConfig)}
+        <div key={key} className="m-b-5 filter-container">
+          {this.renderFilterBadge(chartId, key, label)}
+          <div>
+            <label htmlFor={`LABEL-${key}`}>{label}</label>
+            {this.renderSelect(filterConfig)}
+          </div>
         </div>
       );
     });
   }
 
+  renderFilterBadge(chartId, column) {
+    const colorKey = getFilterColorKey(chartId, column);
+    const filterColorMap = getFilterColorMap();
+    const colorCode = filterColorMap[colorKey];
+
+    return (
+      <div className="filter-badge-container">
+        <FilterBadgeIcon
+          colorCode={colorCode}
+        />
+      </div>
+    );
+  }
+
   render() {
     const { instantFiltering } = this.props;
+
     return (
       <div className="scrollbar-container">
         <div className="scrollbar-content">

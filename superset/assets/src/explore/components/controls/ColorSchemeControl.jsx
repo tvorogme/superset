@@ -21,6 +21,7 @@ import PropTypes from 'prop-types';
 import { isFunction } from 'lodash';
 import { Creatable } from 'react-select';
 import ControlHeader from '../ControlHeader';
+import { t } from '@superset-ui/translation';
 import TooltipWrapper from '../../../components/TooltipWrapper';
 
 const propTypes = {
@@ -105,7 +106,7 @@ export default class ColorSchemeControl extends React.PureComponent {
     const selectProps = {
       multi: false,
       name: `select-${this.props.name}`,
-      placeholder: `Select (${options.length})`,
+      placeholder: `${t('Select')} (${options.length})`,
       default: this.props.default,
       options,
       value: this.props.value,

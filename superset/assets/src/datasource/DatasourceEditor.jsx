@@ -104,28 +104,7 @@ function ColumnCollectionTable({
                     {t('python datetime string pattern')}
                   </a>
                   {t(` expression. If time is stored in epoch format, put \`epoch_s\` or
-                      \`epoch_ms\`. Leave \`Database Expression\`
-                      below empty if timestamp is stored in '
-                      String or Integer(epoch) type`)}
-                </div>
-              }
-              control={<TextControl />}
-            />
-            <Field
-              fieldKey="database_expression"
-              label={t('Database Expression')}
-              descr={
-                <div>
-                  {t(`
-                    The database expression to cast internal datetime
-                    constants to database date/timestamp type according to the DBAPI.
-                    The expression should follow the pattern of
-                    %Y-%m-%d %H:%M:%S, based on different DBAPI.
-                    The string should be a python string formatter
-                    \`Ex: TO_DATE('{}', 'YYYY-MM-DD HH24:MI:SS')\` for Oracle
-                    Superset uses default expression based on DB URI if this
-                    field is blank.
-                  `)}
+                      \`epoch_ms\`.`)}
                 </div>
               }
               control={<TextControl />}
@@ -282,10 +261,11 @@ export class DatasourceEditor extends React.PureComponent {
   }
   syncMetadata() {
     const { datasource } = this.state;
+    // Handle carefully when the schema is empty
     const endpoint = (
       `/datasource/external_metadata/${datasource.type}/${datasource.id}/` +
       `?db_id=${datasource.database.id}` +
-      `&schema=${datasource.schema}` +
+      `&schema=${datasource.schema || ''}` +
       `&table_name=${datasource.datasource_name}`
     );
     this.setState({ metadataLoading: true });
