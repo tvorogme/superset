@@ -442,17 +442,17 @@ HTTP_HEADERS = {}
 DEFAULT_DB_ID = None
 
 # Timeout duration for SQL Lab synchronous queries
-SQLLAB_TIMEOUT = 300000
+SQLLAB_TIMEOUT = 30
 
 # Timeout duration for SQL Lab query validation
-SQLLAB_VALIDATION_TIMEOUT = 100000
+SQLLAB_VALIDATION_TIMEOUT = 10
 
 # SQLLAB_DEFAULT_DBID
 SQLLAB_DEFAULT_DBID = None
 
 # The MAX duration (in seconds) a query can run for before being killed
 # by celery.
-SQLLAB_ASYNC_TIME_LIMIT_SEC = 60 * 60 * 60
+SQLLAB_ASYNC_TIME_LIMIT_SEC = 60 * 60 * 6
 
 # Some databases support running EXPLAIN queries that allow users to estimate
 # query costs before they run. These EXPLAIN queries should have a small
