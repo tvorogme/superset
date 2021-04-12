@@ -23,6 +23,7 @@ import { max as d3Max } from 'd3-array';
 import { AsyncCreatableSelect, CreatableSelect } from 'src/components/Select';
 import Button from 'src/components/Button';
 import { t, SupersetClient } from '@superset-ui/core';
+import replaceTemplate from '../../utils/filterTemplates';
 
 import {
   BOOL_FALSE_DISPLAY,
@@ -367,6 +368,14 @@ class FilterBox extends React.PureComponent {
     if (value === undefined && defaultValue) {
       // multiple values are separated by semicolons
       value = isMultiple ? defaultValue.split(';') : defaultValue;
+    }
+
+    if (value && value.length > 0) {
+      if (filterConfig.multiple) {
+        value = value.map(replaceTemplate);
+      } else {
+        value = replaceTemplate(value);
+      }
     }
 
     return (
