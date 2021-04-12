@@ -14,12 +14,12 @@
 # KIND, either express or implied.  See the License for the
 # specific language governing permissions and limitations
 # under the License.
-# pylint: disable=C,R,W
 from superset.db_engine_specs.postgres import PostgresBaseEngineSpec
 
 
 class RedshiftEngineSpec(PostgresBaseEngineSpec):
     engine = "redshift"
+    engine_name = "Amazon Redshift"
     max_column_name_length = 127
 
     @staticmethod
