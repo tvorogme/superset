@@ -1,0 +1,100 @@
+{
+  "app": "superset",
+  "entrypoints": {
+    "theme": {
+      "css": [],
+      "js": [
+        "/static/assets/theme.2d3ef09f.entry.js"
+      ]
+    },
+    "preamble": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/preamble.2d3ef09f.entry.js"
+      ]
+    },
+    "addSlice": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/mathjs.2d3ef09f.chunk.js",
+        "/static/assets/thumbnail.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/4.2d3ef09f.chunk.js",
+        "/static/assets/6.2d3ef09f.chunk.js",
+        "/static/assets/addSlice.2d3ef09f.entry.js"
+      ]
+    },
+    "explore": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/mathjs.2d3ef09f.chunk.js",
+        "/static/assets/thumbnail.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/4.2d3ef09f.chunk.js",
+        "/static/assets/6.2d3ef09f.chunk.js",
+        "/static/assets/7.2d3ef09f.chunk.js",
+        "/static/assets/explore.2d3ef09f.entry.js"
+      ]
+    },
+    "dashboard": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/mathjs.2d3ef09f.chunk.js",
+        "/static/assets/thumbnail.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/4.2d3ef09f.chunk.js",
+        "/static/assets/6.2d3ef09f.chunk.js",
+        "/static/assets/7.2d3ef09f.chunk.js",
+        "/static/assets/dashboard.2d3ef09f.entry.js"
+      ]
+    },
+    "sqllab": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/4.2d3ef09f.chunk.js",
+        "/static/assets/sqllab.2d3ef09f.entry.js"
+      ]
+    },
+    "crudViews": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/mathjs.2d3ef09f.chunk.js",
+        "/static/assets/thumbnail.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/4.2d3ef09f.chunk.js",
+        "/static/assets/6.2d3ef09f.chunk.js",
+        "/static/assets/crudViews.2d3ef09f.entry.js"
+      ]
+    },
+    "menu": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/menu.2d3ef09f.entry.js"
+      ]
+    },
+    "profile": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/3.2d3ef09f.chunk.js",
+        "/static/assets/profile.2d3ef09f.entry.js"
+      ]
+    },
+    "showSavedQuery": {
+      "css": [],
+      "js": [
+        "/static/assets/vendors.2d3ef09f.chunk.js",
+        "/static/assets/showSavedQuery.2d3ef09f.entry.js"
+      ]
+    }
+  }
+}

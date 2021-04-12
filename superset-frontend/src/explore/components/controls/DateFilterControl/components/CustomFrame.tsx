@@ -22,6 +22,7 @@ import { Moment } from 'moment';
 import { isInteger } from 'lodash';
 import { Col, InputNumber, Row } from 'src/common/components';
 import { DatePicker } from 'src/components/DatePicker';
+import locale from 'antd/es/date-picker/locale/ru_RU';
 import { Radio } from 'src/common/components/Radio';
 import { Select } from 'src/components/Select';
 import { InfoTooltipWithTrigger } from '@superset-ui/chart-controls';
@@ -192,6 +193,7 @@ export function CustomFrame(props: FrameComponentProps) {
                 onSelect={(datetime: Moment) =>
                   onChange('untilDatetime', datetime.format(MOMENT_FORMAT))
                 }
+                locale={locale}
                 allowClear={false}
               />
             </Row>
