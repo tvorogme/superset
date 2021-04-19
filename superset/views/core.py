@@ -1870,6 +1870,7 @@ class Superset(BaseSupersetView):  # pylint: disable=too-many-public-methods
             "common": common_bootstrap_payload(),
             "editMode": edit_mode,
             "urlParams": url_params,
+            "user": bootstrap_user_data(g.user),
             "dashboard_data": {
                 **data["dashboard"],
                 "standalone_mode": standalone_mode,

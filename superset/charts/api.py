@@ -18,6 +18,7 @@ import json
 import logging
 from datetime import datetime
 from io import BytesIO
+from tempfile import NamedTemporaryFile
 from typing import Any, Dict
 from zipfile import ZipFile
 
@@ -84,6 +85,7 @@ from superset.views.base_api import (
 )
 from superset.views.core import CsvResponse, generate_download_headers
 from superset.views.filters import FilterRelatedOwners
+import pandas
 
 logger = logging.getLogger(__name__)
 
@@ -481,6 +483,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
             return self.response_400(message=exc.message)
 
         result_format = result["query_context"].result_format
+
         if result_format == ChartDataResultFormat.CSV:
             # return the first result
             data = result["queries"][0]["data"]
@@ -495,6 +498,20 @@ class ChartRestApi(BaseSupersetModelRestApi):
             resp = make_response(response_data, 200)
             resp.headers["Content-Type"] = "application/json; charset=utf-8"
             return resp
+
+        if result_format == ChartDataResultFormat.XLSX:
+
+            sio = BytesIO()
+            df = pandas.DataFrame(result["queries"][0]["data"])
+            writer = pandas.ExcelWriter(sio, engine='xlsxwriter')
+            df.to_excel(writer, sheet_name="Лист 1", index=None)
+            writer.save()
+
+            sio.seek(0)
+            workbook = sio.getvalue()
+
+            return CsvResponse(workbook, headers=generate_download_headers("xlsx"))
+
 
         return self.response_400(message=f"Unsupported result_format: {result_format}")
 
@@ -546,6 +563,7 @@ class ChartRestApi(BaseSupersetModelRestApi):
         json_body = None
         if request.is_json:
             json_body = request.json
+
         elif request.form.get("form_data"):
             # CSV export submits regular form data
             try:
