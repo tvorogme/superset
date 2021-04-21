@@ -90,3 +90,4 @@ release.json
 messages.mo
 
 docker/requirements-local.txt
+superset/static/assets/*
