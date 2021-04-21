@@ -19,12 +19,13 @@
 import React, { FC } from 'react';
 import { styled, t } from '@superset-ui/core';
 import { Collapse, Typography, Tooltip } from 'src/common/components';
-import { DataMaskUnit } from 'src/dataMask/types';
+import { DataMaskState } from 'src/dataMask/types';
 import { CaretDownOutlined } from '@ant-design/icons';
 import { areObjectsEqual } from 'src/reduxUtils';
 import { FilterSet } from 'src/dashboard/reducers/types';
 import { getFilterValueForDisplay } from './utils';
 import { useFilters } from '../state';
+import { getFilterBarTestId } from '../index';
 
 const FilterHeader = styled.div`
   display: flex;
@@ -54,8 +55,8 @@ const StyledCollapse = styled(Collapse)`
   }
 `;
 
-type FiltersHeaderProps = {
-  dataMask?: DataMaskUnit;
+export type FiltersHeaderProps = {
+  dataMask?: DataMaskState;
   filterSet?: FilterSet;
 };
 
@@ -93,13 +94,14 @@ const FiltersHeader: FC<FiltersHeaderProps> = ({ dataMask, filterSet }) => {
             t('Filter metadata changed in dashboard. It will not be applied.'))
         }
         placement="bottomLeft"
+        key={id}
       >
-        <div>
+        <div data-test="filter-info">
           <Typography.Text strong delete={removedFilter} mark={changedFilter}>
             {name}:&nbsp;
           </Typography.Text>
           <Typography.Text delete={removedFilter} mark={changedFilter}>
-            {getFilterValueForDisplay(dataMask?.[id]?.currentState?.value) || (
+            {getFilterValueForDisplay(dataMask?.[id]?.filterState?.value) || (
               <Typography.Text type="secondary">{t('None')}</Typography.Text>
             )}
           </Typography.Text>
@@ -117,7 +119,11 @@ const FiltersHeader: FC<FiltersHeaderProps> = ({ dataMask, filterSet }) => {
         <CaretDownOutlined rotate={isActive ? 0 : 180} />
       )}
     >
-      <Collapse.Panel header={getFiltersHeader()} key="filters">
+      <Collapse.Panel
+        {...getFilterBarTestId('collapse-filter-set-description')}
+        header={getFiltersHeader()}
+        key="filters"
+      >
         {resultFilters.map(getFilterRow)}
       </Collapse.Panel>
     </StyledCollapse>

@@ -483,7 +483,6 @@ class ChartRestApi(BaseSupersetModelRestApi):
             return self.response_400(message=exc.message)
 
         result_format = result["query_context"].result_format
-
         if result_format == ChartDataResultFormat.CSV:
             # return the first result
             data = result["queries"][0]["data"]
@@ -563,7 +562,6 @@ class ChartRestApi(BaseSupersetModelRestApi):
         json_body = None
         if request.is_json:
             json_body = request.json
-
         elif request.form.get("form_data"):
             # CSV export submits regular form data
             try:

@@ -18,7 +18,7 @@
  */
 import React, { FC } from 'react';
 import { styled, t } from '@superset-ui/core';
-import { Tooltip } from 'src/common/components/Tooltip';
+import { Tooltip } from 'src/components/Tooltip';
 import { useSelector } from 'react-redux';
 import EditableTitle from 'src/components/EditableTitle';
 import SliceHeaderControls from 'src/dashboard/components/SliceHeaderControls';
@@ -46,6 +46,7 @@ type SliceHeaderProps = {
   annotationError?: object;
   sliceName?: string;
   supersetCanExplore?: boolean;
+  supersetCanShare?: boolean;
   supersetCanCSV?: boolean;
   sliceCanEdit?: boolean;
   componentId: string;
@@ -83,6 +84,7 @@ const SliceHeader: FC<SliceHeaderProps> = ({
   isExpanded = [],
   sliceName = '',
   supersetCanExplore = false,
+  supersetCanShare = false,
   supersetCanCSV = false,
   sliceCanEdit = false,
   slice,
@@ -96,8 +98,7 @@ const SliceHeader: FC<SliceHeaderProps> = ({
 }) => {
   // TODO: change to indicator field after it will be implemented
   const crossFilterValue = useSelector<RootState, any>(
-    state =>
-      state.dataMask?.crossFilters?.[slice?.slice_id]?.currentState?.value,
+    state => state.dataMask[slice?.slice_id]?.filterState?.value,
   );
 
   return (
@@ -172,6 +173,7 @@ const SliceHeader: FC<SliceHeaderProps> = ({
               exploreChart={exploreChart}
               exportCSV={exportCSV}
               supersetCanExplore={supersetCanExplore}
+              supersetCanShare={supersetCanShare}
               supersetCanCSV={supersetCanCSV}
               sliceCanEdit={sliceCanEdit}
               componentId={componentId}
