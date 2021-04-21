@@ -17,34 +17,40 @@
  * under the License.
  */
 import React from 'react';
-import PropTypes from 'prop-types';
+import { useArgs } from '@storybook/client-api';
+import { Radio } from './index';
 
-import BootstrapSliderWrapper from 'src/components/BootstrapSliderWrapper';
-import ControlHeader from 'src/explore/components/ControlHeader';
-
-const propTypes = {
-  onChange: PropTypes.func,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+export default {
+  title: 'Radio',
+  component: Radio,
+  parameters: {
+    controls: { hideNoControlsWarning: true },
+  },
+  argTypes: {
+    theme: {
+      table: {
+        disable: true,
+      },
+    },
+    checked: { control: 'boolean' },
+    disabled: { control: 'boolean' },
+  },
 };
 
-const defaultProps = {
-  onChange: () => {},
-};
-
-export default function SliderControl(props) {
-  // This wouldn't be necessary but might as well
+export const SupersetRadio = () => {
+  const [{ checked, ...rest }, updateArgs] = useArgs();
   return (
-    <div>
-      <ControlHeader {...props} />
-      <BootstrapSliderWrapper
-        {...props}
-        change={obj => {
-          props.onChange(obj.target.value);
-        }}
-      />
-    </div>
+    <Radio
+      checked={checked}
+      onChange={() => updateArgs({ checked: !checked })}
+      {...rest}
+    >
+      Example
+    </Radio>
   );
-}
+};
 
-SliderControl.propTypes = propTypes;
-SliderControl.defaultProps = defaultProps;
+SupersetRadio.args = {
+  checked: false,
+  disabled: false,
+};

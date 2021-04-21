@@ -16,22 +16,5 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-import React from 'react';
-import PropTypes from 'prop-types';
-import Label from 'src/components/Label';
 
-import { STATE_TYPE_MAP } from '../constants';
-
-const propTypes = {
-  query: PropTypes.object.isRequired,
-};
-
-export default function QueryStateLabel({ query }) {
-  const type = STATE_TYPE_MAP[query.state];
-  return (
-    <Label className="m-r-3" type={type}>
-      {query.state}
-    </Label>
-  );
-}
-QueryStateLabel.propTypes = propTypes;
+export * from './CronPicker';
